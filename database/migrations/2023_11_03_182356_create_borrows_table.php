@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('borrows', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id'); //借りたユーザー(borrowsをusersのidに結びつけるためのもの)
+            $table->string('item_name'); //借りたアイテムの名称
+            $table->date('borrowed_at'); //借りた日
+            $table->integer('trust_score')->default(100); //信頼度スコア
             $table->timestamps();
         });
     }
