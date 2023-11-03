@@ -16,12 +16,12 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id'); //借りたユーザー(borrowsをusersのidに結びつけるためのもの)
             $table->string('item_name'); //借りたアイテムの名称
             $table->date('borrowed_at'); //借りた日
-            $table->integer('trust_score')->default(100); //信頼度スコア
+            $table->integer('trust_score')->default(100); //信頼度スコア(初期値は100)
             $table->timestamps();
             $table
                 ->foreign('user_id') //上で定義したuser_idを
                 ->references('id') //idに結びつける
-                ->on('posts') //postsテーブルの
+                ->on('users') //usersテーブルの
                 ->onDelete('cascade'); //borrowsテーブルでレコードが削除されたら関連するユーザーも削除される
         });
     }
