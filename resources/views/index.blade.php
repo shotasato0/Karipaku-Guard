@@ -80,7 +80,7 @@
                             <!-- 繰り返しのアイテムデータがここに入ります -->
                             <tr class="bg-white border-b">
                               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                山田 太郎
+                                {{ $users[0] }}
                               </td>
                               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                 ファイナルファンタジーXV
