@@ -78,9 +78,10 @@
                           </thead>
                           <tbody>
                             <!-- 繰り返しのアイテムデータがここに入ります -->
+                            @forelse ($users as $user)
                             <tr class="bg-white border-b">
                               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                {{ $users[0] }}
+                                {{ $user }}
                               </td>
                               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                 ファイナルファンタジーXV
@@ -95,6 +96,9 @@
                                 80
                               </td>
                             </tr>
+                            @empty
+                                <td>No Data</td>
+                            @endforelse
                             <!-- 他のアイテム行も同様に -->
                           </tbody>
                         </table>
