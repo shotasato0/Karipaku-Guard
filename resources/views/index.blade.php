@@ -78,10 +78,12 @@
                           </thead>
                           <tbody>
                             <!-- 繰り返しのアイテムデータがここに入ります -->
-                            @forelse ($users as $user)
+                            @forelse ($users as $index => $user)
                             <tr class="bg-white border-b">
                               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                {{ $user }}
+                                <a href="/user/{{ $index }}" class="hover:text-blue-600">
+                                    {{ $user }}
+                                </a>
                               </td>
                               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                 ファイナルファンタジーXV
