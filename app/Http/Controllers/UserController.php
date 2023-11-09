@@ -6,14 +6,22 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function index() {
-        $users = [
-            'user A',
-            'user B',
-            'user C',
-        ];
+    private $users = [
+        'user A',
+        'user B',
+        'user C',
+    ];
+
+    public function index()
+    {
 
         return view('index')
-            ->with(['users' => $users]);
+            ->with(['users' => $this->users]);
+    }
+
+    public function show($id)
+    {
+        return view('show')
+            ->with(['user' => $this->user[$id]]);
     }
 }
