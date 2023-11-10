@@ -874,12 +874,14 @@
         @endif
 
         {{-- main --}}
-
-        <body>
-            <div>
-                <h1>{{ $user }}</h1>
-            </div>
-        </body>
+<body class="bg-gray-200 min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0">
+    <div class="max-w-screen-xl mx-auto">
+        <div class="bg-white rounded-lg shadow p-5">
+            <h1 class="text-2xl font-bold mb-3">{{ $user }}</h1>
+            <!-- ここに他のコンテンツを追加 -->
+        </div>
+    </div>
+</body>
     </div>
 </body>
 
