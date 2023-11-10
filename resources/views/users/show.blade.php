@@ -874,14 +874,20 @@
         @endif
 
         {{-- main --}}
-<body class="bg-gray-200 min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0">
-    <div class="max-w-screen-xl mx-auto">
-        <div class="bg-white rounded-lg shadow p-5">
-            <h1 class="text-2xl font-bold mb-3">{{ $user }}</h1>
-            <!-- ここに他のコンテンツを追加 -->
-        </div>
-    </div>
-</body>
+
+        <body class="bg-gray-100">
+            <div class="container mx-auto px-4 md:px-0">
+                <div class="bg-white rounded-lg shadow-lg p-5 md:p-8 my-10">
+                    <a href="/" class="mb-5 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                        &laquo; Back
+                    </a>
+                    <h1 class="text-3xl font-bold mb-6">
+                        User A
+                    </h1>
+                    <!-- 他のコンテンツをここに追加 -->
+                </div>
+            </div>
+        </body>
     </div>
 </body>
 

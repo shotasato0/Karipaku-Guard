@@ -81,7 +81,7 @@
                             @forelse ($users as $index => $user)
                             <tr class="bg-white border-b">
                               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                <a href="/users/{{ $index }}" class="hover:text-blue-600">
+                                <a href="{{ route('users.show', $index) }}" class="hover:text-blue-600">
                                     {{ $user }}
                                 </a>
                               </td>
