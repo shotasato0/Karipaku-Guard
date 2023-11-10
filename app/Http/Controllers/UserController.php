@@ -21,7 +21,7 @@ class UserController extends Controller
 
     public function show($id)
     {
-        return view('show')
-            ->with(['user' => $this->user[$id]]);
+        return view('users.show')
+            ->with(['user' => $this->users[$id]]);
     }
 }
