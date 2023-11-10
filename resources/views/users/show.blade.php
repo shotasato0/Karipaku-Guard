@@ -1,4 +1,5 @@
 <x-header>
+    <x-slot name="title">{{ $user }} - Karipaku Guard</x-slot>
     <body class="bg-gray-100">
         <div class="container mx-auto px-4 md:px-0">
             <div class="bg-white rounded-lg shadow-lg p-5 md:p-8 my-10">
@@ -6,7 +7,7 @@
                     &laquo; Back
                 </a>
                 <h1 class="text-3xl font-bold mb-6">
-                    User A
+                    {{ $user }}
                 </h1>
                 <!-- 他のコンテンツをここに追加 -->
             </div>

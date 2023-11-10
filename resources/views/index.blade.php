@@ -1,4 +1,5 @@
 <x-header>
+  <x-slot name="title">Karipaku Guard</x-slot>
   <div class="container mx-auto p-8">
     <div class="flex flex-col">
         <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
