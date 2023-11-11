@@ -3,20 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class UserController extends Controller
 {
-    private $users = [
-        'user A',
-        'user B',
-        'user C',
-    ];
-
     public function index()
     {
+        $users = User::latest()->get();
 
         return view('index')
-            ->with(['users' => $this->users]);
+            ->with(['users' => $users]);
     }
 
     public function show($id)
