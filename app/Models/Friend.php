@@ -17,6 +17,6 @@ class Friend extends Model
         'email', 
         'address', 
         'relationship_type', 
-        'personal_notes'
+        // 'personal_notes'
     ];
 }

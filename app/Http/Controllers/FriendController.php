@@ -16,9 +16,17 @@ class FriendController extends Controller
     }
 
     public function show($id)
-    {
-        return view('friends.show')
-            ->with(['friend' => $this->friends[$id]]);
+{
+    $friend = Friend::find($id); // IDに基づいて単一の友人を取得
+
+    if (!$friend) {
+        // 友人が見つからない場合の処理
+        abort(404);
     }
+
+    return view('friends.show')
+        ->with(['friend' => $friend]);
+}
+
 
 }
