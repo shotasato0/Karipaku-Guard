@@ -32,11 +32,11 @@
                         </thead>
                         <tbody>
                             <!-- 繰り返しのアイテムデータがここに入ります -->
-                            @forelse ($users as $user)
+                            @forelse ($friends as $friend)
                                 <tr class="bg-white border-b">
                                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                        <a href="{{ route('users.show', $user->id) }}" class="hover:text-blue-600">
-                                            {{ $user->name }}
+                                        <a href="{{ route('friends.show', $friend->id) }}" class="hover:text-blue-600">
+                                            {{ $friend->name }}
                                         </a>
                                     </td>
                                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">

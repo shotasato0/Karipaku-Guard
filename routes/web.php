@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\FriendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,11 +14,11 @@ use App\Http\Controllers\UserController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', [UserController::class, 'index'])
-    ->name('users.index');
+Route::get('/', [FriendController::class, 'index'])
+    ->name('friends.index');
     
-Route::get('/users/{id}', [UserController::class, 'show'])
-    ->name('users.show');
+Route::get('/friends/{id}', [FriendController::class, 'show'])
+    ->name('friends.show');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
