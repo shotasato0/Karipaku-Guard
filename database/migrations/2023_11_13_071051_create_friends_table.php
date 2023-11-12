@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('friends', function (Blueprint $table) {
             $table->id();
+            $table->string('name');                // 名前
+            $table->integer('age')->nullable();    // 年齢
+            $table->string('gender')->nullable();  // 性別
+            $table->string('phone')->nullable();   // 電話番号
+            $table->string('email')->nullable();   // メールアドレス
+            $table->text('address')->nullable();   // 住所
+            $table->date('friendship_date')->nullable();     // 友達になった日付
+            $table->string('relationship_type')->nullable();  // 関係の種類
+            $table->text('personal_notes')->nullable();      // 個人的なメモやコメント
             $table->timestamps();
         });
     }
