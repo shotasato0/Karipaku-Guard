@@ -40,7 +40,7 @@
                                         </a>
                                     </td>
                                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                        ファイナルファンタジーXV
+                                        Nintendo Switch
                                     </td>
                                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                         2023-01-15
