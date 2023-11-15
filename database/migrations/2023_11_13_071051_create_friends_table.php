@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('address')->nullable();   // 住所
             $table->string('relationship_type')->nullable();  // 関係の種類
             $table->text('personal_notes')->nullable();      // 個人的なメモやコメント
-            $table->timestamps();
+            $table->timestamps(); //エンコード問題を仮クリア
         });
     }
 
