@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FriendController;
-
+use App\Http\Controllers\BorrowController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +20,9 @@ Route::get('/', [FriendController::class, 'index'])
 Route::get('/friends/{id}', [FriendController::class, 'show'])
     ->name('friends.show');
 
+    Route::get('/borrows/{id}', [BorrowController::class, 'show'])
+        ->name('borrows.show');
+        
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -29,5 +32,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
 
 require __DIR__.'/auth.php';

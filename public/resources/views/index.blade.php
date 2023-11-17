@@ -40,16 +40,18 @@
                                         </a>
                                     </td>
                                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                        Nintendo Switch
+                                        <a href="{{ route('borrow.show', $borrow->id) }}" class="hover:text-blue-600">
+                                            {{ $friend->borrow->item_name }}
+                                        </a>
                                     </td>
                                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                        2023-01-15
+                                        {{ $friend->borrow->borrow_date }}
                                     </td>
                                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                        30日
+                                        {{ $friend->borrow->days_passed }}
                                     </td>
                                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                        80
+                                        {{ $friend->borrow->trust_score }}
                                     </td>
                                 </tr>
                             @empty
