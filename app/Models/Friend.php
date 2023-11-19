@@ -19,4 +19,10 @@ class Friend extends Model
         'relationship_type', 
         // 'personal_notes'
     ];
+
+   public function borrows()
+    {
+        return $this->hasMany(Borrow::class, 'friend_id');
+    }
+
 }
