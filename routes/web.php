@@ -14,14 +14,15 @@ use App\Http\Controllers\BorrowController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', [FriendController::class, 'index'])
+Route::get('/friends', [FriendController::class, 'index'])
     ->name('friends.index');
-    
 Route::get('/friends/{id}', [FriendController::class, 'show'])
     ->name('friends.show');
 
-    Route::get('/borrows/{id}', [BorrowController::class, 'show'])
-        ->name('borrows.show');
+Route::get('/', [BorrowController::class, 'index'])
+    ->name('borrows.index');
+Route::get('/borrows/{id}', [BorrowController::class, 'show'])
+    ->name('borrows.show');
         
 Route::get('/dashboard', function () {
     return view('dashboard');
