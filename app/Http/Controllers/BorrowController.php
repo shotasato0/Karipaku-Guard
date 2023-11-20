@@ -13,4 +13,12 @@ class BorrowController extends Controller
         return view('index')
             ->with(['borrows' => $borrows]);
     }
+
+    public function friend($id) {
+        $borrow = Borrow::find($id); 
+        // $borrows = Borrow::latest()->get();
+
+        return view('friends.show')
+            ->with(['borrow' => $borrow]);
+    }
 }

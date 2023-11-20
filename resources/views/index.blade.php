@@ -35,12 +35,12 @@
                             @forelse ($borrows as $borrow)
                                 <tr class="bg-white border-b">
                                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                        <a href="{{ route('borrows.show', $borrow->id) }}" class="hover:text-blue-600">
+                                        <a href="{{ route('borrows.friend', $borrow->friend->id) }}" class="hover:text-blue-600">
                                             {{ $borrow->friend->name }}
                                         </a>
                                     </td>
                                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                        Nintendo Switch
+                                        <a href=""></a>
                                     </td>
                                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                         2023-01-15

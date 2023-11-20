@@ -21,8 +21,8 @@ Route::get('/friends/{id}', [FriendController::class, 'show'])
 
 Route::get('/', [BorrowController::class, 'index'])
     ->name('borrows.index');
-Route::get('/borrows/{id}', [BorrowController::class, 'show'])
-    ->name('borrows.show');
+Route::get('/borrows/{id}', [BorrowController::class, 'friend'])
+    ->name('borrows.friend');
         
 Route::get('/dashboard', function () {
     return view('dashboard');

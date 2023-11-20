@@ -1,5 +1,5 @@
 <x-header>
-    <x-slot name="title">{{ $friend }} - Karipaku Guard</x-slot>
+    <x-slot name="title">{{ $borrow }} - Karipaku Guard</x-slot>
 
     <body class="bg-gray-100">
         <div class="container mx-auto px-4 md:px-0">
@@ -9,9 +9,9 @@
                     &laquo; Back
                 </a>
                 <h1 class="text-3xl font-bold mb-6">
-                    {{ $friend->name }}
+                    {{ $borrow->friend->name }}
                 </h1>
-                @if ($friend->is_active)
+                @if ($borrow->friend->is_active)
                     <p>This friend is active.</p>
                 @else
                     <p>This friend is inactive.</p>
@@ -29,12 +29,12 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="border px-4 py-2">{{ $friend->age }}</td>
-                            <td class="border px-4 py-2">{{ $friend->gender }}</td>
-                            <td class="border px-4 py-2">{{ $friend->phone }}</td>
-                            <td class="border px-4 py-2">{{ $friend->email }}</td>
-                            <td class="border px-4 py-2">{{ $friend->address }}</td>
-                            <td class="border px-4 py-2">{{ $friend->relationship_type }}</td>
+                            <td class="border px-4 py-2">{{ $borrow->friend->age }}</td>
+                            <td class="border px-4 py-2">{{ $borrow->friend->gender }}</td>
+                            <td class="border px-4 py-2">{{ $borrow->friend->phone }}</td>
+                            <td class="border px-4 py-2">{{ $borrow->friend->email }}</td>
+                            <td class="border px-4 py-2">{{ $borrow->friend->address }}</td>
+                            <td class="border px-4 py-2">{{ $borrow->friend->relationship_type }}</td>
                         </tr>
                     </tbody>
                 </table>
