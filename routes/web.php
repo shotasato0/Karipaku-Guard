@@ -23,6 +23,11 @@ Route::get('/', [BorrowController::class, 'index'])
     ->name('borrows.index');
 Route::get('/borrows/{id}', [BorrowController::class, 'friend'])
     ->name('borrows.friend');
+
+Route::get('/borrows/item', [BorrowController::class, 'item'])
+    ->name('borrows.item');
+Route::get('/borrows/name', [BorrowController::class, 'name'])
+    ->name('borrows.name');
         
 Route::get('/dashboard', function () {
     return view('dashboard');
