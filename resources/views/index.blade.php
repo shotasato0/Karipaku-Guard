@@ -39,13 +39,13 @@
                                             {{ $borrow->item_name }}
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            2023-01-15
+                                            {{ $borrow->borrowed_at }}
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            30日
+                                            {{ $borrow->days_passed }}
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            80
+                                            {{ $borrow->trust_score }}
                                         </td>
                                     </tr>
                                 @empty
