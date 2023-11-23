@@ -18,7 +18,7 @@ class Borrow extends Model
     ];
 
     protected $casts = [
-        'borrowed_at' => 'datetime',
+        'borrowed_at' => 'date',
     ];
 
     public function friend() 
