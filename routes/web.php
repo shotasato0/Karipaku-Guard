@@ -26,6 +26,8 @@ Route::get('/borrows/{id}', [BorrowController::class, 'friend'])
 
 Route::get('/borrows/item', [BorrowController::class, 'item'])
     ->name('borrows.item');
+    Route::get('/borrows/edit/{id}', [BorrowController::class, 'edit'])
+        ->name('borrows.edit');
         
 Route::get('/dashboard', function () {
     return view('dashboard');

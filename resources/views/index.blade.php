@@ -23,6 +23,9 @@
                                     <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
                                         信頼度スコア
                                     </th>
+                                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                        編集
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -46,6 +49,12 @@
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                             {{ $borrow->trust_score }}
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            <a href="{{ route('borrows.edit', $borrow->id) }}"
+                                                class="hover:text-blue-600">
+                                                編集
+                                            </a>
                                         </td>
                                     </tr>
                                 @empty

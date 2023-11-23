@@ -21,4 +21,11 @@ class BorrowController extends Controller
         return view('friends.show')
             ->with(['borrow' => $borrow]);
     }
+
+    public function edit($id) {
+        $borrow = Borrow::find($id);
+    
+        return view('borrows.edit')
+            ->with(['borrow' => $borrow]);
+    }
 }
