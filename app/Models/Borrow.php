@@ -17,6 +17,10 @@ class Borrow extends Model
         'trust_score',
     ];
 
+    protected $casts = [
+        'borrowed_at' => 'datetime',
+    ];
+
     public function friend() 
     {
         return $this->belongsTo(Friend::class, 'friend_id');
