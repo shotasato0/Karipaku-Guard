@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FriendController;
 use App\Http\Controllers\BorrowController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,9 +27,12 @@ Route::get('/borrows/{id}', [BorrowController::class, 'friend'])
 
 Route::get('/borrows/item', [BorrowController::class, 'item'])
     ->name('borrows.item');
-    Route::get('/borrows/edit/{id}', [BorrowController::class, 'edit'])
+Route::get('/borrows/edit/{id}', [BorrowController::class, 'edit'])
         ->name('borrows.edit');
-        
+
+Route::patch('/borrows/update/{id}', [BorrowController::class, 'update'])
+    ->name('borrows.update');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
