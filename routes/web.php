@@ -40,7 +40,7 @@ Route::get('/borrows/{borrow}/edit/', [BorrowController::class, 'edit'])
 
 Route::patch('/borrows/update/{id}', [BorrowController::class, 'update'])
     ->name('borrows.update')
-    ->where('id', '[0-9]+'); 
+    ->where('id', '[0-9]+');
 
 Route::delete('/borrows/{borrow}', [BorrowController::class, 'destroy'])
     ->name('borrows.destroy')

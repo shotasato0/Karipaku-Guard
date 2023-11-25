@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Borrow;
+use App\Models\Friend;
 
 class BorrowController extends Controller
 {
@@ -22,10 +23,43 @@ class BorrowController extends Controller
         return view('borrows.create');
     }
 
-    public function store() {
-        return view('borrows.store')
-            ->with(['borrow' => $borrow]);
+    // public function store(Request $request) {
+    //     // 友達モデルを作成
+    //     // $friend = new Friend();
+    //     // $friend->name = $request->friend_name;
+    //     // $friend->save();
+    //     $borrow = new Borrow();
+    //     $friend = $borrow->friend;
+
+    //     // 借り物モデルを作成
+    //     $borrow->friend_id = $request->friend_id;
+    //     $borrow->item_name = $request->item_name;
+    //     $borrow->borrowed_at = $request->borrowed_at;
+    //     $borrow->trust_score = $request->trust_score;
+    //     $borrow->save();
+
+    //     return redirect()
+    //         ->route('borrows.index');
+    // }
+    public function store(Request $request) {
+        // 友達モデルを作成
+        $friend = new Friend();
+        $friend->name = $request->friend_name;
+        // ...他の必要なフィールドを設定
+        $friend->save();
+    
+        // 借り物モデルを作成
+        $borrow = new Borrow();
+        $borrow->friend_id = $friend->id; // 新しく作成したFriendのIDを設定
+        $borrow->item_name = $request->item_name;
+        $borrow->borrowed_at = $request->borrowed_at;
+        $borrow->trust_score = $request->trust_score;
+        $borrow->save();
+    
+        return redirect()
+            ->route('borrows.index');
     }
+    
 
     public function edit(Borrow $borrow) {
         return view('borrows.edit')

@@ -10,6 +10,7 @@
                             <form action="{{ route('borrows.store') }}" method="POST">
                                 @csrf
                                 <tr class="bg-white border-b">
+                                    <input type="hidden" name="friend_id" value="">
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <input type="text" name="friend_name" placeholder="借りた人の名前"
                                             class="border rounded px-2 py-1">
