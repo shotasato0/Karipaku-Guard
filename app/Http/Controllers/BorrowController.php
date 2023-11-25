@@ -14,20 +14,33 @@ class BorrowController extends Controller
             ->with(['borrows' => $borrows]);
     }
 
-    public function friend($id) {
-        $borrow = Borrow::find($id); 
-        // $borrows = Borrow::latest()->get();
-
+    public function friend(Borrow $borrow) {
         return view('friends.show')
             ->with(['borrow' => $borrow]);
-    }
-
-    public function edit($id) {
-        $borrow = Borrow::find($id);
-    
+        }
+    public function edit(Borrow $borrow) {
         return view('borrows.edit')
             ->with(['borrow' => $borrow]);
     }
 
-    
+    public function update(Request $request, Borrow $borrow) {
+        // friendモデルを明示的に取得
+        $friend = $borrow->friend;
+
+        // 取得したモデルに対して変更を加える
+        if ($friend) {
+            $friend->name = $request->friend_name;
+            $friend->save(); // 変更を保存
+        }
+
+        $borrow->friend_id = $request->friend_id;
+        $borrow->item_name = $request->item_name;
+        $borrow->borrowed_at = $request->borrowed_at;
+        $borrow->trust_score = $request->trust_score;
+        $borrow->save();
+
+        return redirect()
+            ->route('borrows.index', $borrow);
+    }
 }
+

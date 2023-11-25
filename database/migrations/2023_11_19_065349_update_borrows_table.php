@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('trust_score')->default(100); // 信頼度スコア(初期値は100)
             $table->timestamps();
 
+            //外部キー制約（リレーションシップの一種）
             $table
                 ->foreign('friend_id') // 上で定義したfriend_idを
                 ->references('id') // idに結びつける

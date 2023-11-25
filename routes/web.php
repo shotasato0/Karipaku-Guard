@@ -17,18 +17,18 @@ use App\Http\Controllers\BorrowController;
 */
 Route::get('/friends', [FriendController::class, 'index'])
     ->name('friends.index');
-Route::get('/friends/{id}', [FriendController::class, 'show'])
+Route::get('/friends/{borrow}', [FriendController::class, 'show'])
     ->name('friends.show');
 
 Route::get('/', [BorrowController::class, 'index'])
     ->name('borrows.index');
-Route::get('/borrows/{id}', [BorrowController::class, 'friend'])
+Route::get('/borrows/{borrow}', [BorrowController::class, 'friend'])
     ->name('borrows.friend');
 
 Route::get('/borrows/item', [BorrowController::class, 'item'])
     ->name('borrows.item');
-Route::get('/borrows/edit/{id}', [BorrowController::class, 'edit'])
-        ->name('borrows.edit');
+Route::get('/borrows/{borrow}/edit/', [BorrowController::class, 'edit'])
+    ->name('borrows.edit');
 
 Route::patch('/borrows/update/{id}', [BorrowController::class, 'update'])
     ->name('borrows.update');

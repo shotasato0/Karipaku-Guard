@@ -5,12 +5,14 @@
             <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
                     <div class="overflow-hidden">
-                        <form method="POST" action="{{ route('borrows.update', $borrow->id) }}">
+                        <form method="POST" action="{{ route('borrows.update', $borrow) }}">
 
                             @csrf
                             @method('PATCH')
 
                             <div class="mb-4">
+                                 <!-- friend_idのための隠されたフィールド -->
+                                <input type="hidden" name="friend_id" value="{{ $borrow->friend_id }}">
                                 <label for="friend_name" class="block text-gray-700 text-sm font-bold mb-2">
                                     借りた人の名前
                                 </label>
