@@ -29,6 +29,9 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <a href="{{ route('borrows.create') }}" class="bg-white hover:text-blue-600 text-sm text-gray-900 font-light px-6 py-4">
+                                    新規作成
+                                </a>
                                 <!-- 繰り返しのアイテムデータがここに入ります -->
                                 @forelse ($borrows as $borrow)
                                     <tr class="bg-white border-b">
@@ -51,10 +54,15 @@
                                             {{ $borrow->trust_score }}
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            <a href="{{ route('borrows.edit', $borrow) }}"
-                                                class="hover:text-blue-600">
+                                            <a href="{{ route('borrows.edit', $borrow) }}" class="hover:text-blue-600">
                                                 編集
                                             </a>
+                                            <form action="{{ route('borrows.destroy', $borrow) }}" method="POST"
+                                                class="inline-block">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="hover:text-red-600">削除</button>
+                                            </form>
                                         </td>
                                     </tr>
                                 @empty

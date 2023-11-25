@@ -18,6 +18,15 @@ class BorrowController extends Controller
         return view('friends.show')
             ->with(['borrow' => $borrow]);
         }
+    public function create() {
+        return view('borrows.create');
+    }
+
+    public function store() {
+        return view('borrows.store')
+            ->with(['borrow' => $borrow]);
+    }
+
     public function edit(Borrow $borrow) {
         return view('borrows.edit')
             ->with(['borrow' => $borrow]);
@@ -41,6 +50,22 @@ class BorrowController extends Controller
 
         return redirect()
             ->route('borrows.index', $borrow);
+    }
+
+    public function destroy(Borrow $borrow) {
+        // 削除する前に関連する友達モデルを取得
+        $friend = $borrow->friend;
+
+        // 友達モデルが存在する場合は削除
+        if ($friend) {
+            $friend->delete();
+        }
+
+        // 借り物モデルを削除
+        $borrow->delete();
+
+        return redirect()
+            ->route('borrows.index');
     }
 }
 

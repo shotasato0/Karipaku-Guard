@@ -18,20 +18,36 @@ use App\Http\Controllers\BorrowController;
 Route::get('/friends', [FriendController::class, 'index'])
     ->name('friends.index');
 Route::get('/friends/{borrow}', [FriendController::class, 'show'])
-    ->name('friends.show');
+    ->name('friends.show')
+    ->where('borrow', '[0-9]+');
 
 Route::get('/', [BorrowController::class, 'index'])
     ->name('borrows.index');
 Route::get('/borrows/{borrow}', [BorrowController::class, 'friend'])
-    ->name('borrows.friend');
+    ->name('borrows.friend')
+    ->where('borrow', '[0-9]+');
 
 Route::get('/borrows/item', [BorrowController::class, 'item'])
     ->name('borrows.item');
+
+Route::post('/borrows/store', [BorrowController::class, 'store'])
+    ->name('borrows.store');
+Route::get('/borrows/create', [BorrowController::class, 'create'])
+    ->name('borrows.create');
+
 Route::get('/borrows/{borrow}/edit/', [BorrowController::class, 'edit'])
     ->name('borrows.edit');
 
 Route::patch('/borrows/update/{id}', [BorrowController::class, 'update'])
-    ->name('borrows.update');
+    ->name('borrows.update')
+    ->where('id', '[0-9]+'); 
+
+Route::delete('/borrows/{borrow}', [BorrowController::class, 'destroy'])
+    ->name('borrows.destroy')
+    ->where('borrow', '[0-9]+');
+
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -45,3 +61,4 @@ Route::middleware('auth')->group(function () {
 
 
 require __DIR__.'/auth.php';
+
