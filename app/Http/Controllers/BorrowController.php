@@ -18,7 +18,8 @@ class BorrowController extends Controller
     public function friend(Borrow $borrow) {
         return view('friends.show')
             ->with(['borrow' => $borrow]);
-        }
+    }
+
     public function create() {
         return view('borrows.create');
     }

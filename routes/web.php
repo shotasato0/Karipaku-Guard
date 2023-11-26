@@ -15,11 +15,11 @@ use App\Http\Controllers\BorrowController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/friends', [FriendController::class, 'index'])
-    ->name('friends.index');
-Route::get('/friends/{borrow}', [FriendController::class, 'show'])
-    ->name('friends.show')
-    ->where('borrow', '[0-9]+');
+// Route::get('/friends', [FriendController::class, 'index'])
+//     ->name('friends.index');
+// Route::get('/friends/{borrow}', [FriendController::class, 'show'])
+//     ->name('friends.show')
+//     ->where('borrow', '[0-9]+');
 
 Route::get('/', [BorrowController::class, 'index'])
     ->name('borrows.index');
