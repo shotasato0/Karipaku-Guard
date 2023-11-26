@@ -31,7 +31,7 @@
                                             class="border rounded px-2 py-1">
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <button type="submit" class="hover:text-blue-600">追加</button>
+                                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">追加</button>
                                     </td>
                                 </tr>
                             </form>
