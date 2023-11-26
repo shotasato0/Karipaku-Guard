@@ -9,6 +9,25 @@
 
                             @csrf
                             @method('PATCH')
+                            @error('friend_name')
+                                <p class="text-red-500 text-sm">{{ $message }}</p>
+                            @enderror
+
+                            @error('friend_id')
+                                <p class="text-red-500 text-sm">{{ $message }}</p>
+                            @enderror
+
+                            @error('item_name')
+                                <p class="text-red-500 text-sm">{{ $message }}</p>
+                            @enderror
+
+                            @error('borrowed_at')
+                                <p class="text-red-500 text-sm">{{ $message }}</p>
+                            @enderror
+
+                            @error('trust_score')
+                                <p class="text-red-500 text-sm">{{ $message }}</p>
+                            @enderror
 
                             <div class="mb-4">
                                  <!-- friend_idのための隠されたフィールド -->

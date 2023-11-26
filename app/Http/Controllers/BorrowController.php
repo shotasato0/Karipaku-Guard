@@ -25,6 +25,17 @@ class BorrowController extends Controller
     }
 
     public function store(Request $request) {
+        $validatedData = $request->validate([
+            'friend_name' => 'required|string|max:255',
+            'item_name' => 'required|string|max:255',
+            'borrowed_at' => 'required|date',
+            'trust_score' => 'required|numeric|min:0|max:100'
+        ]);
+    
+        // バリデーションが成功した場合の処理
+        // 以下、既存のコード...
+    
+    
         // 友達モデルを作成
         $friend = new Friend();
         $friend->name = $request->friend_name;
@@ -50,6 +61,18 @@ class BorrowController extends Controller
     }
 
     public function update(Request $request, Borrow $borrow) {
+        $validatedData = $request->validate([
+            'friend_name' => 'required|string|max:255',
+            'friend_id' => 'required|integer|exists:friends,id',
+            'item_name' => 'required|string|max:255',
+            'borrowed_at' => 'required|date',
+            'trust_score' => 'required|numeric|min:0|max:100'
+        ]);
+    
+        // バリデーションが成功した場合の処理
+        // 以下、既存のコード...
+    
+    
         // friendモデルを明示的に取得
         $friend = $borrow->friend;
 

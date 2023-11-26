@@ -7,6 +7,21 @@
                     <div class="overflow-hidden">
                         <table class="min-w-full">
                             <!-- レコードの挿入フォーム -->
+                            @error('friend_name')
+                                <div class="text-red-500">{{ $message }}</div>
+                            @enderror
+
+                            @error('item_name')
+                                <div class="text-red-500">{{ $message }}</div>
+                            @enderror
+
+                            @error('borrowed_at')
+                                <div class="text-red-500">{{ $message }}</div>
+                            @enderror
+
+                            @error('trust_score')
+                                <div class="text-red-500">{{ $message }}</div>
+                            @enderror
                             <form action="{{ route('borrows.store') }}" method="POST">
                                 @csrf
                                 <tr class="bg-white border-b">
@@ -31,7 +46,8 @@
                                             class="border rounded px-2 py-1">
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">追加</button>
+                                        <button type="submit"
+                                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">追加</button>
                                     </td>
                                 </tr>
                             </form>
