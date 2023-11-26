@@ -23,24 +23,6 @@ class BorrowController extends Controller
         return view('borrows.create');
     }
 
-    // public function store(Request $request) {
-    //     // 友達モデルを作成
-    //     // $friend = new Friend();
-    //     // $friend->name = $request->friend_name;
-    //     // $friend->save();
-    //     $borrow = new Borrow();
-    //     $friend = $borrow->friend;
-
-    //     // 借り物モデルを作成
-    //     $borrow->friend_id = $request->friend_id;
-    //     $borrow->item_name = $request->item_name;
-    //     $borrow->borrowed_at = $request->borrowed_at;
-    //     $borrow->trust_score = $request->trust_score;
-    //     $borrow->save();
-
-    //     return redirect()
-    //         ->route('borrows.index');
-    // }
     public function store(Request $request) {
         // 友達モデルを作成
         $friend = new Friend();

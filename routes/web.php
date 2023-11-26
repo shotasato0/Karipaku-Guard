@@ -38,7 +38,7 @@ Route::get('/borrows/create', [BorrowController::class, 'create'])
 Route::get('/borrows/{borrow}/edit/', [BorrowController::class, 'edit'])
     ->name('borrows.edit');
 
-Route::patch('/borrows/update/{id}', [BorrowController::class, 'update'])
+Route::patch('/borrows/update/{borrow}', [BorrowController::class, 'update'])
     ->name('borrows.update')
     ->where('id', '[0-9]+');
 
