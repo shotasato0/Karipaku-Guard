@@ -70,7 +70,6 @@ class BorrowController extends Controller
         ]);
     
         // バリデーションが成功した場合の処理
-        // 以下、既存のコード...
     
     
         // friendモデルを明示的に取得
