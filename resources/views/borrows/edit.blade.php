@@ -25,10 +25,6 @@
                                 <p class="text-red-500 text-sm">{{ $message }}</p>
                             @enderror
 
-                            @error('trust_score')
-                                <p class="text-red-500 text-sm">{{ $message }}</p>
-                            @enderror
-
                             <div class="mb-4">
                                  <!-- friend_idのための隠されたフィールド -->
                                 <input type="hidden" name="friend_id" value="{{ $borrow->friend_id }}">
@@ -54,15 +50,6 @@
                                 </label>
                                 <input type="date" name="borrowed_at" id="borrowed_at"
                                     value="{{ $borrow->borrowed_at->format('Y-m-d') }}"
-                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                            </div>
-
-                            <div class="mb-4">
-                                <label for="trust_score" class="block text-gray-700 text-sm font-bold mb-2">
-                                    信頼度スコア
-                                </label>
-                                <input type="number" name="trust_score" id="trust_score"
-                                    value="{{ $borrow->trust_score }}"
                                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                             </div>
 

@@ -41,6 +41,6 @@ class Borrow extends Model
     public function getTrustScoreAttribute()
     {
         $daysPassed = $this->days_passed; // この場合、自動的に上記のアクセサが呼ばれます。
-        return max(0, 100 - (2 * $daysPassed)); // スコアが負の数にならないようにする。
+        return max(0, 100 - (1 * $daysPassed)); // スコアが負の数にならないようにする。
     }
 }

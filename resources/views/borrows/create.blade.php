@@ -19,27 +19,21 @@
                                 <div class="text-red-500">{{ $message }}</div>
                             @enderror
 
-                            @error('trust_score')
-                                <div class="text-red-500">{{ $message }}</div>
-                            @enderror
                             <form action="{{ route('borrows.store') }}" method="POST">
                                 @csrf
                                 <tr class="bg-white border-b">
                                     <input type="hidden" name="friend_id" value="">
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <input type="text" name="friend_name" placeholder="借りた人の名前"
+                                        <input type="text" name="friend_name" value="{{ old('friend_name') }}" placeholder="借りた人の名前"
                                             class="border rounded px-2 py-1">
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <input type="text" name="item_name" placeholder="借りた物の名前"
+                                        <input type="text" name="item_name" value="{{ old('item_name') }}" placeholder="借りた物の名前"
                                             class="border rounded px-2 py-1">
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <input type="date" name="borrowed_at" class="border rounded px-2 py-1">
+                                        <input type="date" name="borrowed_at" value="{{ old('borrowed_at') }}" class="border rounded px-2 py-1">
                                     </td>
-                                    <td class="px-6 py-4 whitespace-nowrap">
-                                        <input type="number" name="trust_score" placeholder="信頼度スコア"
-                                            class="border rounded px-2 py-1">
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <button type="submit"

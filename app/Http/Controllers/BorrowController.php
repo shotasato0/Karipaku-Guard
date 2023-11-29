@@ -29,7 +29,6 @@ class BorrowController extends Controller
             'friend_name' => 'required|string|max:255',
             'item_name' => 'required|string|max:255',
             'borrowed_at' => 'required|date',
-            'trust_score' => 'required|numeric|min:0|max:100'
         ]);
     
         // バリデーションが成功した場合の処理
@@ -46,7 +45,6 @@ class BorrowController extends Controller
         $borrow->friend_id = $friend->id; // 新しく作成したFriendのIDを設定
         $borrow->item_name = $request->item_name;
         $borrow->borrowed_at = $request->borrowed_at;
-        $borrow->trust_score = $request->trust_score;
         $borrow->save();
     
         return redirect()
@@ -65,12 +63,8 @@ class BorrowController extends Controller
             'friend_id' => 'required|integer|exists:friends,id',
             'item_name' => 'required|string|max:255',
             'borrowed_at' => 'required|date',
-            'trust_score' => 'required|numeric|min:0|max:100'
         ]);
-    
-        // バリデーションが成功した場合の処理
-    
-    
+
         // friendモデルを明示的に取得
         $friend = $borrow->friend;
 
@@ -83,7 +77,6 @@ class BorrowController extends Controller
         $borrow->friend_id = $request->friend_id;
         $borrow->item_name = $request->item_name;
         $borrow->borrowed_at = $request->borrowed_at;
-        $borrow->trust_score = $request->trust_score;
         $borrow->save();
 
         return redirect()
