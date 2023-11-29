@@ -37,4 +37,10 @@ class Borrow extends Model
         // この結果、借りた日から現在までの経過日数が計算され、返されます。
         return now()->diffInDays($this->borrowed_at);
     }
+
+    public function getTrustScoreAttribute()
+    {
+        $daysPassed = $this->days_passed; // この場合、自動的に上記のアクセサが呼ばれます。
+        return max(0, 100 - (2 * $daysPassed)); // スコアが負の数にならないようにする。
+    }
 }

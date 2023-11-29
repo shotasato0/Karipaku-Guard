@@ -35,10 +35,6 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                {{-- <a href="{{ route('borrows.create') }}"
-                                    class="bg-white hover:text-blue-600 text-sm text-gray-900 font-light px-6 py-4">
-                                    新規作成
-                                </a> --}}
                                 @forelse ($borrows as $borrow)
                                     <tr class="bg-white border-b">
                                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">

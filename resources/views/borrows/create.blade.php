@@ -37,10 +37,6 @@
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <input type="date" name="borrowed_at" class="border rounded px-2 py-1">
                                     </td>
-                                    {{-- <td class="px-6 py-4 whitespace-nowrap">
-                                        <input type="number" name="days_passed" placeholder="経過日数"
-                                            class="border rounded px-2 py-1">
-                                    </td> --}}
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <input type="number" name="trust_score" placeholder="信頼度スコア"
                                             class="border rounded px-2 py-1">
