@@ -15,12 +15,19 @@ use App\Http\Controllers\BorrowController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//FriendController
 // Route::get('/friends', [FriendController::class, 'index'])
 //     ->name('friends.index');
-// Route::get('/friends/{borrow}', [FriendController::class, 'show'])
-//     ->name('friends.show')
-//     ->where('borrow', '[0-9]+');
+Route::get('/friends/{borrow}', [FriendController::class, 'show'])
+    ->name('friends.show')
+    ->where('borrow', '[0-9]+');
+Route::get('/friends/{borrow}/edit/', [FriendController::class, 'edit'])
+    ->name('friends.edit');
+Route::patch('/friends/update/{friend}', [FriendController::class, 'update'])
+    ->name('friends.update')
+    ->where('friend', '[0-9]+');
 
+//BorrowController
 Route::get('/', [BorrowController::class, 'index'])
     ->name('borrows.index');
 Route::get('/borrows/{borrow}', [BorrowController::class, 'friend'])
@@ -45,9 +52,6 @@ Route::patch('/borrows/update/{borrow}', [BorrowController::class, 'update'])
 Route::delete('/borrows/{borrow}', [BorrowController::class, 'destroy'])
     ->name('borrows.destroy')
     ->where('borrow', '[0-9]+');
-
-
-
 
 Route::get('/dashboard', function () {
     return view('dashboard');

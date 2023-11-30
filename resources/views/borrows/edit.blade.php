@@ -5,12 +5,11 @@
             <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
                     <a href="/"
-                    class="mb-5 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
-                    &laquo; Back
-                </a>
+                        class="mb-5 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                        &laquo; Back
+                    </a>
                     <div class="overflow-hidden">
                         <form method="POST" action="{{ route('borrows.update', $borrow) }}">
-
                             @csrf
                             @method('PATCH')
                             @error('friend_name')
@@ -30,7 +29,7 @@
                             @enderror
 
                             <div class="mb-4">
-                                 <!-- friend_idのための隠されたフィールド -->
+                                <!-- friend_idのための隠されたフィールド -->
                                 <input type="hidden" name="friend_id" value="{{ $borrow->friend_id }}">
                                 <label for="friend_name" class="block text-gray-700 text-sm font-bold mb-2">
                                     借りた人の名前
@@ -58,9 +57,8 @@
                             </div>
 
                             <div class="flex items-center justify-between">
-                                <button
-                                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                                    type="submit">
+                                <button type="submit"
+                                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                                     更新
                                 </button>
                             </div>

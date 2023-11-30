@@ -32,8 +32,6 @@ class BorrowController extends Controller
         ]);
     
         // バリデーションが成功した場合の処理
-    
-    
         // 友達モデルを作成
         $friend = new Friend();
         $friend->name = $request->friend_name;
@@ -71,7 +69,7 @@ class BorrowController extends Controller
         // 取得したモデルに対して変更を加える
         if ($friend) {
             $friend->name = $request->friend_name;
-            $friend->save(); // 変更を保存
+            $friend->save();
         }
 
         $borrow->friend_id = $request->friend_id;
