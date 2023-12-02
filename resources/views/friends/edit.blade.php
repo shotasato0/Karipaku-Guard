@@ -10,7 +10,8 @@
                 <h1 class="text-3xl font-bold mb-6">
                     {{ $borrow->friend->name }} - Edit
                 </h1>
-                <form method="POST" action="{{ route('friends.update', $borrow->friend) }}">
+                {{-- <form method="POST" action="{{ route('friends.update', $borrow->id) }}"> --}}
+                    <form method="POST" action="{{ route('friends.update', ['friend' => $borrow->friend->id]) }}">
                     @csrf
                     @method('PATCH')
                     <table class="table-auto w-full mb-6">

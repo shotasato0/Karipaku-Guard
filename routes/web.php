@@ -27,6 +27,7 @@ Route::patch('/friends/update/{friend}', [FriendController::class, 'update'])
     ->name('friends.update')
     ->where('friend', '[0-9]+');
 
+
 //BorrowController
 Route::get('/', [BorrowController::class, 'index'])
     ->name('borrows.index');

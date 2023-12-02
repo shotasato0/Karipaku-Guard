@@ -36,26 +36,31 @@ class FriendController extends Controller
     }
 
     public function update(Request $request, Friend $friend)
-    {
-        $validateData = $request->validate([
-            'age' => 'required|string|max:255',
-            'gender' => 'required|string|max:255',
-            'phone' => 'required|string|max:255',
-            'email' => 'required|string|max:255',
-            'address' => 'required|string|max:255',
-            'relationship_type' => 'required|string|max:255',
-        ]);
+{
+    $validateData = $request->validate([
+        'age' => 'required|string|max:255',
+        'gender' => 'required|string|max:255',
+        'phone' => 'required|string|max:255',
+        'email' => 'required|string|max:255',
+        'address' => 'required|string|max:255',
+        'relationship_type' => 'required|string|max:255',
+    ]);
 
-        $friend->age = $request->age;
-        $friend->gender = $request->gender;
-        $friend->phone = $request->phone;
-        $friend->email = $request->email;
-        $friend->address = $request->address;
-        $friend->relationship_type = $request->relationship_type;
-        $friend->save();
+    $friend->age = $request->age;
+    $friend->gender = $request->gender;
+    $friend->phone = $request->phone;
+    $friend->email = $request->email;
+    $friend->address = $request->address;
+    $friend->relationship_type = $request->relationship_type;
+    $friend->save();
 
+    if ($friend->borrow) {
         $borrowId = $friend->borrow->id;
-        return redirect()
-            ->route('friends.show', ['borrow' => $borrowId]);
+        return redirect()->route('friends.show', ['borrow' => $borrowId]);
+    } else {
+        // `borrow` リレーションシップがない場合のリダイレクト先を設定
+        return redirect()->route('borrows.index');
     }
+}
+
 }
