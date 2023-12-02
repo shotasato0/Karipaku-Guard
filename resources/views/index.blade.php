@@ -4,7 +4,7 @@
         <div class="flex flex-col">
             <div class="flex justify-end mb-4">
                 <a href="{{ route('borrows.create') }}"
-                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-3 mr-2 rounded">
                     新規作成
                 </a>
             </div>
@@ -14,7 +14,7 @@
                         <table class="min-w-full">
                             <thead class="bg-gray-200">
                                 <tr>
-                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                    <th scope="col" class="text-lg  font-semibold text-gray-900 px-6 py-4 text-left">
                                         借りた人の名前
                                     </th>
                                     <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
@@ -27,10 +27,13 @@
                                         経過日数
                                     </th>
                                     <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
-                                        信頼度スコア
+                                        信頼度
                                     </th>
-                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-2 py-4 text-left">
                                         編集
+                                    </th>
+                                    <th scope="col" class="text-lg font-semibold text-gray-900 py-4 text-left">
+                                        削除
                                     </th>
                                 </tr>
                             </thead>
@@ -55,20 +58,21 @@
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                             {{ $borrow->trust_score }}
                                         </td>
-                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                        <td class="text-sm text-gray-900 font-light py-4 whitespace-wrap">
                                             <a href="{{ route('borrows.edit', $borrow) }}"
-                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2 inline-block align-middle text-center"
-                                                style="line-height: normal; height: 38px; width: 100px;"> <!-- 幅を指定 -->
+                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 rounded inline-block align-middle text-center"
+                                                style="line-height: normal; height: 38px; width: 80px;">
                                                 編集
                                             </a>
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light py-4 whitespace-wrap">
                                             <form action="{{ route('borrows.destroy', $borrow) }}" method="POST"
                                                 class="inline-block align-middle" id="js-borrow-delete">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit"
                                                     class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
-                                                    style="line-height: normal; height: 38px; width: 100px;">
-                                                    <!-- 幅を指定 -->
+                                                    style="line-height: normal; height: 38px; width: 80px;">
                                                     削除
                                                 </button>
                                             </form>
@@ -77,7 +81,7 @@
 
                                     </tr>
                                 @empty
-                                    <td class="text-center py-4" colspan="6">No Data</td>
+                                    <td class="text-center py-4" colspan="7">No Data</td>
                                 @endforelse
                             </tbody>
                         </table>
