@@ -4,10 +4,9 @@
         <div class="flex flex-col">
             <div class="flex justify-end mb-4">
                 <div class="flex items-center mx-2">
-                    <form action="{{ route('search.index') }}" method="POST">
+                    <form action="{{ route('search.index') }}" method="GET">
 
                         @csrf
-                        @method('PATCH')
 
                         <div class="relative mr-4">
                             <input type="text" placeholder="検索" name="keyword"
