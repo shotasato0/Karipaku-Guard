@@ -833,7 +833,7 @@
 
 <body class="antialiased">
     {{-- header --}}
-    <header class="text-gray-600 body-font">
+    <header class="text-gray-600 body-font bg-gray-200">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
             <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
                 <img src="../../../bomb.png" alt="説明" class="w-9 sm:w-25 lg:w-40">
@@ -841,7 +841,7 @@
             </a>
             <nav
                 class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center">
-                <a class="mr-5 hover:text-gray-900 font-bold    ">アプリの説明</a>
+                <a class="mr-5 hover:text-gray-900 font-bold">アプリの説明</a>
             </nav>
         </div>
     </header>
@@ -851,16 +851,24 @@
         @if (Route::has('login'))
             <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
                 @auth
-                    <a href="{{ url('/dashboard') }}"
-                        class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
+                    {{-- <a href="{{ url('/dashboard') }}"
+                        class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline
+                        focus:outline-2 focus:rounded-sm focus:outline-red-500">
+                        Dashboard
+                    </a> --}}
                 @else
                     <a href="{{ route('login') }}"
-                        class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log
-                        in</a>
+                        class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline
+                        focus:outline-2 focus:rounded-sm focus:outline-red-500">
+                        ログイン
+                    </a>
 
                     @if (Route::has('register'))
                         <a href="{{ route('register') }}"
-                            class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
+                            class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline
+                            focus:outline-2 focus:rounded-sm focus:outline-red-500">
+                            登録
+                        </a>
                     @endif
                 @endauth
             </div>
@@ -869,13 +877,13 @@
         {{-- main --}}
         {{ $slot }}
     </div>
+    <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 my-4 flex flex-wrap text-base justify-center">
+        <a class="mr-5 hover:text-gray-900">よくある質問</a>
+        <a class="mr-5 hover:text-gray-900">プライバシーポリシーと利用規約</a>
+        <a class="mr-5 hover:text-gray-900">お問い合わせ</a>
+    </nav>
+
     <footer class="text-gray-600 body-font">
-        <nav
-            class="md:mr-auto md:ml-4 md:py-1 md:pl-4 my-4 flex flex-wrap text-base justify-center">
-            <a class="mr-5 hover:text-gray-900">よくある質問</a>
-            <a class="mr-5 hover:text-gray-900">プライバシーポリシーと利用規約</a>
-            <a class="mr-5 hover:text-gray-900">お問い合わせ</a>
-        </nav>
         <div class="bg-gray-100">
             <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
                 <p class="text-gray-500 text-sm text-center sm:text-left">© 2023 Karipaku Guard —
