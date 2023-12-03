@@ -3,10 +3,14 @@
     <div class="container mx-auto p-12">
         <div class="flex flex-col">
             <div class="flex justify-end mb-4">
-                <a href="{{ route('borrows.create') }}"
-                    class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-3 mr-2 rounded">
-                    新規作成
-                </a>
+                <div class="flex items-center mx-2">
+                    <input type="text" placeholder="検索"
+                        class="px-4 py-2 mx-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <a href="{{ route('borrows.create') }}"
+                        class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded-md">
+                        新規作成
+                    </a>
+                </div>
             </div>
             <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div class="py-4 inline-block min-w-full sm:px-6 lg:px-10">
@@ -77,8 +81,6 @@
                                                 </button>
                                             </form>
                                         </td>
-
-
                                     </tr>
                                 @empty
                                     <td class="text-center py-4" colspan="7">No Data</td>
