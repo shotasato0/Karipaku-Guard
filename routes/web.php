@@ -54,6 +54,10 @@ Route::delete('/borrows/{borrow}', [BorrowController::class, 'destroy'])
     ->name('borrows.destroy')
     ->where('borrow', '[0-9]+');
 
+//SearchController
+Route::patch('/search', ['SearchController@index'])
+    ->name('search.index');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

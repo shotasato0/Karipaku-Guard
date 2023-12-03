@@ -4,13 +4,12 @@
         <div class="flex flex-col">
             <div class="flex justify-end mb-4">
                 <div class="flex items-center mx-2">
-                    <form action="" method="GET">
+                    <form action="{{ route('search.index') }}" method="POST">
 
                         @csrf
+                        @method('PATCH')
 
                         <div class="relative mr-4">
-                            {{-- <input type="text" placeholder="検索"
-                                class="px-4 py-2 mx-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 --}}
                             <input type="text" placeholder="検索" name="keyword"
                                 class="px-4 py-2 mr-48 border border-gray-300 rounded-md focus:outline-none focus:ring-2
                                 focus:ring-blue-500 focus:border-transparent w-full">
@@ -84,8 +83,10 @@
                                         <td class="text-sm text-gray-900 font-light py-4 whitespace-wrap">
                                             <form action="{{ route('borrows.destroy', $borrow) }}" method="POST"
                                                 class="inline-block align-middle" id="js-borrow-delete">
+
                                                 @csrf
                                                 @method('DELETE')
+
                                                 <button type="submit"
                                                     class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
                                                     style="line-height: normal; height: 38px; width: 80px;">
