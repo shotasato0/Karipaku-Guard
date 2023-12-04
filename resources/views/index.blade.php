@@ -4,12 +4,12 @@
         <div class="flex flex-col">
             <div class="flex justify-end mb-4">
                 <div class="flex items-center mx-2">
-                    <form action="{{ route('search.index') }}" method="GET">
+                    <form action="{{ route('search.index') }}" method="GET" onsubmit="saveKeyword(event)">
 
                         @csrf
 
                         <div class="relative mr-4">
-                            <input type="text" placeholder="検索" name="keyword"
+                            <input type="text" placeholder="検索" name="keyword" id="js-keyword"
                                 class="px-4 py-2 mr-48 border border-gray-300 rounded-md focus:outline-none focus:ring-2
                                 focus:ring-blue-500 focus:border-transparent w-full">
                             <input type="submit" value="検索"
