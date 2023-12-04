@@ -4,9 +4,7 @@
     <body class="bg-gray-100">
         <div class="container mx-auto px-4 md:px-0">
             <div class="bg-white rounded-lg shadow-lg p-5 md:p-8 my-10">
-                <a href="/" class="mb-5 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
-                    &laquo; 戻る
-                </a>
+                <x-back-link />
                 <a href="{{ route('friends.edit', $borrow) }}" class="mb-5 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
                     編集
                 </a>

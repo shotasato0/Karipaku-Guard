@@ -4,10 +4,7 @@
         <div class="flex flex-col">
             <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-                    <a href="/"
-                        class="mb-5 inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
-                        &laquo; 戻る
-                    </a>
+                    <x-back-link />
                     <div class="overflow-hidden">
                         <form method="POST" action="{{ route('borrows.update', $borrow) }}">
                             @csrf
