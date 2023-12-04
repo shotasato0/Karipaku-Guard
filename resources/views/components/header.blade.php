@@ -925,11 +925,6 @@
             </div>
         </div>
     </footer>
-    {{-- <script>
-        window.onload = function() {
-            document.getElementsByName("keyword")[0].value = "";
-        };
-    </script> --}}
 </body>
 
 </html>

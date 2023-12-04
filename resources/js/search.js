@@ -1,10 +1,14 @@
 function saveKeyword(e) {
+    // console.log();
     e.preventDefault();
     var keyword = document.getElementById("js-keyword").value;
     sessionStorage.setItem("lastKeyword", keyword);
-    console.log("Saved keyword: " + keyword);
+    // console.log("Saved keyword: " + keyword);
     e.target.submit();
 }
+
+// グローバルスコープに関数を設定
+window.saveKeyword = saveKeyword;
 
 document.addEventListener("DOMContentLoaded", function () {
     // console.log(lastKeyword);
@@ -30,3 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
 function clearKeyword() {
     sessionStorage.removeItem("lastKeyword");
 }
+
+// グローバルスコープに関数を設定
+window.clearKeyword = clearKeyword;
