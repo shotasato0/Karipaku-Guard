@@ -10,18 +10,6 @@ class SearchController extends Controller
 {
     public function index(Request $request)
     {
-        // $keyword = $request->input('keyword');
-        // $friends = collect();
-        // $borrows = collect();
-
-        // if (!empty($keyword)) {
-        //     $friends = Friend::where('name', 'like', '%'.$keyword.'%')->paginate(5);
-        //     $borrows = Borrow::where('item_name', 'like', '%'.$keyword.'%')->paginate(5);
-        // }
-
-        // // 検索結果をビューに渡す
-        // return view('search.results', compact('friends', 'borrows'));
-
         //テーブルからすべてのレコードを取得
         $borrows = Borrow::query();
 
