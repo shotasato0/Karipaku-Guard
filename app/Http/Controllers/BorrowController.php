@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreBorrowRequest;
 use Illuminate\Http\Request;
 use App\Models\Borrow;
 use App\Models\Friend;
@@ -24,14 +25,8 @@ class BorrowController extends Controller
         return view('borrows.create');
     }
 
-    public function store(Request $request) {
-        $validatedData = $request->validate([
-            'friend_name' => 'required|string|max:255',
-            'item_name' => 'required|string|max:255',
-            'borrowed_at' => 'required|date',
-        ]);
-    
-        // バリデーションが成功した場合の処理
+    public function store(StoreBorrowRequest $request) {
+        // バリデーションが成功した場合の処理（バリデーションはRequestsディレクトリのファイルに設定）
         // 友達モデルを作成
         $friend = new Friend();
         $friend->name = $request->friend_name;
@@ -55,14 +50,7 @@ class BorrowController extends Controller
             ->with(['borrow' => $borrow]);
     }
 
-    public function update(Request $request, Borrow $borrow) {
-        $validatedData = $request->validate([
-            'friend_name' => 'required|string|max:255',
-            'friend_id' => 'required|integer|exists:friends,id',
-            'item_name' => 'required|string|max:255',
-            'borrowed_at' => 'required|date',
-        ]);
-
+    public function update(StoreBorrowRequest $request, Borrow $borrow) {
         // friendモデルを明示的に取得
         $friend = $borrow->friend;
 

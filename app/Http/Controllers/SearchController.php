@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SearchRequest;
 use Illuminate\Http\Request;
 use App\Models\Friend;
 use App\Models\Borrow;
 
 class SearchController extends Controller
 {
-    public function index(Request $request)
+    public function index(SearchRequest $request)
     {
         //テーブルからすべてのレコードを取得
         $borrows = Borrow::query();

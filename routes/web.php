@@ -58,7 +58,6 @@ Route::delete('/borrows/{borrow}', [BorrowController::class, 'destroy'])
 Route::get('/search', 'App\Http\Controllers\SearchController@index')
     ->name('search.index');
 
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
