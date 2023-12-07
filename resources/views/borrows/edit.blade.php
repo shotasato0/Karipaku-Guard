@@ -5,62 +5,62 @@
             <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
                     <x-back-link />
-                    <div class="overflow-hidden">
+                    <div class="overflow-hidden rounded-lg">
                         <form method="POST" action="{{ route('borrows.update', $borrow) }}">
                             @csrf
                             @method('PATCH')
-                            @error('friend_name')
-                                <p class="text-red-500 text-sm">{{ $message }}</p>
-                            @enderror
-
-                            @error('friend_id')
-                                <p class="text-red-500 text-sm">{{ $message }}</p>
-                            @enderror
-
-                            @error('item_name')
-                                <p class="text-red-500 text-sm">{{ $message }}</p>
-                            @enderror
-
-                            @error('borrowed_at')
-                                <p class="text-red-500 text-sm">{{ $message }}</p>
-                            @enderror
-
-                            <div class="mb-4">
-                                <!-- friend_idのための隠されたフィールド -->
-                                <input type="hidden" name="friend_id" value="{{ $borrow->friend_id }}">
-                                <label for="friend_name" class="block text-gray-700 text-sm font-bold mb-2">
-                                    借りた人の名前
-                                </label>
-                                <input type="text" name="friend_name" id="friend_name"
-                                    value="{{ $borrow->friend->name }}"
-                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                            </div>
-
-                            <div class="mb-4">
-                                <label for="item_name" class="block text-gray-700 text-sm font-bold mb-2">
-                                    借りた物の名前
-                                </label>
-                                <input type="text" name="item_name" id="item_name" value="{{ $borrow->item_name }}"
-                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                            </div>
-
-                            <div class="mb-4">
-                                <label for="borrowed_at" class="block text-gray-700 text-sm font-bold mb-2">
-                                    借りた日
-                                </label>
-                                <input type="date" name="borrowed_at" id="borrowed_at"
-                                    value="{{ $borrow->borrowed_at->format('Y-m-d') }}"
-                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                            </div>
-
-                            <div class="flex items-center justify-between">
-                                <button type="submit"
-                                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                                    更新
-                                </button>
-                            </div>
+                    
+                            <table class="min-w-full">
+                                <!-- ラベル行 -->
+                                <tr class="bg-gray-100">
+                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                        借りた人の名前
+                                    </th>
+                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                        借りた物の名前
+                                    </th>
+                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                        借用日
+                                    </th>
+                                    <th class="px-6 py-3">
+                                    </th>
+                                </tr>
+                    
+                                <!-- エラーメッセージ -->
+                                @error('friend_name')
+                                    <div class="text-red-500">{{ $message }}</div>
+                                @enderror
+                                @error('item_name')
+                                    <div class="text-red-500">{{ $message }}</div>
+                                @enderror
+                                @error('borrowed_at')
+                                    <div class="text-red-500">{{ $message }}</div>
+                                @enderror
+                    
+                                <!-- 入力フィールド -->
+                                <tr class="bg-white border-b">
+                                    <input type="hidden" name="friend_id" value="{{ $borrow->friend_id }}">
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <input type="text" name="friend_name" id="friend_name" value="{{ $borrow->friend->name }}"
+                                               class="border rounded px-2 py-1 w-full">
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <input type="text" name="item_name" id="item_name" value="{{ $borrow->item_name }}"
+                                               class="border rounded px-2 py-1 w-full">
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <input type="date" name="borrowed_at" id="borrowed_at" value="{{ $borrow->borrowed_at->format('Y-m-d') }}"
+                                               class="border rounded px-2 py-1 w-full">
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <button type="submit"
+                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">更新</button>
+                                    </td>
+                                </tr>
+                            </table>
                         </form>
                     </div>
+                    
                 </div>
             </div>
         </div>
