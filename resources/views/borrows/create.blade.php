@@ -1,11 +1,11 @@
 <x-header>
-    <x-slot name="title">Karipaku Guard</x-slot>
-    <div class="container mx-auto p-8">
+    <x-slot name="title" class="text-2xl font-bold my-4">Karipaku Guard</x-slot>
+    <div class="container mx-auto p-12">
         <div class="flex flex-col">
             <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
                     <x-back-link />
-                    <div class="overflow-hidden">
+                    <div class="overflow-hidden rounded-lg">
 
                         <table class="min-w-full">
                             <tr class="bg-gray-100">
@@ -18,7 +18,7 @@
                                 <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
                                     借用日
                                 </th>
-                                <th class="px-6 py-3"> <!-- This is for the Actions column -->
+                                <th class="px-6 py-3">
                                 </th>
                             </tr>
                             @error('friend_name')
