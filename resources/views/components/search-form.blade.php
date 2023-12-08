@@ -1,4 +1,4 @@
-<div>
+<div class="flex">
     @error('keyword')
         <div class="text-red-500 text-sm leading-tight">{{ $message }}</div>
     @enderror
