@@ -25,8 +25,7 @@ class FriendController extends Controller
             abort(404);
         }
 
-        return view('friends.show')
-            ->with(['friend' => $friend]);
+        return view('friends.show', ['borrow' => $borrow, 'friend' => $borrow->friend]);
     }
 
     public function edit(Borrow $borrow)
@@ -36,31 +35,31 @@ class FriendController extends Controller
     }
 
     public function update(Request $request, Friend $friend)
-{
-    $validateData = $request->validate([
-        'age' => 'required|string|max:255',
-        'gender' => 'required|string|max:255',
-        'phone' => 'required|string|max:255',
-        'email' => 'required|string|max:255',
-        'address' => 'required|string|max:255',
-        'relationship_type' => 'required|string|max:255',
-    ]);
+    {
+        $validateData = $request->validate([
+            'age' => 'required|string|max:255',
+            'gender' => 'required|string|max:255',
+            'phone' => 'required|string|max:255',
+            'email' => 'required|string|max:255',
+            'address' => 'required|string|max:255',
+            'relationship_type' => 'required|string|max:255',
+        ]);
 
-    $friend->age = $request->age;
-    $friend->gender = $request->gender;
-    $friend->phone = $request->phone;
-    $friend->email = $request->email;
-    $friend->address = $request->address;
-    $friend->relationship_type = $request->relationship_type;
-    $friend->save();
+        $friend->age = $request->age;
+        $friend->gender = $request->gender;
+        $friend->phone = $request->phone;
+        $friend->email = $request->email;
+        $friend->address = $request->address;
+        $friend->relationship_type = $request->relationship_type;
+        $friend->save();
 
-    if ($friend->borrow) {
-        $borrowId = $friend->borrow->id;
-        return redirect()->route('friends.show', ['borrow' => $borrowId]);
-    } else {
-        // `borrow` リレーションシップがない場合のリダイレクト先を設定
-        return redirect()->route('borrows.index');
+        if ($friend->borrows->isNotEmpty()) {
+            $borrow = $friend->borrows->first();
+            return redirect()->route('friends.show', ['borrow' => $borrow->id]);
+        } else {
+            return redirect()->route('borrows.index');
+        }
+        
     }
-}
 
 }
