@@ -51,7 +51,7 @@
                                             {{ $borrow->item_name }}
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            {{-- {{ $borrow->borrowed_at->format('Y-m-d') }} --}}
+                                            {{ $borrow->borrowed_at->format('Y-m-d') }}
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                             {{ $borrow->days_passed }}
