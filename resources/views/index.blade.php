@@ -56,8 +56,9 @@
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                             {{ $borrow->days_passed }}
                                         </td>
-                                        {{-- {{ $borrow->trust_score }} --}}
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap" data-trust-score="{{ $borrow->trust_score }}">
+                                            {{-- スコアの数値 --}}
+                                            {{-- {{ $borrow->trust_score }}  --}}
                                             <img src="../../images/bomb2.png" alt="爆弾" class="w-16 ml-4" id="js-bomb">
                                             <img src="../../images/ignition.png" alt="点火" class="w-20 ml-1 hidden" id="js-ignition">
                                             <img src="../../images/exprosion.png" alt="爆発" class="w-24 hidden" id="js-exprosion">
