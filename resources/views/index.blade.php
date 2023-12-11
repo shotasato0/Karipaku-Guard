@@ -72,7 +72,7 @@
                                         </td>
                                         <td class="text-sm text-gray-900 font-light py-4 whitespace-wrap">
                                             <form action="{{ route('borrows.destroy', $borrow) }}" method="POST"
-                                                class="inline-block align-middle" id="js-borrow-delete">
+                                                class="inline-block align-middle borrow-delete-form" id="js-borrow-delete">
 
                                                 @csrf
                                                 @method('DELETE')

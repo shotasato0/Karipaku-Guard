@@ -1,11 +1,8 @@
 export function initConfirmDelete() {
-    // "js-borrow-delete"というIDを持つ要素を取得
-    const element = document.getElementById("js-borrow-delete");
-
-    // 要素が存在するかどうかをチェック
-    if (element) {
-        // 要素に対してsubmitイベントリスナーを追加
-        element.addEventListener("submit", (e) => {
+    // "borrow-delete-form"クラスを持つすべての要素を取得
+    document.querySelectorAll(".borrow-delete-form").forEach(form => {
+        // 各要素に対してsubmitイベントリスナーを追加
+        form.addEventListener("submit", (e) => {
             // デフォルトのフォーム送信を防止
             e.preventDefault();
 
@@ -17,6 +14,5 @@ export function initConfirmDelete() {
             // フォームを送信
             e.target.submit();
         });
-    }
+    });
 }
-
