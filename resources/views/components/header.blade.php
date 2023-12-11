@@ -19,6 +19,7 @@
         </div>
     </header>
 
+    {{-- main --}}
     <div
         class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-center bg-gray-100 dark:bg-gray-900 selection:bg-red-500 selection:text-white">
         @if (Route::has('login'))
@@ -46,8 +47,6 @@
                 @endauth
             </div>
         @endif
-
-        {{-- main --}}
         {{ $slot }}
     </div>
     <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 my-4 flex flex-wrap text-base justify-center">
