@@ -21,7 +21,7 @@ class Borrow extends Model
         'borrowed_at' => 'date',
     ];
 
-    public function friend() 
+    public function friend()
     {
         return $this->belongsTo(Friend::class, 'friend_id');
     }

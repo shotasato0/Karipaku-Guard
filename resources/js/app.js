@@ -1,5 +1,6 @@
 import './bootstrap';
 import './search';
+import './bomb.js';
 // "js-borrow-delete"というIDを持つ要素が存在するかどうかをチェック
 if (document.getElementById("js-borrow-delete")) {
     // 条件が真の場合、confirmdelete.jsを動的にインポート
