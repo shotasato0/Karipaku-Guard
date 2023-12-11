@@ -58,9 +58,9 @@
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                             {{ $borrow->trust_score }}
-                                            <img src="../../images/bomb2.png" alt="爆弾" class="w-16">
-                                            <img src="../../images/bomb3.png" alt="点火" class="w-16 mb-4">
-                                            <img src="../../images/exprosion.png" alt="爆発" class="w-24">
+                                            <img src="../../images/bomb2.png" alt="爆弾" class="w-16" id="js-bomb">
+                                            <img src="../../images/ignition.png" alt="点火" class="w-16 mb-4 hidden" id="js-ignition">
+                                            <img src="../../images/exprosion.png" alt="爆発" class="w-24 hidden" id="js-exprosion">
                                         </td>
                                         <td class="text-sm text-gray-900 font-light py-4 whitespace-wrap">
                                             <a href="{{ route('borrows.edit', $borrow) }}"
