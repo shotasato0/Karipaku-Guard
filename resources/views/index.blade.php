@@ -15,7 +15,7 @@
                         <table class="min-w-full">
                             <thead class="bg-gray-200">
                                 <tr>
-                                    <th scope="col" class="text-lg  font-semibold text-gray-900 px-6 py-4 text-left">
+                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
                                         借りた人の名前
                                     </th>
                                     <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
@@ -27,13 +27,13 @@
                                     <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
                                         経過日数
                                     </th>
-                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-10 py-4 text-left">
+                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
                                         信頼度
                                     </th>
-                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-2 py-4 text-left">
+                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
                                         編集
                                     </th>
-                                    <th scope="col" class="text-lg font-semibold text-gray-900 py-4 text-left">
+                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
                                         削除
                                     </th>
                                 </tr>
@@ -73,7 +73,7 @@
                                                 編集
                                             </a>
                                         </td>
-                                        <td class="text-sm text-gray-900 font-light py-4 whitespace-wrap">
+                                        <td class="text-sm text-gray-900 font-light py-4 px-6 whitespace-wrap">
                                             <form action="{{ route('borrows.destroy', $borrow) }}" method="POST"
                                                 class="inline-block align-middle borrow-delete-form"
                                                 id="js-borrow-delete">
