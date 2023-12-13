@@ -27,7 +27,7 @@ class BorrowController extends Controller
 
     public function store(StoreBorrowRequest $request) {
         // バリデーションが成功した場合の処理（バリデーションはRequestsディレクトリのファイルに設定）
-        // 友達モデルを作成
+        
         $friend = new Friend();
         $friend->name = $request->friend_name;
         // ...他の必要なフィールドを設定
