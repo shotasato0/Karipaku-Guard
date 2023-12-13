@@ -15,25 +15,25 @@
                         <table class="min-w-full">
                             <thead class="bg-gray-200">
                                 <tr>
-                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                    <th scope="col" class="table-head">
                                         借りた人の名前
                                     </th>
-                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                    <th scope="col" class="table-head">
                                         借りた物の名前
                                     </th>
-                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                    <th scope="col" class="table-head">
                                         借りた日
                                     </th>
-                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                    <th scope="col" class="table-head">
                                         経過日数
                                     </th>
-                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                    <th scope="col" class="table-head">
                                         信頼度
                                     </th>
-                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                    <th scope="col" class="table-head">
                                         編集
                                     </th>
-                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                    <th scope="col" class="table-head">
                                         削除
                                     </th>
                                 </tr>
