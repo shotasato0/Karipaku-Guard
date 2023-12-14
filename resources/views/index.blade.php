@@ -27,7 +27,7 @@
                                     <th scope="col" class="table-head">
                                         経過日数
                                     </th>
-                                    <th scope="col" class="table-head">
+                                    <th scope="col" class="table-head padding-left-2-5rem">
                                         信頼度
                                     </th>
                                     <th scope="col" class="table-head">
@@ -67,13 +67,13 @@
                                             <img src="../../images/exprosion.png" alt="爆発" class="w-24 hidden"
                                                 id="js-exprosion">
                                         </td>
-                                        <td class="text-sm text-gray-900 font-light py-4 whitespace-wrap">
+                                        <td class="pl-4 py-4 text-sm text-gray-900 font-light whitespace-wrap">
                                             <a href="{{ route('borrows.edit', $borrow) }}"
                                                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 rounded flex items-center justify-center h-10 w-20">
                                                 編集
                                             </a>
                                         </td>
-                                        <td class="text-sm text-gray-900 font-light py-4 px-6 whitespace-wrap">
+                                        <td class="px-4 py-4 text-sm text-gray-900 font-light whitespace-wrap">
                                             <form action="{{ route('borrows.destroy', $borrow) }}" method="POST"
                                                 class="inline-block align-middle borrow-delete-form"
                                                 id="js-borrow-delete">
