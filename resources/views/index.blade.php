@@ -27,7 +27,7 @@
                                     <th scope="col" class="table-head">
                                         経過日数
                                     </th>
-                                    <th scope="col" class="table-head padding-left-25rem">
+                                    <th scope="col" class="table-head padding-left-2-5rem">
                                         信頼度
                                     </th>
                                     <th scope="col" class="table-head">
@@ -60,7 +60,7 @@
                                             data-trust-score="{{ $borrow->trust_score }}">
                                             {{-- スコアの数値 --}}
                                             {{-- {{ $borrow->trust_score }}  --}}
-                                            <img src="../../images/bomb2.png" alt="爆弾" class="w-16 ml-4"
+                                            <img src="../../images/bomb2.png" alt="爆弾" class="w-16 sm:ml-4"
                                                 id="js-bomb">
                                             <img src="../../images/ignition.png" alt="点火" class="w-20 ml-1 hidden"
                                                 id="js-ignition">

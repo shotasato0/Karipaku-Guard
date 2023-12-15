@@ -18,26 +18,35 @@
     padding-left: 2.5rem;
 }
 
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .table-head {
-      display: none; 
+        display: none;
     }
     .min-w-full, .px-6 {
-      min-width: 0;
+        min-width: 0;
     }
     .border-b {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+        display: flex;
+        flex-wrap: wrap;
     }
     .border-b > td {
-      display: block;
-      width: 100%;
-      box-sizing: border-box;
+        flex: 1 1 auto;
+        min-width: 50%; 
     }
     .border-b > td:before {
-      content: attr(data-label);
-      font-weight: bold;
-      width: 100%;
+        content: attr(data-label);
+        font-weight: bold;
+        width: 100%;
+        margin-bottom: 0.5em;
     }
-  } */
+    .overflow-x-auto {
+        overflow-x: hidden;
+    }
+
+    .border-b > td[data-trust-score] {
+        flex: 1 0 100%; 
+    }
+}
+
+
+
