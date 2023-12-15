@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // この関数は、信頼スコアに基づいて画像の表示を更新します
+    // 信頼スコアに基づいて画像の表示を更新
     function updateImages(trustScore, bombElement, ignitionElement, explosionElement) {
         if (trustScore <= 50 && trustScore > 0) {
             bombElement.classList.add('hidden');
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // 信頼スコアと対応する画像を含むすべての要素を選択します
+    // 信頼スコアと対応する画像を含むすべての要素を選択
     const trustScoreElements = document.querySelectorAll('[data-trust-score]');
 
     trustScoreElements.forEach((element) => {

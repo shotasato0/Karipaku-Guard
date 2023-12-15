@@ -31,7 +31,7 @@
     }
     .border-b > td {
         flex: 1 1 auto;
-        min-width: 50%; 
+        min-width: 50%;
     }
     .border-b > td:before {
         content: attr(data-label);
@@ -44,7 +44,7 @@
     }
 
     .border-b > td[data-trust-score] {
-        flex: 1 0 100%; 
+        flex: 1 0 100%;
     }
 }
 
