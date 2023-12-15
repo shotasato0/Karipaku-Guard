@@ -3,7 +3,7 @@
     <div class="container mx-auto p-12">
         <div class="flex flex-col">
             <div class="flex lg:justify-end justify-center mb-4">
-                <div class="flex items-center mx-2">
+                <div class="sm:flex mx-2">
                     <x-search-form />
                     <x-create-button />
                 </div>
