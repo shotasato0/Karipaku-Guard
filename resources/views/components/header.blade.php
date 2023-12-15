@@ -58,7 +58,7 @@
     <footer class="text-gray-600 body-font">
         <div class="bg-gray-100">
             <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-                <p class="text-gray-500 text-sm text-center sm:text-left">© 2023 Karipaku Guard —
+                <p class="text-gray-500 text-sm text-center">© 2023 Karipaku Guard —
                     <a href="https://twitter.com/shoprogramming" rel="noopener noreferrer" class="text-gray-600 ml-1"
                         target="_blank">@shoprogramming</a>
                 </p>

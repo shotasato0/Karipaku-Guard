@@ -2,7 +2,7 @@
     <x-slot name="title" class="text-2xl font-bold my-4">Karipaku Guard</x-slot>
     <div class="container mx-auto p-12">
         <div class="flex flex-col">
-            <div class="flex justify-end mb-4">
+            <div class="flex lg:justify-end justify-center mb-4">
                 <div class="flex items-center mx-2">
                     <x-search-form />
                     <x-create-button />
@@ -27,7 +27,7 @@
                                     <th scope="col" class="table-head">
                                         経過日数
                                     </th>
-                                    <th scope="col" class="table-head padding-left-2-5rem">
+                                    <th scope="col" class="table-head padding-left-25rem">
                                         信頼度
                                     </th>
                                     <th scope="col" class="table-head">

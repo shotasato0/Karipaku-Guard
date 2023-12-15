@@ -18,3 +18,26 @@
     padding-left: 2.5rem;
 }
 
+/* @media screen and (max-width: 768px) {
+    .table-head {
+      display: none; 
+    }
+    .min-w-full, .px-6 {
+      min-width: 0;
+    }
+    .border-b {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .border-b > td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .border-b > td:before {
+      content: attr(data-label);
+      font-weight: bold;
+      width: 100%;
+    }
+  } */
