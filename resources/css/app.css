@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+* { border: 1px solid red; }
+
 
 .table-head {
     font-size: 1.125rem;
@@ -24,7 +26,8 @@
     }
 
     .min-w-full, .px-6 {
-        min-width: 0; /* セルの最小幅を0に設定し、幅が柔軟になるようにします */
+        /* セルの最小幅を0に設定し、幅が柔軟になるようにします */
+        /* min-width: 0;  */
     }
 
     .border-b {
@@ -47,8 +50,9 @@
     }
 
     .overflow-x-auto {
-        overflow-x: hidden; /* 水平スクロールを無効化 */
+        overflow-x: auto; /* 水平スクロールが必要な場合に表示されるように変更 */
     }
+    
 
     .edit-button, .delete-button {
         padding-top: 0; /* 編集ボタンの右マージンを設定 */
