@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* { border: 1px solid red; }
-
-
 .table-head {
     font-size: 1.125rem;
     font-weight: 600;
