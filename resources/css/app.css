@@ -2,27 +2,11 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-.table-head {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: #1a202c;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    text-align: left;
-}
-
 .padding-left-2-5rem {
     padding-left: 2.5rem;
 }
 
 @media screen and (max-width: 768px) {
-    .table-head {
-        display: none;
-        /* デスクトップ用のヘッダーを非表示に */
-    }
-
     .min-w-full,
     .px-6 {
         /* セルの最小幅を0に設定し、幅が柔軟になるようにします */
