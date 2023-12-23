@@ -3,7 +3,7 @@
     <div class="container mx-auto p-6 lg:p-12">
         <div class="flex flex-col space-y-4">
             <div class="flex justify-center lg:justify-end">
-                <div class="flex flex-row space-y-2 sm:space-y-0 sm:space-x-2 w-full lg:justify-end">
+                <div class="flex flex-row space-y-2 sm:space-y-0 sm:space-x-2 w-full justify-end">
                     <x-search-form />
                     <x-create-button />
                 </div>
