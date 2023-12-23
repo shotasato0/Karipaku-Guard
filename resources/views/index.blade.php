@@ -11,27 +11,27 @@
 
             <div class="overflow-x-auto rounded-lg shadow-md">
                 <table class="min-w-full divide-y divide-gray-300">
-                    <thead class="bg-gray-200 hidden sm:table-header-group">
+                    <thead class="bg-gray-200 table-header-group">
                         <tr>
-                            <th scope="col" class="px-6 py-4 text-left text-sm font-semibold text-gray-700">
+                            <th scope="col" class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 借りた人の名前
                             </th>
-                            <th scope="col" class="px-6 py-4 text-left text-sm font-semibold text-gray-700">
+                            <th scope="col" class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 借りた物の名前
                             </th>
-                            <th scope="col" class="px-6 py-4 text-left text-sm font-semibold text-gray-700">
+                            <th scope="col" class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 借りた日
                             </th>
-                            <th scope="col" class="px-6 py-4 text-left text-sm font-semibold text-gray-700">
+                            <th scope="col" class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 経過日数
                             </th>
-                            <th scope="col" class="px-6 py-4 text-left text-sm font-semibold text-gray-700">
+                            <th scope="col" class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 信頼度
                             </th>
-                            <th scope="col" class="px-6 py-4 text-left text-sm font-semibold text-gray-700">
+                            <th scope="col" class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 編集
                             </th>
-                            <th scope="col" class="px-6 py-4 text-left text-sm font-semibold text-gray-700">
+                            <th scope="col" class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 削除
                             </th>
 
