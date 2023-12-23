@@ -3,7 +3,7 @@
     <div class="container mx-auto p-6 lg:p-12">
         <div class="flex flex-col space-y-4">
             <div class="flex justify-center lg:justify-end">
-                <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 w-full lg:justify-end">
+                <div class="flex flex-row space-y-2 sm:space-y-0 sm:space-x-2 w-full lg:justify-end">
                     <x-search-form />
                     <x-create-button />
                 </div>
@@ -39,7 +39,7 @@
                     </thead>
                     <tbody class="bg-white">
                         @forelse ($borrows as $borrow)
-                            <tr class="bg-white border-b">
+                            <tr>
                                 <td data-label="借りた人"
                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                                     <a href="{{ route('borrows.friend', $borrow->id) }}" class="hover:text-blue-600">
