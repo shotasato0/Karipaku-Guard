@@ -1,4 +1,4 @@
-<x-header>
+<x-main>
     <x-slot name="title" class="text-2xl font-bold my-4">Karipaku Guard</x-slot>
     <div class="container mx-auto p-6 lg:p-12">
         <div class="flex flex-col space-y-4">
@@ -13,25 +13,32 @@
                 <table class="min-w-full divide-y divide-gray-300">
                     <thead class="bg-gray-200 table-header-group">
                         <tr>
-                            <th scope="col" class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
+                            <th scope="col"
+                                class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 借りた人の名前
                             </th>
-                            <th scope="col" class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
+                            <th scope="col"
+                                class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 借りた物の名前
                             </th>
-                            <th scope="col" class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
+                            <th scope="col"
+                                class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 借りた日
                             </th>
-                            <th scope="col" class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
+                            <th scope="col"
+                                class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 経過日数
                             </th>
-                            <th scope="col" class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
+                            <th scope="col"
+                                class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 信頼度
                             </th>
-                            <th scope="col" class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
+                            <th scope="col"
+                                class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 編集
                             </th>
-                            <th scope="col" class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
+                            <th scope="col"
+                                class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 削除
                             </th>
 
@@ -102,4 +109,4 @@
     </div>
     </div>
     </div>
-</x-header>
+</x-main>

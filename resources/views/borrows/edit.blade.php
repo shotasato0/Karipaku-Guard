@@ -1,4 +1,4 @@
-<x-header>
+<x-main>
     <x-slot name="title">Karipaku Guard - Edit Borrow</x-slot>
     <div class="container mx-auto p-8">
         <div class="flex flex-col">
@@ -9,7 +9,7 @@
                         <form method="POST" action="{{ route('borrows.update', $borrow) }}">
                             @csrf
                             @method('PATCH')
-                    
+
                             <table class="min-w-full">
                                 <!-- ラベル行 -->
                                 <tr class="bg-gray-100">
@@ -25,7 +25,7 @@
                                     <th class="px-6 py-3">
                                     </th>
                                 </tr>
-                    
+
                                 <!-- エラーメッセージ -->
                                 @error('friend_name')
                                     <div class="text-red-500">{{ $message }}</div>
@@ -36,33 +36,34 @@
                                 @error('borrowed_at')
                                     <div class="text-red-500">{{ $message }}</div>
                                 @enderror
-                    
+
                                 <!-- 入力フィールド -->
                                 <tr class="bg-white border-b">
                                     <input type="hidden" name="friend_id" value="{{ $borrow->friend_id }}">
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <input type="text" name="friend_name" id="friend_name" value="{{ $borrow->friend->name }}"
-                                               class="border rounded px-2 py-1 w-full">
+                                        <input type="text" name="friend_name" id="friend_name"
+                                            value="{{ $borrow->friend->name }}" class="border rounded px-2 py-1 w-full">
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <input type="text" name="item_name" id="item_name" value="{{ $borrow->item_name }}"
-                                               class="border rounded px-2 py-1 w-full">
+                                        <input type="text" name="item_name" id="item_name"
+                                            value="{{ $borrow->item_name }}" class="border rounded px-2 py-1 w-full">
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <input type="date" name="borrowed_at" id="borrowed_at" value="{{ $borrow->borrowed_at->format('Y-m-d') }}"
-                                               class="border rounded px-2 py-1 w-full">
+                                        <input type="date" name="borrowed_at" id="borrowed_at"
+                                            value="{{ $borrow->borrowed_at->format('Y-m-d') }}"
+                                            class="border rounded px-2 py-1 w-full">
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <button type="submit"
-                                                class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded">更新</button>
+                                            class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded">更新</button>
                                     </td>
                                 </tr>
                             </table>
                         </form>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </div>
-</x-header>
+</x-main>

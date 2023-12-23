@@ -1,4 +1,4 @@
-<x-header>
+<x-main>
     <x-slot name="title" class="text-2xl font-bold my-4">Karipaku Guard</x-slot>
     <div class="container mx-auto p-12">
         <div class="flex flex-col">
@@ -62,4 +62,4 @@
             </div>
         </div>
     </div>
-</x-header>
+</x-main>

@@ -1,4 +1,4 @@
-<x-header>
+<x-main>
     <x-slot name="title" class="text-2xl font-bold my-4">{{ $borrow }} - Karipaku Guard</x-slot>
 
     <body class="bg-gray-100">
@@ -68,4 +68,4 @@
             </div>
         </div>
     </body>
-</x-header>
+</x-main>
