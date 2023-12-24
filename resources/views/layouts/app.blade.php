@@ -5,6 +5,7 @@
 @section('title', config('app.name', 'Laravel'))
 
 <body class="font-sans antialiased">
+    @include('layouts.partials.header')
     <div class="min-h-screen bg-gray-100">
         @include('layouts.navigation')
 
@@ -22,6 +23,7 @@
             {{ $slot }}
         </main>
     </div>
+    @include('layouts.partials.footer')
 </body>
 
 </html>
