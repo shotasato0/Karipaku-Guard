@@ -30,15 +30,15 @@
                                 経過日数
                             </th>
                             <th scope="col"
-                                class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
+                                class="px-12 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 信頼度
                             </th>
                             <th scope="col"
-                                class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
+                                class="px-4 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 編集
                             </th>
                             <th scope="col"
-                                class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
+                                class="px-4 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 削除
                             </th>
                         </tr>
