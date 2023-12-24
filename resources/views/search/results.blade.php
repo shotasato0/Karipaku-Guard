@@ -4,7 +4,7 @@
         <div class="flex flex-col">
             <div class="flex justify-between mb-4">
                 <x-back-link />
-                <div class="flex items-center mx-2">
+                <div class="flex flex-row space-y-2 sm:space-y-0 sm:space-x-2 w-full justify-end">
                     <x-search-form />
                     <x-create-button />
                 </div>
