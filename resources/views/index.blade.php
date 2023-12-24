@@ -41,7 +41,6 @@
                                 class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 削除
                             </th>
-
                         </tr>
                     </thead>
                     <tbody class="bg-white">
@@ -68,8 +67,6 @@
                                 <td data-label="信頼度"
                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
                                     data-trust-score="{{ $borrow->trust_score }}">
-                                    {{-- スコアの数値 --}}
-                                    {{-- {{ $borrow->trust_score }}  --}}
                                     <img src="../../images/bomb2.png" alt="爆弾" class="w-16 sm:ml-4"
                                         id="js-bomb">
                                     <img src="../../images/ignition.png" alt="点火" class="w-20 ml-1 hidden"
