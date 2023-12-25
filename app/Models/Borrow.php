@@ -15,10 +15,12 @@ class Borrow extends Model
         'item_name',
         'borrowed_at',
         'trust_score',
+        'deadline'
     ];
 
     protected $casts = [
         'borrowed_at' => 'date',
+        'deadline'=>'date'
     ];
 
     public function friend()
