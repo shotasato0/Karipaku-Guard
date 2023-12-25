@@ -38,6 +38,7 @@ class BorrowController extends Controller
         $borrow->friend_id = $friend->id; // 新しく作成したFriendのIDを設定
         $borrow->item_name = $request->item_name;
         $borrow->borrowed_at = $request->borrowed_at;
+        // $borrow->deadline = $request->deadline;
         $borrow->save();
     
         return redirect()
