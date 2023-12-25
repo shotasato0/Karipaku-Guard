@@ -16,7 +16,7 @@
                                     借りた物の名前
                                 </th>
                                 <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
-                                    借用日
+                                    借りた日
                                 </th>
                                 <th class="px-6 py-3">
                                 </th>
