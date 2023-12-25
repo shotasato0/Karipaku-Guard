@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('borrows', function (Blueprint $table) {
-            //
+            $table->date('deadline')->nullable();
         });
     }
 
@@ -22,7 +22,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('borrows', function (Blueprint $table) {
-            //
+            $table->dropColumn('deadline');
         });
     }
 };
