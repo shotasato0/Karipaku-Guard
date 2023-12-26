@@ -64,6 +64,7 @@ class BorrowController extends Controller
         $borrow->friend_id = $request->friend_id;
         $borrow->item_name = $request->item_name;
         $borrow->borrowed_at = $request->borrowed_at;
+        $borrow->deadline = $request->deadline;
         $borrow->save();
 
         return redirect()

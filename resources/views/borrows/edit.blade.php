@@ -61,8 +61,12 @@
                                             class="border rounded px-2 py-1 w-full">
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <input type="date" name="borrowed_at" id="borrowed_at"
-                                            {{-- value="{{ $borrow->deadline->format('Y-m-d') }}" --}}
+                                        <input type="date" name="deadline" id="deadline"
+                                            @if ($borrow->deadline)
+                                                value="{{ $borrow->deadline->format('Y-m-d') }}"
+                                            @else
+                                                value="{{ $borrow->deadline }}"
+                                            @endif
                                             class="border rounded px-2 py-1 w-full">
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
