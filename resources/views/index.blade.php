@@ -27,7 +27,7 @@
                             </th>
                             <th scope="col"
                                 class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
-                                返却日
+                                返却期限
                             </th>
                             <th scope="col"
                                 class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
@@ -64,7 +64,7 @@
                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                                     {{ $borrow->borrowed_at->format('Y-m-d') }}
                                 </td>
-                                <td data-label="返却日"
+                                <td data-label="返却期限"
                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                                     {{ $borrow->deadline }}
                                 </td>
