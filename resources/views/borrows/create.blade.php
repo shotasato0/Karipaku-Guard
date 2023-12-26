@@ -57,11 +57,9 @@
                                             class="border rounded px-2 py-1 w-full">
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <input type="date" name="borrowed_at" value="{{ old('deadline') }}"
+                                        <input type="date" name="deadline" value="{{ old('deadline') }}"
                                             class="border rounded px-2 py-1 w-full">
                                     </td>
-                                    {{-- あとで消す？ --}}
-                                    {{-- </td> --}}
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <button type="submit"
                                             class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded">保存</button>
