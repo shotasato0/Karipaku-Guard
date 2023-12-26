@@ -66,7 +66,11 @@
                                 </td>
                                 <td data-label="返却期限"
                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                    {{ $borrow->deadline }}
+                                    @if ($borrow->deadline)
+                                        {{ $borrow->deadline->format('Y-m-d') }}
+                                    @else
+                                        {{ $borrow->deadline }}
+                                    @endif
                                 </td>
                                 <td data-label="経過日数"
                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
