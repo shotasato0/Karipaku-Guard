@@ -18,6 +18,9 @@
                                 <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
                                     借りた日
                                 </th>
+                                <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                    返却期限
+                                </th>
                                 <th class="px-6 py-3">
                                 </th>
                             </tr>
@@ -30,6 +33,10 @@
                             @enderror
 
                             @error('borrowed_at')
+                                <div class="text-red-500">{{ $message }}</div>
+                            @enderror
+
+                            @error('deadline')
                                 <div class="text-red-500">{{ $message }}</div>
                             @enderror
                             <!-- レコードの挿入フォーム -->
@@ -49,7 +56,12 @@
                                         <input type="date" name="borrowed_at" value="{{ old('borrowed_at') }}"
                                             class="border rounded px-2 py-1 w-full">
                                     </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <input type="date" name="borrowed_at" value="{{ old('deadline') }}"
+                                            class="border rounded px-2 py-1 w-full">
                                     </td>
+                                    {{-- あとで消す？ --}}
+                                    {{-- </td> --}}
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <button type="submit"
                                             class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded">保存</button>
