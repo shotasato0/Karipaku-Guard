@@ -20,9 +20,13 @@
                                         借りた物の名前
                                     </th>
                                     <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
-                                        借用日
+                                        借りた日
                                     </th>
-                                    <th class="px-6 py-3">
+                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                        返却期限
+                                    </th>
+                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                        更新
                                     </th>
                                 </tr>
 
@@ -34,6 +38,9 @@
                                     <div class="text-red-500">{{ $message }}</div>
                                 @enderror
                                 @error('borrowed_at')
+                                    <div class="text-red-500">{{ $message }}</div>
+                                @enderror
+                                @error('deadline')
                                     <div class="text-red-500">{{ $message }}</div>
                                 @enderror
 
@@ -51,6 +58,11 @@
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <input type="date" name="borrowed_at" id="borrowed_at"
                                             value="{{ $borrow->borrowed_at->format('Y-m-d') }}"
+                                            class="border rounded px-2 py-1 w-full">
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <input type="date" name="borrowed_at" id="borrowed_at"
+                                            {{-- value="{{ $borrow->deadline->format('Y-m-d') }}" --}}
                                             class="border rounded px-2 py-1 w-full">
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
