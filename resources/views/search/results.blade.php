@@ -25,6 +25,9 @@
                                         借りた日
                                     </th>
                                     <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                        返却期限
+                                    </th>
+                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
                                         経過日数
                                     </th>
                                     <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
@@ -52,6 +55,13 @@
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                             {{ $borrow->borrowed_at->format('Y-m-d') }}
+                                        </td>
+                                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                            @if ($borrow->deadline)
+                                                {{ $borrow->deadline->format('Y-m-d') }}
+                                            @else
+                                                {{ $borrow->deadline }}
+                                            @endif
                                         </td>
                                         <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                             {{ $borrow->days_passed }}
