@@ -27,6 +27,10 @@
                             </th>
                             <th scope="col"
                                 class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
+                                返却日
+                            </th>
+                            <th scope="col"
+                                class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 経過日数
                             </th>
                             <th scope="col"
@@ -59,6 +63,10 @@
                                 <td data-label="借りた日"
                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                                     {{ $borrow->borrowed_at->format('Y-m-d') }}
+                                </td>
+                                <td data-label="返却日"
+                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                    {{ $borrow->deadline }}
                                 </td>
                                 <td data-label="経過日数"
                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
