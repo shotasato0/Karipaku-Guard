@@ -12,6 +12,7 @@ class StoreBorrowRequest extends FormRequest
             'friend_name' => 'required|string|max:255',
             'item_name' => 'required|string|max:255',
             'borrowed_at' => 'required|date',
+            'deadline' => 'required|date',
         ];
     }
 
@@ -21,6 +22,7 @@ class StoreBorrowRequest extends FormRequest
             'friend_name.required' => '借りた人の名前は必須です。',
             'item_name.required' => '借りた物の名前は必須です。',
             'borrowed_at.required' => '借りた日は必須です。',
+            'deadline.required' => '返却期限は必須です。',
         ];
     }
 }
