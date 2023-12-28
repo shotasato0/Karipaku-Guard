@@ -83,8 +83,8 @@
                                         id="js-bomb">
                                     <img src="../../images/ignition.png" alt="点火" class="w-20 ml-1 hidden"
                                         id="js-ignition">
-                                    <img src="../../images/exprosion.png" alt="爆発" class="w-24 hidden"
-                                        id="js-exprosion">
+                                    <img src="../../images/explosion.png" alt="爆発" class="w-24 hidden"
+                                        id="js-explosion">
                                 </td>
                                 <td class="edit-button pl-4 py-4 text-sm text-gray-900 font-light whitespace-wrap">
                                     <a href="{{ route('borrows.edit', $borrow) }}"

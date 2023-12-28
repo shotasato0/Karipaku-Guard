@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const trustScore = parseInt(element.getAttribute('data-trust-score'));
         const bombElement = element.querySelector('#js-bomb');
         const ignitionElement = element.querySelector('#js-ignition');
-        const explosionElement = element.querySelector('#js-exprosion');
+        const explosionElement = element.querySelector('#js-explosion');
 
         updateImages(trustScore, bombElement, ignitionElement, explosionElement);
     });
