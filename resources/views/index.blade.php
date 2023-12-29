@@ -31,7 +31,7 @@
                             </th>
                             <th scope="col"
                                 class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
-                                経過日数
+                                残り日数
                             </th>
                             <th scope="col"
                                 class="px-12 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
@@ -72,10 +72,11 @@
                                         {{ $borrow->deadline }}
                                     @endif
                                 </td>
-                                <td data-label="経過日数"
-                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                    {{ $borrow->days_passed }}
+                                <td data-label="残り日数"
+                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 days-until-deadline">
+                                    {{ $borrow->days_until_deadline }}
                                 </td>
+
                                 <td data-label="信頼度"
                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
                                     data-trust-score="{{ $borrow->trust_score }}">

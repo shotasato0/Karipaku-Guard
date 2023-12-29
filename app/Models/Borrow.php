@@ -28,21 +28,15 @@ class Borrow extends Model
         return $this->belongsTo(Friend::class, 'friend_id');
     }
 
-   // getDaysPassedAttributeメソッドはアクセサであり、
-// $borrow->days_passedとしてアクセスされたときに実行されるカスタム属性の値を提供します。
-    public function getDaysPassedAttribute()
+
+    public function getDaysUntilDeadlineAttribute()
     {
-        // now()は現在の日時のCarbonインスタンスを返します。
-        // diffInDaysメソッドは、指定された日付（この場合は$this->borrowed_at）と
-        // 現在日時との差を日数で計算します。
-        // $this->borrowed_atはBorrowモデルのborrowed_atカラムの値を参照します。
-        // この結果、借りた日から現在までの経過日数が計算され、返されます。
-        return now()->diffInDays($this->borrowed_at);
+    if ($this->deadline) {
+        // deadlineが設定されている場合、現在日時との差を計算
+        return now()->diffInDays($this->deadline, false);
     }
 
-    public function getTrustScoreAttribute()
-    {
-        $daysPassed = $this->days_passed; // この場合、自動的に上記のアクセサが呼ばれます。
-        return max(0, 100 - (1 * $daysPassed)); // スコアが負の数にならないようにする。
+    // deadlineが設定されていない場合はnullを返す
+    return null;
     }
 }
