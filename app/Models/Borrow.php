@@ -14,8 +14,8 @@ class Borrow extends Model
         'friend_id',
         'item_name',
         'borrowed_at',
-        'trust_score',
-        'deadline'
+        'deadline',
+        'trust_score'
     ];
 
     protected $casts = [

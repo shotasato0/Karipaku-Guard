@@ -29,10 +29,10 @@
                                 class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 返却期限
                             </th>
-                            <th scope="col"
+                            {{-- <th scope="col"
                                 class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 残り日数
-                            </th>
+                            </th> --}}
                             <th scope="col"
                                 class="px-12 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 信頼度
@@ -72,15 +72,17 @@
                                         {{ $borrow->deadline }}
                                     @endif
                                 </td>
-                                <td data-label="残り日数"
+                                {{-- <td data-label="残り日数"
                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 days-until-deadline">
                                     {{ $borrow->days_until_deadline }}
-                                </td>
+                                </td> --}}
 
                                 <td data-label="信頼度"
                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
-                                    data-trust-score="{{ $borrow->trust_score }}">
-                                    <img src="../../images/bomb2.png" alt="爆弾" class="w-16 sm:ml-4"
+                                    data-trust-score="{{ $borrow->days_until_deadline }}">
+                                    <img src="../../images/smile.png" alt="笑顔" class="w-16 sm:ml-4 "
+                                        id="js-smile">
+                                    <img src="../../images/bomb2.png" alt="爆弾" class="w-16 sm:ml-4 hidden"
                                         id="js-bomb">
                                     <img src="../../images/ignition.png" alt="点火" class="w-20 ml-1 hidden"
                                         id="js-ignition">
