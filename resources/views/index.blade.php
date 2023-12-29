@@ -80,15 +80,15 @@
                                 <td data-label="信頼度"
                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
                                     data-trust-score="{{ $borrow->days_until_deadline }}">
-                                    <img src="../../images/smile.png" alt="笑顔" class="w-16 sm:ml-4 "
-                                        id="js-smile">
-                                    <img src="../../images/bomb2.png" alt="爆弾" class="w-16 sm:ml-4 hidden"
-                                        id="js-bomb">
-                                    <img src="../../images/ignition.png" alt="点火" class="w-20 ml-1 hidden"
-                                        id="js-ignition">
-                                    <img src="../../images/explosion.png" alt="爆発" class="w-24 hidden"
-                                        id="js-explosion">
+                                    <img src="../../images/smile.png" alt="笑顔" class="w-16 sm:ml-4 js-smile">
+                                    <img src="../../images/bomb2.png" alt="爆弾"
+                                        class="w-16 sm:ml-4 hidden js-bomb">
+                                    <img src="../../images/ignition.png" alt="点火"
+                                        class="w-20 ml-1 hidden js-ignition">
+                                    <img src="../../images/explosion.png" alt="爆発"
+                                        class="w-24 hidden js-explosion">
                                 </td>
+
                                 <td class="edit-button pl-4 py-4 text-sm text-gray-900 font-light whitespace-wrap">
                                     <a href="{{ route('borrows.edit', $borrow) }}"
                                         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 rounded flex items-center justify-center h-10 w-20">
