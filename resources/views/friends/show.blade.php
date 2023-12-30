@@ -22,18 +22,19 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="border px-4 py-2">{{ $borrow->friend->age }}</td>
-                                <td class="border px-4 py-2">{{ $borrow->friend->gender }}</td>
-                                <td class="border px-4 py-2">{{ $borrow->friend->phone }}</td>
-                                <td class="border px-4 py-2">{{ $borrow->friend->email }}</td>
-                                <td class="border px-4 py-2">{{ $borrow->friend->address }}</td>
-                                <td class="border px-4 py-2">{{ $borrow->friend->relationship_type }}</td>
+                                <td class="border px-4 py-2">{{ $borrow->friend->age ?? '未登録' }}</td>
+                                <td class="border px-4 py-2">{{ $borrow->friend->gender ?? '未登録' }}</td>
+                                <td class="border px-4 py-2">{{ $borrow->friend->phone ?? '未登録' }}</td>
+                                <td class="border px-4 py-2">{{ $borrow->friend->email ?? '未登録' }}</td>
+                                <td class="border px-4 py-2">{{ $borrow->friend->address ?? '未登録' }}</td>
+                                <td class="border px-4 py-2">{{ $borrow->friend->relationship_type ?? '未登録' }}</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <a href="{{ route('friends.edit', $borrow) }}"  class="py-2 bg-blue-500 hover:bg-blue-700 text-white mt-10 font-bold rounded inline-block align-middle text-center"
-                style="line-height: normal; height: 38px; width: 80px;">
+                <a href="{{ route('friends.edit', $borrow) }}"
+                    class="py-2 bg-blue-500 hover:bg-blue-700 text-white mt-10 font-bold rounded inline-block align-middle text-center"
+                    style="line-height: normal; height: 38px; width: 80px;">
                     編集
                 </a>
             </div>
