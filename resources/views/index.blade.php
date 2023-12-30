@@ -29,10 +29,6 @@
                                 class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 返却期限
                             </th>
-                            {{-- <th scope="col"
-                                class="px-6 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
-                                残り日数
-                            </th> --}}
                             <th scope="col"
                                 class="px-12 py-4 text-left text-sm font-semibold whitespace-nowrap text-gray-700">
                                 信頼度
@@ -72,10 +68,6 @@
                                         {{ $borrow->deadline }}
                                     @endif
                                 </td>
-                                {{-- <td data-label="残り日数"
-                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 days-until-deadline">
-                                    {{ $borrow->days_until_deadline }}
-                                </td> --}}
 
                                 <td data-label="信頼度"
                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
