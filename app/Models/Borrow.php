@@ -33,6 +33,7 @@ class Borrow extends Model
     {
     if ($this->deadline) {
         // deadlineが設定されている場合、現在日時との差を計算
+        //now()は現在日時を示すCarbonインスタンス、diffInDays()はCarbonインスタンスのメソッド
         return now()->diffInDays($this->deadline, false);
     }
 
