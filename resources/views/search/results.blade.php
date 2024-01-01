@@ -15,28 +15,36 @@
                         <table class="min-w-full">
                             <thead class="bg-gray-200">
                                 <tr>
-                                    <th scope="col" class="whitespace-nowrap text-lg  font-semibold text-gray-900 px-6 py-4 text-left">
+                                    <th scope="col"
+                                        class="whitespace-nowrap text-lg  font-semibold text-gray-900 px-6 py-4 text-left">
                                         借りた人の名前
                                     </th>
-                                    <th scope="col" class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                    <th scope="col"
+                                        class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
                                         借りた物の名前
                                     </th>
-                                    <th scope="col" class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                    <th scope="col"
+                                        class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
                                         借りた日
                                     </th>
-                                    <th scope="col" class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                    <th scope="col"
+                                        class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
                                         返却期限
                                     </th>
-                                    <th scope="col" class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                    <th scope="col"
+                                        class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
                                         経過日数
                                     </th>
-                                    <th scope="col" class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                    <th scope="col"
+                                        class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
                                         信頼度
                                     </th>
-                                    <th scope="col" class="whitespace-nowrap text-lg font-semibold text-gray-900 px-2 py-4 text-left">
+                                    <th scope="col"
+                                        class="whitespace-nowrap text-lg font-semibold text-gray-900 px-2 py-4 text-left">
                                         編集
                                     </th>
-                                    <th scope="col" class="whitespace-nowrap text-lg font-semibold text-gray-900 py-4 text-left">
+                                    <th scope="col"
+                                        class="whitespace-nowrap text-lg font-semibold text-gray-900 py-4 text-left">
                                         削除
                                     </th>
                                 </tr>
@@ -92,7 +100,10 @@
                                         </td>
                                     </tr>
                                 @empty
-                                    <td class="text-center py-4" colspan="7">No Data</td>
+                                    <tr class="bg-white border-b">
+                                        <td class=" text-center text-xl py-4" colspan="8">検索結果が見つかりませんでした
+                                        </td>
+                                    </tr>
                                 @endforelse
                             </tbody>
                         </table>
