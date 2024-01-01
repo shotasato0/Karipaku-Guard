@@ -101,7 +101,7 @@
                                     </tr>
                                 @empty
                                     <tr class="bg-white border-b">
-                                        <td class=" text-center text-xl py-4" colspan="8">検索結果が見つかりませんでした
+                                        <td class=" text-center text-xl py-12" colspan="8">検索結果が見つかりませんでした
                                         </td>
                                     </tr>
                                 @endforelse
