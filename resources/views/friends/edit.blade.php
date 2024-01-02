@@ -43,12 +43,28 @@
                                 <tbody>
                                     <tr class="bg-white border-b">
                                         <td class="px-6 py-4 whitespace-nowrap">
-                                            <input type="text" name="age" value="{{ $borrow->friend->age }}"
-                                                placeholder="年齢" class="border rounded px-2 py-1 w-full lg:w-1/2" />
+                                            <!-- 年齢のプルダウンメニュー -->
+                                            <select name="age" class="border rounded pr-6 py-1 w-full   ">
+                                                @for ($i = 18; $i <= 100; $i++)
+                                                    <option value="{{ $i }}"
+                                                        {{ $borrow->friend->age == $i ? 'selected' : '' }}>
+                                                        {{ $i }}</option>
+                                                @endfor
+                                            </select>
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
-                                            <input type="text" name="gender" value="{{ $borrow->friend->gender }}"
-                                                placeholder="性別" class="border rounded px-2 py-1 w-full lg:w-1/2" />
+                                            <!-- 性別のプルダウンメニュー -->
+                                            <select name="gender" class="border rounded pr-6 py-1 w-full">
+                                                <option value="男性"
+                                                    {{ $borrow->friend->gender == 'male' ? 'selected' : '' }}>男性
+                                                </option>
+                                                <option value="女性"
+                                                    {{ $borrow->friend->gender == 'female' ? 'selected' : '' }}>女性
+                                                </option>
+                                                <option value="その他"
+                                                    {{ $borrow->friend->gender == 'other' ? 'selected' : '' }}>その他
+                                                </option>
+                                            </select>
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
                                             <input type="text" name="phone" value="{{ $borrow->friend->phone }}"
