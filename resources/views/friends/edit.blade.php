@@ -44,28 +44,28 @@
                                     <tr class="bg-white border-b">
                                         <td class="px-6 py-4 whitespace-nowrap">
                                             <input type="text" name="age" value="{{ $borrow->friend->age }}"
-                                                placeholder="年齢" class="border rounded px-2 py-1 sm:w-full" />
+                                                placeholder="年齢" class="border rounded px-2 py-1 w-full lg:w-1/2" />
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
                                             <input type="text" name="gender" value="{{ $borrow->friend->gender }}"
-                                                placeholder="性別" class="border rounded px-2 py-1 sm:w-full" />
+                                                placeholder="性別" class="border rounded px-2 py-1 w-full lg:w-1/2" />
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
                                             <input type="text" name="phone" value="{{ $borrow->friend->phone }}"
-                                                placeholder="電話番号" class="border rounded px-2 py-1 sm:w-full" />
+                                                placeholder="電話番号" class="border rounded px-2 py-1 lg:w-full" />
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
                                             <input type="email" name="email" value="{{ $borrow->friend->email }}"
-                                                placeholder="Email" class="border rounded px-2 py-1 sm:w-full" />
+                                                placeholder="Email" class="border rounded px-2 py-1 lg:w-full" />
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
                                             <input type="text" name="address" value="{{ $borrow->friend->address }}"
-                                                placeholder="住所" class="border rounded px-2 py-1 sm:w-full" />
+                                                placeholder="住所" class="border rounded px-2 py-1 lg:w-full" />
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
                                             <input type="text" name="relationship_type"
                                                 value="{{ $borrow->friend->relationship_type }}" placeholder="あなたとの関係"
-                                                class="border rounded px-2 py-1 sm:w-full" />
+                                                class="border rounded px-2 py-1 lg:w-full" />
                                         </td>
                                     </tr>
                                 </tbody>
