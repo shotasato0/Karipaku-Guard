@@ -6,19 +6,22 @@
                 <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
                     <x-back-link />
                     <div class="overflow-hidden rounded-lg">
-
                         <table class="min-w-full">
                             <tr class="bg-gray-100">
-                                <th scope="col" class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                <th scope="col"
+                                    class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
                                     借りた人の名前
                                 </th>
-                                <th scope="col" class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                <th scope="col"
+                                    class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
                                     借りた物の名前
                                 </th>
-                                <th scope="col" class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                <th scope="col"
+                                    class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
                                     借りた日
                                 </th>
-                                <th scope="col" class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                <th scope="col"
+                                    class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
                                     返却期限
                                 </th>
                                 <th class="px-6 py-3">
