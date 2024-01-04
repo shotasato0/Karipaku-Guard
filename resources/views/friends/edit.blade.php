@@ -56,13 +56,13 @@
                                             <!-- 性別のプルダウンメニュー -->
                                             <select name="gender" class="border rounded pr-6 py-1 w-full">
                                                 <option value="男性"
-                                                    {{ $borrow->friend->gender == 'male' ? 'selected' : '' }}>男性
+                                                    {{ $borrow->friend->gender == '男性' ? 'selected' : '' }}>男性
                                                 </option>
                                                 <option value="女性"
-                                                    {{ $borrow->friend->gender == 'female' ? 'selected' : '' }}>女性
+                                                    {{ $borrow->friend->gender == '女性' ? 'selected' : '' }}>女性
                                                 </option>
-                                                <option value="その他"
-                                                    {{ $borrow->friend->gender == 'other' ? 'selected' : '' }}>その他
+                                                <option value="指定なし"
+                                                    {{ $borrow->friend->gender == '指定なし' ? 'selected' : '' }}>指定なし
                                                 </option>
                                             </select>
                                         </td>
