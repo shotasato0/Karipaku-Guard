@@ -111,6 +111,4 @@
             </div>
         </div>
     </div>
-    </div>
-    </div>
 </x-main>
