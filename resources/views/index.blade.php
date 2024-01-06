@@ -68,7 +68,6 @@
                                         {{ $borrow->deadline }}
                                     @endif
                                 </td>
-
                                 <td data-label="信頼度"
                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
                                     data-trust-score="{{ $borrow->days_until_deadline }}">
@@ -80,7 +79,6 @@
                                     <img src="../../images/explosion.png" alt="爆発"
                                         class="w-24 hidden js-explosion">
                                 </td>
-
                                 <td class="edit-button pl-4 py-4 text-sm text-gray-900 font-light whitespace-wrap">
                                     <a href="{{ route('borrows.edit', $borrow) }}"
                                         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 rounded flex items-center justify-center h-10 w-20">
@@ -90,10 +88,8 @@
                                 <td class="delete-button px-4 py-4 text-sm text-gray-900 font-light whitespace-wrap">
                                     <form action="{{ route('borrows.destroy', $borrow) }}" method="POST"
                                         class="inline-block align-middle borrow-delete-form" id="js-borrow-delete">
-
                                         @csrf
                                         @method('DELETE')
-
                                         <button type="submit"
                                             class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 rounded flex items-center justify-center h-10 w-20">
                                             削除
@@ -103,12 +99,16 @@
                             </tr>
                         @empty
                             <tr>
-                                <td class="text-center py-4" colspan="7">No Data</td>
+                                <td colspan="7"
+                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                    No data available
+                                </td>
                             </tr>
                         @endforelse
                     </tbody>
                 </table>
             </div>
         </div>
+    </div>
     </div>
 </x-main>
