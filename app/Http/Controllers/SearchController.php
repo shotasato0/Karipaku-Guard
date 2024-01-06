@@ -46,7 +46,6 @@ class SearchController extends Controller
             //ページネーション
             //5レコードずつ表示する
             $posts = $borrows->paginate(5);
-            // dd($posts);
             return view('search.results', ['posts' => $posts]);
     }
 }

@@ -10,17 +10,16 @@ class Friend extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 
-        'age', 
-        'gender', 
-        'phone', 
-        'email', 
-        'address', 
-        'relationship_type', 
-        // 'personal_notes'
+        'name',
+        'age',
+        'gender',
+        'phone',
+        'email',
+        'address',
+        'relationship_type',
     ];
 
-   public function borrows()
+    public function borrows()
     {
         return $this->hasMany(Borrow::class, 'friend_id');
     }

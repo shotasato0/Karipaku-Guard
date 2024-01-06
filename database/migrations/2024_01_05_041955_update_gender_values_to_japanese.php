@@ -6,9 +6,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
-    /**
-     * Run the migrations.
-     */
+
     public function up()
     {
         // 既存のレコードを更新
@@ -17,9 +15,6 @@ return new class extends Migration {
         DB::table('friends')->where('gender', 'other')->update(['gender' => '指定なし']);
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down()
     {
         // ロールバックのために逆の変更を行う
