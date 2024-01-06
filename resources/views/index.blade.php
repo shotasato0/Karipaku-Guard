@@ -10,12 +10,12 @@
             <table class="min-w-full divide-y divide-gray-300">
                 <thead class="bg-gray-200">
                     <tr class="text-left text-lg font-semibold text-gray-700">
-                        <th class="px-6 py-4 whitespace-nowrap">借りた人の名前</th>
-                        <th class="px-6 py-4 whitespace-nowrap">借りた物の名前</th>
-                        <th class="px-6 py-4 whitespace-nowrap">借りた日</th>
-                        <th class="px-6 py-4 whitespace-nowrap">返却期限</th>
-                        <th class="px-12 py-4 whitespace-nowrap">信頼度</th>
-                        <th class="px-4 py-4 whitespace-nowrap">オプション</th>
+                        <th class="px-6 lg:px-4 py-4 whitespace-nowrap">借りた人の名前</th>
+                        <th class="px-6 lg:px-4 py-4 whitespace-nowrap">借りた物の名前</th>
+                        <th class="px-6 lg:px-4 py-4 whitespace-nowrap">借りた日</th>
+                        <th class="px-6 lg:px-4 py-4 whitespace-nowrap">返却期限</th>
+                        <th class="px-6 lg:px-4 py-4 whitespace-nowrap">信頼度</th>
+                        <th class="px-6 lg:px-4 py-4 whitespace-nowrap">操作</th>
                     </tr>
                 </thead>
                 <tbody class="bg-white">
@@ -41,7 +41,7 @@
                                     {{ $borrow->deadline }}
                                 @endif
                             </td>
-                            <td data-label="信頼度" class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                            <td data-label="信頼度" class="px-2 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
                                 data-trust-score="{{ $borrow->days_until_deadline }}">
                                 <img src="../../images/smile.png" alt="笑顔" class="w-16 sm:ml-4 js-smile">
                                 <img src="../../images/bomb2.png" alt="爆弾" class="w-16 sm:ml-4 hidden js-bomb">
@@ -49,8 +49,8 @@
                                     class="w-20 ml-1 hidden js-ignition">
                                 <img src="../../images/explosion.png" alt="爆発" class="w-24 hidden js-explosion">
                             </td>
-                            <td data-label="オプション" class="px-4 py-4 whitespace-nowrap text-center">
-                                <div class="relative inline-block text-left">
+                            <td data-label="操作" class="px-4 py-4 whitespace-nowrap text-center">
+                                <div class="relative inline-block text-center">
                                     <button type="button"
                                         class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none"
                                         id="menu-button-{{ $borrow->id }}" aria-expanded="true" aria-haspopup="true">
@@ -69,7 +69,9 @@
                                             <a href="{{ route('borrows.edit', $borrow) }}"
                                                 class="text-gray-700 block px-4 py-2 text-sm" role="menuitem"
                                                 tabindex="-1" id="menu-item-0-{{ $borrow->id }}">編集</a>
-                                            <form action="{{ route('borrows.destroy', $borrow) }}" method="POST">
+                                            <form action="{{ route('borrows.destroy', $borrow) }}" method="POST"
+                                                class="inline-block align-middle borrow-delete-form"
+                                                id="js-borrow-delete">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit"
