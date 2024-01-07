@@ -69,7 +69,7 @@
                                                 class="text-gray-700 block px-4 py-2 text-sm" role="menuitem"
                                                 id="menu-item-0-{{ $borrow->id }}">編集</a>
                                             <form action="{{ route('borrows.destroy', $borrow) }}" method="POST"
-                                                class="inline-block align-middle" id="js-borrow-delete">
+                                                class="inline-block align-middle borrow-delete-form" id="js-borrow-delete">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit"
