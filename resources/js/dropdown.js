@@ -2,27 +2,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuButtons = document.querySelectorAll("[id^='menu-button-']");
     const dropdownMenus = document.querySelectorAll(".dropdown-menu");
 
-    // メニューボタンに対するクリックイベントリスナー
     menuButtons.forEach((button) => {
         button.addEventListener("click", function (event) {
-            // 開いている他のすべてのドロップダウンメニューを閉じる
-            dropdownMenus.forEach((menu) => {
-                if (
-                    `menu-button-${menu
-                        .getAttribute("aria-labelledby")
-                        .split("-")
-                        .pop()}` !== button.id
-                ) {
-                    menu.style.display = "none";
-                }
-            });
+            event.preventDefault();
 
-            // 対象のプルダウンメニューの表示切り替え
+            // 対象のプルダウンメニューを取得
             const dropdownMenu = document.querySelector(
                 `.dropdown-menu[aria-labelledby='${button.id}']`
             );
-            dropdownMenu.style.display =
-                dropdownMenu.style.display === "none" ? "block" : "none";
+
+            // 他のすべてのドロップダウンメニューを閉じる
+            dropdownMenus.forEach((menu) => {
+                if (menu !== dropdownMenu) {
+                    menu.classList.add("hidden");
+                }
+            });
+
+            // 対象のメニューの表示・非表示をトグル
+            dropdownMenu.classList.toggle("hidden");
 
             // イベントの伝播を停止
             event.stopPropagation();
@@ -30,19 +27,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // ドキュメント全体のクリックイベントリスナー
-    document.addEventListener("click", function (event) {
-        const isClickInsideMenuButton = Array.from(menuButtons).some((button) =>
-            button.contains(event.target)
-        );
-        const isClickInsideDropdownMenu = Array.from(dropdownMenus).some(
-            (menu) => menu.contains(event.target)
-        );
-
-        if (!isClickInsideMenuButton && !isClickInsideDropdownMenu) {
-            // プルダウンメニュー以外をクリックした場合、全てのプルダウンメニューを閉じる
-            dropdownMenus.forEach((menu) => {
-                menu.style.display = "none";
-            });
-        }
+    document.addEventListener("click", function () {
+        // プルダウンメニュー以外をクリックした場合、全てのプルダウンメニューを閉じる
+        dropdownMenus.forEach((menu) => {
+            menu.classList.add("hidden");
+        });
     });
 });
