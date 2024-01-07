@@ -1,6 +1,6 @@
 <x-main :minHeightClass="'min-h-screen'">
     <x-slot name="title" class="text-2xl font-bold my-4">Karipaku Guard</x-slot>
-    <div class="container mx-auto p-6 lg:p-12">
+    <div class="container mx-auto lg:mx-32 p-6 lg:p-12">
         <div class="flex justify-end mb-4">
             <x-search-form class="w-full lg:w-auto" />
             <x-create-button class="ml-2" />
@@ -10,19 +10,19 @@
             <table class="min-w-full divide-y divide-gray-300">
                 <thead class="bg-gray-200">
                     <tr class="text-left text-lg font-semibold text-gray-700">
-                        <th class="px-6 lg:px-4 py-4 whitespace-nowrap">借りた人の名前</th>
-                        <th class="px-6 lg:px-4 py-4 whitespace-nowrap">借りた物の名前</th>
-                        <th class="px-6 lg:px-4 py-4 whitespace-nowrap">借りた日</th>
-                        <th class="px-6 lg:px-4 py-4 whitespace-nowrap">返却期限</th>
-                        <th class="px-6 lg:px-4 py-4 whitespace-nowrap">信頼度</th>
-                        <th class="px-6 lg:px-4 py-4 whitespace-nowrap">操作</th>
+                        <th class="pl-10 pr-6  py-4 whitespace-nowrap">借りた人の名前</th>
+                        <th class="px-6  py-4 whitespace-nowrap">借りた物の名前</th>
+                        <th class="px-6  py-4 whitespace-nowrap">借りた日</th>
+                        <th class="px-6  py-4 whitespace-nowrap">返却期限</th>
+                        <th class="px-6  py-4 whitespace-nowrap">信頼度</th>
+                        <th class="px-6  py-4 whitespace-nowrap">操作</th>
                     </tr>
                 </thead>
                 <tbody class="bg-white">
                     @forelse ($borrows as $borrow)
                         <tr>
                             <td data-label="借りた人の名前"
-                                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                class="pl-10 pr-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                                 <a href="{{ route('borrows.friend', $borrow->id) }}" class="hover:text-blue-600">
                                     {{ $borrow->friend->name }}
                                 </a>
