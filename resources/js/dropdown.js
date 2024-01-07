@@ -5,7 +5,19 @@ document.addEventListener("DOMContentLoaded", function () {
     // メニューボタンに対するクリックイベントリスナー
     menuButtons.forEach((button) => {
         button.addEventListener("click", function (event) {
-            // プルダウンメニューの表示切り替え
+            // 開いている他のすべてのドロップダウンメニューを閉じる
+            dropdownMenus.forEach((menu) => {
+                if (
+                    `menu-button-${menu
+                        .getAttribute("aria-labelledby")
+                        .split("-")
+                        .pop()}` !== button.id
+                ) {
+                    menu.style.display = "none";
+                }
+            });
+
+            // 対象のプルダウンメニューの表示切り替え
             const dropdownMenu = document.querySelector(
                 `.dropdown-menu[aria-labelledby='${button.id}']`
             );

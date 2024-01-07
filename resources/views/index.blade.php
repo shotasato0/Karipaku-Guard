@@ -60,27 +60,25 @@
                                                 d="M4 6h16M4 12h16m-7 6h7"></path>
                                         </svg> <!-- ここにアイコンを挿入 -->
                                     </button>
-
-                                    <div class="dropdown-menu origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
-                                        style="display: none;" role="menu" aria-orientation="vertical"
-                                        id="menu-button" aria-labelledby="menu-button-{{ $borrow->id }}"
-                                        tabindex="-1">
+                                    {{-- プルダウンメニュー --}}
+                                    <div class="dropdown-menu origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden"
+                                        role="menu" aria-orientation="vertical"
+                                        aria-labelledby="menu-button-{{ $borrow->id }}">
                                         <div class="py-1" role="none">
                                             <a href="{{ route('borrows.edit', $borrow) }}"
                                                 class="text-gray-700 block px-4 py-2 text-sm" role="menuitem"
-                                                tabindex="-1" id="menu-item-0-{{ $borrow->id }}">編集</a>
+                                                id="menu-item-0-{{ $borrow->id }}">編集</a>
                                             <form action="{{ route('borrows.destroy', $borrow) }}" method="POST"
-                                                class="inline-block align-middle borrow-delete-form"
-                                                id="js-borrow-delete">
+                                                class="inline-block align-middle" id="js-borrow-delete">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit"
                                                     class="text-gray-700 block w-full text-left px-4 py-2 text-sm"
-                                                    role="menuitem" tabindex="-1"
-                                                    id="menu-item-1-{{ $borrow->id }}">削除</button>
+                                                    role="menuitem" id="menu-item-1-{{ $borrow->id }}">削除</button>
                                             </form>
                                         </div>
                                     </div>
+
                                 </div>
                             </td>
                         </tr>
