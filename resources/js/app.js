@@ -1,7 +1,6 @@
 import './bootstrap';
 import './search';
 import './bomb.js';
-import './dropdown.js';
 
 // ページが完全にロードされた後に実行
 document.addEventListener("DOMContentLoaded", () => {
