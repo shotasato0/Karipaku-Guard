@@ -36,15 +36,14 @@ class FriendController extends Controller
 
     public function update(Request $request, Friend $friend)
     {
-        //あえてバリデーションを持たせないような仕様にする
-        // $validateData = $request->validate([
-        //     'age' => 'required|string|max:255',
-        //     'gender' => 'required|string|max:255',
-        //     'phone' => 'required|string|max:255',
-        //     'email' => 'required|string|max:255',
-        //     'address' => 'required|string|max:255',
-        //     'relationship_type' => 'required|string|max:255',
-        // ]);
+        $validateData = $request->validate([
+            'age' => 'required|string|max:255',
+            'gender' => 'required|string|max:255',
+            'phone' => 'required|string|max:255',
+            'email' => 'required|string|max:255',
+            'address' => 'required|string|max:255',
+            'relationship_type' => 'required|string|max:255',
+        ]);
 
         $friend->age = $request->age;
         $friend->gender = $request->gender;

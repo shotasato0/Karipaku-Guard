@@ -249,4 +249,31 @@ return [
         'year' => '年',
     ],
 
+    'required' => ':attributeは必須項目です。',
+    'max' => [
+        'string' => ':attributeは最大:max文字までです。',
+    ],
+    'date' => ':attributeは有効な日付でなければなりません。',
+
+    'custom' => [
+        'friend_name' => [
+            'required' => '借してくれた人の名前は必須項目です。',
+            'max' => '借してくれた人の名前は最大20文字までです。',
+        ],
+        'item_name' => [
+            'required' => 'アイテム名は必須項目です。',
+            'max' => 'アイテム名は最大20文字までです。',
+        ],
+        // その他のカスタムメッセージを入れても良い
+    ],
+
+    'attributes' => [
+        'friend_name' => '借してくれた人の名前',
+        'item_name' => 'アイテム名',
+        'borrowed_at' => '借りた日',
+        'deadline' => '返却期限',
+    ],
+
+
+
 ];
