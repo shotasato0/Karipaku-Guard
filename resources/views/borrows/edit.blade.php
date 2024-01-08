@@ -13,19 +13,19 @@
                             <table class="min-w-full">
                                 <!-- ラベル行 -->
                                 <tr class="bg-gray-100">
-                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                    <th scope="col" class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
                                         借りた人の名前
                                     </th>
-                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                    <th scope="col" class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
                                         借りた物の名前
                                     </th>
-                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                    <th scope="col" class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
                                         借りた日
                                     </th>
-                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                    <th scope="col" class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
                                         返却期限
                                     </th>
-                                    <th scope="col" class="text-lg font-semibold text-gray-900 px-6 py-4 text-left">
+                                    <th scope="col" class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
                                         更新
                                     </th>
                                 </tr>
