@@ -33,7 +33,7 @@
                                     編集
                                 </a>
                                 <form action="{{ route('borrows.destroy', $borrow) }}" method="POST"
-                                    class="inline-block align-middle">
+                                    class="inline-block align-middle borrow-delete-form" id="js-borrow-delete">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit"
