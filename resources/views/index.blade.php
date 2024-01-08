@@ -29,7 +29,7 @@
                             <!-- 編集・削除ボタンのコンテナ -->
                             <div class="flex space-x-2">
                                 <a href="{{ route('borrows.edit', $borrow) }}"
-                                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center justify-center h-10 w-20">
+                                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center justify-center h-8 w-16">
                                     編集
                                 </a>
                                 <form action="{{ route('borrows.destroy', $borrow) }}" method="POST"
@@ -37,7 +37,7 @@
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit"
-                                        class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded flex items-center justify-center h-10 w-20">
+                                        class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded flex items-center justify-center h-8 w-16">
                                         削除
                                     </button>
                                 </form>
