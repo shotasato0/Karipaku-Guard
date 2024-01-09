@@ -3,7 +3,7 @@
     <div class="container mx-auto p-6 lg:p-12">
         <div class="flex flex-col space-y-4">
             <div class="flex justify-center lg:justify-end">
-                <div class="flex flex-row space-y-2 sm:space-y-0 sm:space-x-2 w-full justify-end">
+                <div class="flex flex-row justify-end space-y-2 sm:space-y-0 sm:space-x-2 w-full">
                     <x-search-form />
                     <x-create-button />
                 </div>
@@ -16,7 +16,6 @@
                         <div><strong>借りた物の名前:</strong> {{ $borrow->item_name }}</div>
                         <div><strong>借りた日:</strong> {{ $borrow->borrowed_at->format('Y-m-d') }}</div>
                         <div><strong>返却期限:</strong> {{ optional($borrow->deadline)->format('Y-m-d') ?: '未設定' }}</div>
-                        
                         <div class="flex flex-row space-y-2 mt-2">
                             <div class="flex items-center" data-trust-score="{{ $borrow->days_until_deadline }}">
                                 <strong>信頼度:</strong>
