@@ -9,10 +9,13 @@
                 </div>
             </div>
             <!-- モバイルビュー用のカード表示 -->
-            <div class="lg:hidden">
+            <div class="sm:hidden">
                 @forelse ($borrows as $borrow)
                     <div class="bg-white p-4 rounded-lg shadow-md mb-4">
-                        <div><strong>借りた人の名前:</strong> {{ $borrow->friend->name }}</div>
+                        <div><strong>借りた人の名前:</strong> <a href="{{ route('borrows.friend', $borrow->id) }}"
+                                class="hover:text-blue-600">
+                                {{ $borrow->friend->name }}
+                            </a></div>
                         <div><strong>借りた物の名前:</strong> {{ $borrow->item_name }}</div>
                         <div><strong>借りた日:</strong> {{ $borrow->borrowed_at->format('Y-m-d') }}</div>
                         <div><strong>返却期限:</strong> {{ optional($borrow->deadline)->format('Y-m-d') ?: '未設定' }}</div>
@@ -50,8 +53,8 @@
                 @endforelse
             </div>
 
-
-            <div class="hidden lg:block overflow-x-auto rounded-lg shadow-md">
+            {{-- デスクトップ用の表示 --}}
+            <div class="hidden sm:block overflow-x-auto rounded-lg shadow-md">
                 <div class="sm:block sm:overflow-x-auto">
                     <table class="min-w-full divide-y divide-gray-300">
                         <thead class="bg-gray-200 table-header-group">
