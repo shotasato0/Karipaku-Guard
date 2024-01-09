@@ -6,7 +6,7 @@
                 <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
                     <div class="flex flex-row justify-between">
                         <x-back-link />
-                        <div class="mb-4">
+                        <div class="mt-2">
                             <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">登録情報の編集</h2>
                         </div>
                     </div>

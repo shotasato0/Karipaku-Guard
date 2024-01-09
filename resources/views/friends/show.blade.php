@@ -2,9 +2,14 @@
     <x-slot name="title">{{ $borrow }} - Karipaku Guard</x-slot>
 
     <!-- モバイルビュー用のカード表示 -->
-    <div class="sm:hidden bg-gray-100 rounded-lg">
+    <div class="sm:hidden">
         <div class="container px-4 md:px-10">
-            <x-back-link />
+            <div class="flex flex-row justify-between">
+                <x-back-link />
+                <div class="mt-2">
+                    <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">貸し主の情報</h2>
+                </div>
+            </div>
             <div class="bg-white rounded-lg shadow-lg p-5 md:p-8">
                 <h1 class="text-3xl font-bold mb-6">
                     {{ $borrow->friend->name }}
@@ -60,9 +65,15 @@
 
     {{-- デスクトップ用の表示 --}}
     <div class="hidden sm:block">
+
         <body class="bg-gray-100">
             <div class="container px-4 md:px-10">
-                <x-back-link />
+                <div class="flex flex-row justify-between">
+                    <x-back-link />
+                    <div class="mb-4">
+                        <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">貸し主の情報</h2>
+                    </div>
+                </div>
                 <div class="bg-white rounded-lg shadow-lg p-5 md:p-8">
                     <h1 class="text-3xl font-bold mb-6">
                         {{ $borrow->friend->name }}
