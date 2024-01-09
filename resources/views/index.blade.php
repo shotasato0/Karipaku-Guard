@@ -12,11 +12,11 @@
             <div class="sm:hidden">
                 @forelse ($borrows as $borrow)
                     <div class="bg-white p-4 rounded-lg shadow-md mb-4">
-                        <div><strong>借りた人の名前:</strong> <a href="{{ route('borrows.friend', $borrow->id) }}"
+                        <div><strong>貸し主:</strong> <a href="{{ route('borrows.friend', $borrow->id) }}"
                                 class="hover:text-blue-600">
                                 {{ $borrow->friend->name }}
                             </a></div>
-                        <div><strong>借りた物の名前:</strong> {{ $borrow->item_name }}</div>
+                        <div><strong>借りた物:</strong> {{ $borrow->item_name }}</div>
                         <div><strong>借りた日:</strong> {{ $borrow->borrowed_at->format('Y-m-d') }}</div>
                         <div><strong>返却期限:</strong> {{ optional($borrow->deadline)->format('Y-m-d') ?: '未設定' }}</div>
                         <div class="flex flex-row space-y-2 mt-2">
@@ -61,11 +61,11 @@
                             <tr>
                                 <th scope="col"
                                     class="px-6 py-4 text-left text-lg font-semibold whitespace-nowrap text-gray-700">
-                                    借りた人の名前
+                                    貸し主
                                 </th>
                                 <th scope="col"
                                     class="px-6 py-4 text-left text-lg font-semibold whitespace-nowrap text-gray-700">
-                                    借りた物の名前
+                                    借りた物
                                 </th>
                                 <th scope="col"
                                     class="px-6 py-4 text-left text-lg font-semibold whitespace-nowrap text-gray-700">
@@ -92,7 +92,7 @@
                         <tbody class="bg-white">
                             @forelse ($borrows as $borrow)
                                 <tr>
-                                    <td data-label="借りた人"
+                                    <td data-label="貸してくれた人"
                                         class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                                         <a href="{{ route('borrows.friend', $borrow->id) }}"
                                             class="hover:text-blue-600">
