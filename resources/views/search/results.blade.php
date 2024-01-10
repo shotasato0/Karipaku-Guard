@@ -9,7 +9,52 @@
                     <x-create-button />
                 </div>
             </div>
-            <div class="overflow-x-auto rounded-lg shadow-md">
+            {{-- モバイルビュー --}}
+            <div class="sm:hidden">
+                @forelse ($posts as $borrow)
+                    <div class="bg-white p-4 rounded-lg shadow-md mb-4">
+                        <div><strong>貸し主:</strong> <a href="{{ route('borrows.friend', $borrow->id) }}"
+                                class="hover:text-blue-600">
+                                {{ $borrow->friend->name }}
+                            </a></div>
+                        <div><strong>借りた物:</strong> {{ $borrow->item_name }}</div>
+                        <div><strong>借りた日:</strong> {{ $borrow->borrowed_at->format('Y-m-d') }}</div>
+                        <div><strong>返却期限:</strong> {{ optional($borrow->deadline)->format('Y-m-d') ?: '未設定' }}</div>
+                        <div class="flex flex-row space-y-2 mt-2">
+                            <div class="flex items-center" data-trust-score="{{ $borrow->days_until_deadline }}">
+                                <strong>信頼度:</strong>
+                                <img src="../../images/smile.png" alt="笑顔" class="w-16 ml-4 js-smile">
+                                <img src="../../images/bomb2.png" alt="爆弾" class="w-16 ml-4 hidden js-bomb">
+                                <img src="../../images/ignition.png" alt="点火"
+                                    class="w-20 ml-1 hidden js-ignition">
+                                <img src="../../images/explosion.png" alt="爆発" class="w-24 hidden js-explosion">
+                            </div>
+                            <!-- 編集・削除ボタンのコンテナ -->
+                            <div class="flex space-x-2">
+                                <a href="{{ route('borrows.edit', $borrow) }}"
+                                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center justify-center h-8 w-16">
+                                    編集
+                                </a>
+                                <form action="{{ route('borrows.destroy', $borrow) }}" method="POST"
+                                    class="inline-block align-middle borrow-delete-form" id="js-borrow-delete">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit"
+                                        class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded flex items-center justify-center h-8 w-16">
+                                        削除
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                @empty
+                    <div class="bg-white p-4 rounded-lg shadow-md">
+                        データはありません。
+                    </div>
+                @endforelse
+            </div>
+            {{-- デスクトップ --}}
+            <div class="hidden sm:block overflow-x-auto rounded-lg shadow-md">
                 <table class="min-w-full divide-y divide-gray-300">
                     <thead class="bg-gray-200 table-header-group">
                         <tr>

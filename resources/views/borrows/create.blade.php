@@ -9,7 +9,7 @@
                     <div class="flex flex-row justify-between">
                         <x-back-link />
                         <div class="mt-2">
-                            <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">新規登録者の作成</h2>
+                            <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">新規作成</h2>
                         </div>
                     </div>
 
