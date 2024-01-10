@@ -75,7 +75,7 @@
                                 返却期限
                             </th>
                             <th scope="col"
-                                class="px-12 py-4 text-left text-lg font-semibold whitespace-nowrap text-gray-700">
+                                class="px-10 py-4 text-left text-lg font-semibold whitespace-nowrap text-gray-700">
                                 信頼度
                             </th>
                             <th scope="col"
@@ -116,7 +116,7 @@
                                 <td data-label="信頼度"
                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
                                     data-trust-score="{{ $borrow->days_until_deadline }}">
-                                    <img src="../../images/smile.png" alt="笑顔" class="w-16 sm:ml-4 js-smile">
+                                    <img src="../../images/smile2.png" alt="笑顔" class="w-16 sm:ml-3 js-smile">
                                     <img src="../../images/bomb2.png" alt="爆弾"
                                         class="w-16 sm:ml-4 hidden js-bomb">
                                     <img src="../../images/ignition.png" alt="点火"
