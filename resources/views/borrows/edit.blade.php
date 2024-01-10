@@ -38,7 +38,7 @@
 
                                 <div class="bg-white p-4 border rounded-lg">
                                     <label for="friend_name"
-                                        class="block text-lg font-semibold text-gray-900">借りた人の名前</label>
+                                        class="block text-lg font-semibold text-gray-900">貸し主</label>
                                     <input type="text" name="friend_name" id="friend_name"
                                         value="{{ $borrow->friend->name }}"
                                         class="border rounded px-2 py-1 w-full mt-2">
@@ -46,7 +46,7 @@
 
                                 <div class="bg-white p-4 border rounded-lg">
                                     <label for="item_name"
-                                        class="block text-lg font-semibold text-gray-900">借りた物の名前</label>
+                                        class="block text-lg font-semibold text-gray-900">借りた物</label>
                                     <input type="text" name="item_name" id="item_name"
                                         value="{{ $borrow->item_name }}" class="border rounded px-2 py-1 w-full mt-2">
                                 </div>
@@ -101,11 +101,11 @@
                                 <tr>
                                     <th scope="col"
                                         class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
-                                        借りた人の名前
+                                        貸し主
                                     </th>
                                     <th scope="col"
                                         class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
-                                        借りた物の名前
+                                        借りた物
                                     </th>
                                     <th scope="col"
                                         class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
