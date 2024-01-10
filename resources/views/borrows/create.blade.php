@@ -13,7 +13,7 @@
                         </div>
                     </div>
 
-                    <div class="overflow-hidden rounded-lg">
+                    <div class="overflow-hidden">
                         <form method="POST" action="{{ route('borrows.store') }}" class="space-y-4">
                             @csrf
 
