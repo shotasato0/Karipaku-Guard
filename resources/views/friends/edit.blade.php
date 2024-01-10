@@ -4,83 +4,81 @@
     <!-- モバイルビュー用の表示 -->
     <div class="sm:hidden">
         <div class="container mx-auto p-4">
-            <div class="overflow-x-auto">
-                <div class="py-4 inline-block min-w-full sm:px-4 lg:px-6">
-                    <div class="flex flex-row justify-between">
-                        <a href="{{ route('borrows.friend', $borrow->id) }}"
-                            class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold my-2 py-2 px-4 rounded transition duration-300 ">
-                            &laquo; 戻る
-                        </a>
-                        <div class="mt-2">
-                            <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">貸し主情報の編集</h2>
+            <div class="py-4 inline-block min-w-full sm:px-4 lg:px-6">
+                <div class="flex flex-row justify-between">
+                    <a href="{{ route('borrows.friend', $borrow->id) }}"
+                        class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold my-2 py-2 px-4 rounded transition duration-300 ">
+                        &laquo; 戻る
+                    </a>
+                    <div class="mt-2">
+                        <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">貸し主情報の編集</h2>
+                    </div>
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <h1 class="bg-white text-3xl font-bold px-4 py-6">
+                        {{ $borrow->friend->name }}
+                    </h1>
+                    <form method="POST" action="{{ route('friends.update', ['friend' => $borrow->friend->id]) }}"
+                        class="bg-white space-y-4 p-4">
+                        @csrf
+                        @method('PATCH')
+
+                        <!-- 年齢 -->
+                        <div>
+                            <label class="block text-lg font-semibold text-gray-900">年齢</label>
+                            <select name="age" class="border rounded pr-6 py-1 w-full">
+                                @for ($i = 18; $i <= 100; $i++)
+                                    <option value="{{ $i }}"
+                                        {{ $borrow->friend->age == $i ? 'selected' : '' }}>
+                                        {{ $i }}
+                                    </option>
+                                @endfor
+                            </select>
                         </div>
-                    </div>
-                    <div class="overflow-hidden rounded-lg">
-                        <h1 class="bg-white text-3xl font-bold px-4 py-6">
-                            {{ $borrow->friend->name }}
-                        </h1>
-                        <form method="POST" action="{{ route('friends.update', ['friend' => $borrow->friend->id]) }}"
-                            class="bg-white space-y-4 p-4">
-                            @csrf
-                            @method('PATCH')
+                        <!-- 性別 -->
+                        <div>
+                            <label class="block text-lg font-semibold text-gray-900">性別</label>
+                            <select name="gender" class="border rounded pr-6 py-1 w-full">
+                                <option value="男性" {{ $borrow->friend->gender == '男性' ? 'selected' : '' }}>男性
+                                </option>
+                                <option value="女性" {{ $borrow->friend->gender == '女性' ? 'selected' : '' }}>女性
+                                </option>
+                                <option value="指定なし" {{ $borrow->friend->gender == '指定なし' ? 'selected' : '' }}>
+                                    指定なし</option>
+                            </select>
+                        </div>
+                        <!-- 電話番号 -->
+                        <div>
+                            <label class="block text-lg font-semibold text-gray-900">電話番号</label>
+                            <input type="text" name="phone" value="{{ $borrow->friend->phone }}"
+                                placeholder="電話番号" class="border rounded px-2 py-1 w-full" />
+                        </div>
 
-                            <!-- 年齢 -->
-                            <div>
-                                <label class="block text-lg font-semibold text-gray-900">年齢</label>
-                                <select name="age" class="border rounded pr-6 py-1 w-full">
-                                    @for ($i = 18; $i <= 100; $i++)
-                                        <option value="{{ $i }}"
-                                            {{ $borrow->friend->age == $i ? 'selected' : '' }}>
-                                            {{ $i }}
-                                        </option>
-                                    @endfor
-                                </select>
-                            </div>
-                            <!-- 性別 -->
-                            <div>
-                                <label class="block text-lg font-semibold text-gray-900">性別</label>
-                                <select name="gender" class="border rounded pr-6 py-1 w-full">
-                                    <option value="男性" {{ $borrow->friend->gender == '男性' ? 'selected' : '' }}>男性
-                                    </option>
-                                    <option value="女性" {{ $borrow->friend->gender == '女性' ? 'selected' : '' }}>女性
-                                    </option>
-                                    <option value="指定なし" {{ $borrow->friend->gender == '指定なし' ? 'selected' : '' }}>
-                                        指定なし</option>
-                                </select>
-                            </div>
-                            <!-- 電話番号 -->
-                            <div>
-                                <label class="block text-lg font-semibold text-gray-900">電話番号</label>
-                                <input type="text" name="phone" value="{{ $borrow->friend->phone }}"
-                                    placeholder="電話番号" class="border rounded px-2 py-1 w-full" />
-                            </div>
+                        <!-- Email -->
+                        <div>
+                            <label class="block text-lg font-semibold text-gray-900">Email</label>
+                            <input type="email" name="email" value="{{ $borrow->friend->email }}"
+                                placeholder="Email" class="border rounded px-2 py-1 w-full" />
+                        </div>
+                        <!-- 住所 -->
+                        <div>
+                            <label class="block text-lg font-semibold text-gray-900">住所</label>
+                            <input type="text" name="address" value="{{ $borrow->friend->address }}"
+                                placeholder="住所" class="border rounded px-2 py-1 w-full" />
+                        </div>
+                        <!-- あなたとの関係 -->
+                        <div>
+                            <label class="block text-lg font-semibold text-gray-900">あなたとの関係</label>
+                            <input type="text" name="relationship_type"
+                                value="{{ $borrow->friend->relationship_type }}" placeholder="あなたとの関係"
+                                class="border rounded px-2 py-1 w-full" />
+                        </div>
 
-                            <!-- Email -->
-                            <div>
-                                <label class="block text-lg font-semibold text-gray-900">Email</label>
-                                <input type="email" name="email" value="{{ $borrow->friend->email }}"
-                                    placeholder="Email" class="border rounded px-2 py-1 w-full" />
-                            </div>
-                            <!-- 住所 -->
-                            <div>
-                                <label class="block text-lg font-semibold text-gray-900">住所</label>
-                                <input type="text" name="address" value="{{ $borrow->friend->address }}"
-                                    placeholder="住所" class="border rounded px-2 py-1 w-full" />
-                            </div>
-                            <!-- あなたとの関係 -->
-                            <div>
-                                <label class="block text-lg font-semibold text-gray-900">あなたとの関係</label>
-                                <input type="text" name="relationship_type"
-                                    value="{{ $borrow->friend->relationship_type }}" placeholder="あなたとの関係"
-                                    class="border rounded px-2 py-1 w-full" />
-                            </div>
-
-                            <div>
-                                <button type="submit"
-                                    class="bg-green-500 hover:bg-blue-700 text-white font-bold px-2 py-2 rounded">変更を保存</button>
-                            </div>
-                        </form>
-                    </div>
+                        <div>
+                            <button type="submit"
+                                class="bg-green-500 hover:bg-blue-700 text-white font-bold px-2 py-2 rounded">変更を保存</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
