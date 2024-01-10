@@ -50,8 +50,9 @@
                         <!-- 電話番号 -->
                         <div>
                             <label class="block text-lg font-semibold text-gray-900">電話番号</label>
-                            <input type="text" name="phone" value="{{ $borrow->friend->phone }}"
-                                placeholder="電話番号" class="border rounded px-2 py-1 w-full" />
+                            <input type="tel" name="phone" value="{{ $borrow->friend->phone }}"
+                                placeholder="電話番号" class="border rounded px-2 py-1 w-full" pattern="\d*"
+                                title="半角数字のみを入力してください"/>
                         </div>
 
                         <!-- Email -->
@@ -159,9 +160,10 @@
                                                 </select>
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap">
-                                                <input type="text" name="phone"
+                                                <input type="tel" name="phone"
                                                     value="{{ $borrow->friend->phone }}" placeholder="電話番号"
-                                                    class="border rounded px-2 py-1 lg:w-full" />
+                                                    class="border rounded px-2 py-1 lg:w-full" pattern="\d*"
+                                                    title="半角数字のみを入力してください" />
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap">
                                                 <input type="email" name="email"
