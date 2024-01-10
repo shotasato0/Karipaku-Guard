@@ -1,8 +1,4 @@
-@error('keyword')
-    <div class="text-red-500 text-sm leading-tight whitespace-nowrap mt-4">{{ $message }}</div>
-@enderror
 <div class="flex w-1/2 sm:w-1/2 lg:w-1/3 mt-2 sm:mt-0">
-
     <form action="{{ route('search.index') }}" method="GET" onsubmit="saveKeyword(event)" class="flex-grow">
         @csrf
 
