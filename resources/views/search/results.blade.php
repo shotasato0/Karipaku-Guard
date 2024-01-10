@@ -1,10 +1,12 @@
 <x-main>
     <x-slot name="title" class="text-2xl font-bold my-4">Karipaku Guard</x-slot>
-    <div class="container mx-auto p-12">
+    <div class="container mx-auto p-6 lg:p-20">
         <div class="flex flex-col">
-            <div class="flex justify-between mb-4">
-                <x-back-link />
-                <div class="flex flex-row space-y-2 sm:space-y-0 sm:space-x-2 w-full justify-end">
+            <div class="sm:flex justify-between mb-4">
+                <div>
+                    <x-back-link />
+                </div>
+                <div class="flex flex-row space-y-2 sm:space-y-0 sm:space-x-2 w-full sm:justify-end">
                     <x-search-form />
                     <x-create-button />
                 </div>

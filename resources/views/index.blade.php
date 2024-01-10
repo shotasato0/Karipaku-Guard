@@ -1,9 +1,9 @@
 <x-main :minHeightClass="'min-h-screen'">
     <x-slot name="title" class="text-2xl font-bold my-4">Karipaku Guard</x-slot>
-    <div class="container mx-auto p-6 lg:p-12">
+    <div class="container mx-auto p-6 lg:p-20">
         <div class="flex flex-col space-y-4">
             <div class="flex justify-center lg:justify-end">
-                <div class="flex flex-row justify-end space-y-2 sm:space-y-0 sm:space-x-2 w-full">
+                <div class="flex flex-row sm:justify-end space-y-2 sm:space-y-0 sm:space-x-2 w-full">
                     <x-search-form />
                     <x-create-button />
                 </div>
