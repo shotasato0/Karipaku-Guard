@@ -35,24 +35,22 @@
                             <input type="hidden" name="friend_id" value="">
 
                             <div class="bg-white p-4 border rounded-lg">
-                                <label for="friend_name"
-                                    class="block text-lg font-semibold text-gray-900">借りた人の名前</label>
-                                <input type="text" name="friend_name" id="friend_name" value="{{ old('friend_name') }}"
-                                    placeholder="借りた人の名前" class="border rounded px-2 py-1 w-full mt-2">
-                            </div>
-
-                            <div class="bg-white p-4 border rounded-lg">
-                                <label for="item_name"
-                                    class="block text-lg font-semibold text-gray-900">借りた物の名前</label>
-                                <input type="text" name="item_name" id="item_name" value="{{ old('item_name') }}"
-                                    placeholder="借りた物の名前" class="border rounded px-2 py-1 w-full mt-2">
-                            </div>
-
-                            <div class="bg-white p-4 border rounded-lg">
-                                <label for="borrowed_at"
-                                    class="block text-lg font-semibold text-gray-900">借りた日</label>
-                                <input type="date" name="borrowed_at" id="borrowed_at" value="{{ old('borrowed_at') }}"
+                                <label for="friend_name" class="block text-lg font-semibold text-gray-900">貸し主</label>
+                                <input type="text" name="friend_name" id="friend_name"
+                                    value="{{ old('friend_name') }}" placeholder="貸し主"
                                     class="border rounded px-2 py-1 w-full mt-2">
+                            </div>
+
+                            <div class="bg-white p-4 border rounded-lg">
+                                <label for="item_name" class="block text-lg font-semibold text-gray-900">借りた物</label>
+                                <input type="text" name="item_name" id="item_name" value="{{ old('item_name') }}"
+                                    placeholder="借りた物" class="border rounded px-2 py-1 w-full mt-2">
+                            </div>
+
+                            <div class="bg-white p-4 border rounded-lg">
+                                <label for="borrowed_at" class="block text-lg font-semibold text-gray-900">借りた日</label>
+                                <input type="date" name="borrowed_at" id="borrowed_at"
+                                    value="{{ old('borrowed_at') }}" class="border rounded px-2 py-1 w-full mt-2">
                             </div>
 
                             <div class="bg-white p-4 border rounded-lg">
@@ -78,7 +76,7 @@
             <div class="flex flex-row justify-between">
                 <x-back-link />
                 <div class="mt-2">
-                    <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">新規登録者の作成</h2>
+                    <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">新規作成</h2>
                 </div>
             </div>
             <div class="rounded-lg overflow-hidden">
@@ -91,11 +89,11 @@
                                 <tr>
                                     <th scope="col"
                                         class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
-                                        借りた人の名前
+                                        貸し主
                                     </th>
                                     <th scope="col"
                                         class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
-                                        借りた物の名前
+                                        借りた物
                                     </th>
                                     <th scope="col"
                                         class="whitespace-nowrap text-lg font-semibold text-gray-900 px-6 py-4 text-left">
@@ -129,20 +127,22 @@
                                 <tr class="bg-white border-b">
                                     <input type="hidden" name="friend_id" value="">
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <input type="text" name="friend_name" id="friend_name" value="{{ old('friend_name') }}"
-                                            placeholder="借りた人の名前" class="border rounded px-2 py-1 w-full">
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap">
-                                        <input type="text" name="item_name" id="item_name" value="{{ old('item_name') }}"
-                                            placeholder="借りた物の名前" class="border rounded px-2 py-1 w-full">
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap">
-                                        <input type="date" name="borrowed_at" id="borrowed_at" value="{{ old('borrowed_at') }}"
+                                        <input type="text" name="friend_name" id="friend_name"
+                                            value="{{ old('friend_name') }}" placeholder="貸し主"
                                             class="border rounded px-2 py-1 w-full">
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <input type="date" name="deadline" id="deadline" value="{{ old('deadline') }}"
+                                        <input type="text" name="item_name" id="item_name"
+                                            value="{{ old('item_name') }}" placeholder="借りた物"
                                             class="border rounded px-2 py-1 w-full">
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <input type="date" name="borrowed_at" id="borrowed_at"
+                                            value="{{ old('borrowed_at') }}" class="border rounded px-2 py-1 w-full">
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <input type="date" name="deadline" id="deadline"
+                                            value="{{ old('deadline') }}" class="border rounded px-2 py-1 w-full">
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <button type="submit"
