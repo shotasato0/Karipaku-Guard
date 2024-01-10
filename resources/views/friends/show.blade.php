@@ -1,7 +1,7 @@
 <x-main>
     <x-slot name="title">{{ $borrow }} - Karipaku Guard</x-slot>
 
-    <!-- モバイルビュー用のカード表示 -->
+    <!-- モバイルビュー用の表示 -->
     <div class="sm:hidden">
         <div class="container px-4 md:px-10">
             <div class="flex flex-row justify-between">
