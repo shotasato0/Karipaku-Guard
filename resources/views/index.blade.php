@@ -19,7 +19,7 @@
                         <div><strong>借りた物:</strong> {{ $borrow->item_name }}</div>
                         <div><strong>借りた日:</strong> {{ $borrow->borrowed_at->format('Y-m-d') }}</div>
                         <div><strong>返却期限:</strong> {{ optional($borrow->deadline)->format('Y-m-d') ?: '未設定' }}</div>
-                        <div class="flex flex-row space-y-2 mt-2">
+                        <div class="flex flex-row justify-between space-y-2 mt-2">
                             <div class="flex items-center" data-trust-score="{{ $borrow->days_until_deadline }}">
                                 <strong>信頼度:</strong>
                                 <img src="../../images/smile.png" alt="笑顔" class="w-16 ml-4 js-smile">
@@ -29,7 +29,7 @@
                                 <img src="../../images/explosion.png" alt="爆発" class="w-24 hidden js-explosion">
                             </div>
                             <!-- 編集・削除ボタンのコンテナ -->
-                            <div class="flex space-x-2">
+                            <div class="flex space-x-2 items-center">
                                 <a href="{{ route('borrows.edit', $borrow) }}"
                                     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center justify-center h-8 w-16">
                                     編集
