@@ -14,6 +14,7 @@ class SearchController extends Controller
         //テーブルからすべてのレコードを取得
         $borrows = Borrow::query();
 
+        //リクエストパラメーター
         $keyword = $request->input('keyword'); //nameキーワードを取得
         $upper = $request->input('upper');
         $upper = $request->input('lower');
@@ -25,27 +26,32 @@ class SearchController extends Controller
             ->orwhereHas('friend', function ($query) use ($keyword) {
                 $query->where('name', 'LIKE', "%{$keyword}%");
             })->get();
-            }
+        }
 
             //最大値から検索処理
-            if(!empty($upper)) {
+        if(!empty($upper)) {
 
-                $borrows->whereHas('friend', function ($q)use($upper) {
-                    $q->where('id', '<=', $upper);
-                })->get();
-            }
+            $borrows->whereHas('friend', function ($q)use($upper) {
+                $q->where('id', '<=', $upper);
+            })->get();
+        }
 
-            //最小値から検索
-            if(!empty($lower)) {
+        //最小値から検索
+        if(!empty($lower)) {
 
-                $borrows->whereHas('friend', function ($q)use($lower) {
-                    $q->where('id', '<=', $lower);
-                })->get();
-            }
+            $borrows->whereHas('friend', function ($q)use($lower) {
+                $q->where('id', '<=', $lower);
+            })->get();
+        }
 
-            //ページネーション
-            //5レコードずつ表示する
-            $posts = $borrows->paginate(5);
-            return view('search.results', ['posts' => $posts]);
+        // 日付範囲検索
+        if (!empty($borrowedFrom) && !empty($borrowedTo)) {
+            $borrows->whereBetween('borrowed_at', [$borrowedFrom, $borrowedTo]);
+        }
+
+        //ページネーション
+        //5レコードずつ表示する
+        $posts = $borrows->paginate(5);
+        return view('search.results', ['posts' => $posts]);
     }
 }

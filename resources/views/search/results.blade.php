@@ -50,8 +50,8 @@
                         </div>
                     </div>
                 @empty
-                    <div class="bg-white p-4 rounded-lg shadow-md">
-                        データはありません。
+                    <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                        検索結果が見つかりませんでした
                     </div>
                 @endforelse
             </div>
