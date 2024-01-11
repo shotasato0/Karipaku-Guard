@@ -44,11 +44,6 @@ class SearchController extends Controller
             })->get();
         }
 
-        // 日付範囲検索
-        if (!empty($borrowedFrom) && !empty($borrowedTo)) {
-            $borrows->whereBetween('borrowed_at', [$borrowedFrom, $borrowedTo]);
-        }
-
         //ページネーション
         //5レコードずつ表示する
         $posts = $borrows->paginate(5);
