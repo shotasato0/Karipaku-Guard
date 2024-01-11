@@ -73,12 +73,7 @@
                                 value="{{ $borrow->friend->relationship_type }}" placeholder="あなたとの関係"
                                 class="border rounded px-2 py-1 w-full" />
                         </div>
-                        <div>
-                            <button type="submit"
-                                class="bg-green-500 hover:bg-blue-700 text-white font-bold px-2 py-2 rounded">
-                                変更を保存
-                            </button>
-                        </div>
+                        <x-update-button />
                     </form>
                 </div>
             </div>
@@ -179,12 +174,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="px-6 py-4">
-                            <button type="submit"
-                                class="bg-green-500 hover:bg-blue-700 text-white font-bold px-2 py-2 rounded">
-                                変更を保存
-                            </button>
-                        </div>
+                        <x-update-button />
                     </form>
                 </div>
             </div>

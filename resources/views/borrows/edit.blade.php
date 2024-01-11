@@ -68,10 +68,7 @@
                                         class="border rounded px-2 py-1 w-full mt-2">
                                 </div>
 
-                                <div class="pt-4">
-                                    <button type="submit"
-                                        class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded">更新</button>
-                                </div>
+                                <x-update-button />
                             </form>
                         </div>
                     </div>
@@ -159,10 +156,7 @@
                                         value="{{ $borrow->deadline }}" @endif
                                             class="border rounded px-2 py-1 w-full">
                                     </td>
-                                    <td class="px-6 py-4 whitespace-nowrap">
-                                        <button type="submit"
-                                            class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded">更新</button>
-                                    </td>
+                                    <x-update-button />
                                 </tr>
                             </tbody>
                         </form>
