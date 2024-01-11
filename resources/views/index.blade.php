@@ -44,8 +44,8 @@
                         </div>
                     </div>
                 @empty
-                    <div class="bg-white p-4 rounded-lg shadow-md">
-                        データはありません。
+                    <div class="bg-white p-4 text-center rounded-lg shadow-md">
+                        データはありません
                     </div>
                 @endforelse
             </div>
@@ -139,8 +139,8 @@
                         @empty
                             <tr>
                                 <td colspan="7"
-                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                    No data available
+                                    class="text-center text-xl py-12 whitespace-nowrap font-medium text-gray-900">
+                                    データはありません
                                 </td>
                             </tr>
                         @endforelse
