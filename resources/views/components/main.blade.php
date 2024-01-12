@@ -10,7 +10,7 @@
 
     {{-- main --}}
     <div
-        class="relative sm:flex sm:justify-center sm:items-center  {{ $minHeightClass ?? 'min-h-three-quarters' }} 
+        class="relative sm:flex sm:justify-center sm:items-center  {{ $minHeightClass ?? 'min-h-three-quarters' }}
         bg-center bg-gray-100 dark:bg-gray-900 selection:bg-red-500 selection:text-white">
         @include('layouts.partials.auth-navigation')
         {{ $slot }}
