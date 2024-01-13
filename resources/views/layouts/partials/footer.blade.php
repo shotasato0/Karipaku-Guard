@@ -5,7 +5,9 @@
                 <a href="https://twitter.com/shoprogramming" rel="noopener noreferrer" class="text-gray-600 ml-1"
                     target="_blank">@shoprogramming</a>
             </p>
-            <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+            {{-- SNSアイコンのリンク。現状使わないのでオミット --}}
+
+            {{-- <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
                 <a class="text-gray-500">
                     <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         class="w-5 h-5" viewBox="0 0 24 24">
@@ -36,7 +38,7 @@
                         <circle cx="4" cy="4" r="2" stroke="none"></circle>
                     </svg>
                 </a>
-            </span>
+            </span> --}}
         </div>
     </div>
 </footer>

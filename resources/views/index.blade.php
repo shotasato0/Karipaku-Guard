@@ -119,7 +119,7 @@
                                     <img src="../../images/ignition.png" alt="点火"
                                         class="w-20 ml-1 hidden js-ignition">
                                     <img src="../../images/explosion.png" alt="爆発"
-                                        class="w-24 hidden js-explosion">
+                                        class="w-20 hidden js-explosion">
                                 </td>
 
                                 {{-- 編集と削除 --}}
