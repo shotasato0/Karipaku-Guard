@@ -21,8 +21,6 @@ Route::get('/developer-message', [DeveloperMessageController::class, 'show'])
     ->name('developer.message');
 
 //FriendController
-// Route::get('/friends', [FriendController::class, 'index'])
-//     ->name('friends.index');
 Route::get('/friends/{borrow}', [FriendController::class, 'show'])
     ->name('friends.show')
     ->where('borrow', '[0-9]+');
