@@ -71,5 +71,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// 証関連のルート定義を含む重要な部分。消さないように！
 require __DIR__.'/auth.php';
