@@ -1,0 +1,20 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-82a11634.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/app.js": {
+    "dynamicImports": [
+      "resources/js/confirmdelete.js"
+    ],
+    "file": "assets/app-60f01b97.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/js/confirmdelete.js": {
+    "file": "assets/confirmdelete-ce61ead3.js",
+    "isDynamicEntry": true,
+    "src": "resources/js/confirmdelete.js"
+  }
+}
