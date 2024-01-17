@@ -9,8 +9,18 @@ use App\Models\Friend;
 
 class BorrowController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     public function index() {
-        $borrows = Borrow::latest()->get();
+        if (auth()->check()) {
+            $borrows = auth()->user()->borrows()->latest()->get();
+        } else {
+            $borrows = collect(); // 空のコレクションを返す
+        }
 
         return view('index')
             ->with(['borrows' => $borrows]);
@@ -27,14 +37,14 @@ class BorrowController extends Controller
 
     public function store(StoreBorrowRequest $request) {
         // バリデーションが成功した場合の処理（バリデーションはRequestsディレクトリのファイルに設定）
-        
+
         $friend = new Friend();
         $friend->name = $request->friend_name;
-        // ...他の必要なフィールドを設定
         $friend->save();
     
         // 借り物モデルを作成
         $borrow = new Borrow();
+        $borrow->user_id = auth()->id(); //ユーザーID
         $borrow->friend_id = $friend->id; // 新しく作成したFriendのIDを設定
         $borrow->item_name = $request->item_name;
         $borrow->borrowed_at = $request->borrowed_at;
