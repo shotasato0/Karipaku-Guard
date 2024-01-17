@@ -34,8 +34,18 @@
     transition: opacity 0.3s;
 }
 
+
 /* ホバー時にツールチップを表示 */
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+}
+
+@media screen and (max-width: 640px) {
+    .tooltip .tooltiptext {
+        bottom: 0; /* 下部ではなく右側に表示 */
+        left: 100%; /* リンクの右側に表示 */
+        margin-left: 10px; /* 少しマージンを取る */
+        white-space: nowrap;
+    }
 }

@@ -13,9 +13,11 @@
                 @forelse ($borrows as $borrow)
                     <div class="bg-white p-4 rounded-lg shadow-md mb-4">
                         <div><strong>貸し主:</strong> <a href="{{ route('borrows.friend', $borrow->id) }}"
-                                class="hover:text-blue-600">
+                                class="relative hover:text-blue-600 tooltip">
                                 {{ $borrow->friend->name }}
-                            </a></div>
+                                <span class="tooltiptext">貸し主情報を見る</span>
+                            </a>
+                        </div>
                         <div><strong>借りた物:</strong> {{ $borrow->item_name }}</div>
                         <div><strong>借りた日:</strong> {{ $borrow->borrowed_at->format('Y-m-d') }}</div>
                         <div><strong>返却期限:</strong> {{ optional($borrow->deadline)->format('Y-m-d') ?: '未設定' }}</div>
