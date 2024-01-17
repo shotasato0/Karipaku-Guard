@@ -11,12 +11,19 @@ class Borrow extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
         'friend_id',
         'item_name',
         'borrowed_at',
         'deadline',
         'trust_score'
     ];
+
+    public function user()
+    {
+    return $this->belongsTo(User::class, 'user_id');
+    }
+
 
     protected $casts = [
         'borrowed_at' => 'date',
