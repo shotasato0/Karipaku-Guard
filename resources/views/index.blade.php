@@ -88,13 +88,15 @@
                     <tbody class="bg-white">
                         @forelse ($borrows as $borrow)
                             <tr>
-                                <td data-label="貸してくれた人"
+                                <td data-label="貸し主"
                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                    <a href="{{ route('borrows.friend', $borrow->id) }}" class="hover:text-blue-600">
+                                    <a href="{{ route('borrows.friend', $borrow->id) }}"
+                                        class="relative hover:text-blue-600 tooltip">
                                         {{ $borrow->friend->name }}
+                                        <span class="tooltiptext">貸し主情報を見る</span>
                                     </a>
                                 </td>
-                                <td data-label="借りた物の名前"
+                                <td data-label="借りた物"
                                     class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                                     {{ $borrow->item_name }}
                                 </td>
