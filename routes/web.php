@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FriendController;
 use App\Http\Controllers\BorrowController;
 use App\Http\Controllers\DeveloperMessageController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,8 +17,8 @@ use App\Http\Controllers\DeveloperMessageController;
 |
 */
 // HomeController
-Route::get('/home', [HomeController::class, 'home'])
-    ->name('home')->middleware('guest'); //guestミドルウェアを使用し、ログインしているユーザーがこのページにアクセスするのを防ぐ
+Route::get('/', [HomeController::class, 'home'])
+    ->name('home'); //guestミドルウェアを使用し、ログインしているユーザーがこのページにアクセスするのを防ぐ
 
 // DeveloperMessageController
 Route::get('/developer-message', [DeveloperMessageController::class, 'show'])
@@ -34,14 +35,14 @@ Route::patch('/friends/update/{friend}', [FriendController::class, 'update'])
     ->where('friend', '[0-9]+');
 
 //BorrowController
-Route::get('/', [BorrowController::class, 'index'])
+Route::get('/index', [BorrowController::class, 'index'])
     ->name('borrows.index');
 Route::get('/borrows/{borrow}', [BorrowController::class, 'friend'])
     ->name('borrows.friend')
     ->where('borrow', '[0-9]+');
 
-Route::get('/borrows/item', [BorrowController::class, 'item'])
-    ->name('borrows.item');
+// Route::get('/borrows/item', [BorrowController::class, 'item'])
+//     ->name('borrows.item');
 
 Route::post('/borrows/store', [BorrowController::class, 'store'])
     ->name('borrows.store');
