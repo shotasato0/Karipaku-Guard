@@ -15,6 +15,9 @@ use App\Http\Controllers\DeveloperMessageController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+// HomeController
+Route::get('/home', [HomeController::class, 'home'])
+    ->name('home')->middleware('guest'); //guestミドルウェアを使用し、ログインしているユーザーがこのページにアクセスするのを防ぐ
 
 // DeveloperMessageController
 Route::get('/developer-message', [DeveloperMessageController::class, 'show'])
