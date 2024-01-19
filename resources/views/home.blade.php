@@ -1,38 +1,48 @@
-<x-main :tilte="'カスタムタイトル'">
+@props(['title' => 'デフォルトタイトル'])
 
-    @section('title')
-        {{ isset($title) ? $title : 'デフォルトタイトル' }}
-    @endsection
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-    @section('content')
-        <div class="container mx-auto px-4">
-            <div class="flex flex-wrap justify-center">
-                <!-- 左側のセクション -->
-                <div class="w-full lg:w-1/2 px-4">
-                    <div class="text-left mb-6">
-                        <h1 class="text-3xl font-bold">借りパクガード</h1>
-                        <!-- アイコン（後で画像パスを入れてください） -->
-                        <img src="/path/to/icon.png" alt="アイコン" class="h-12">
-                    </div>
-                    <p>ここにアプリの説明文を入れます。</p>
-                    <div class="mt-6">
-                        <a href="{{ route('login') }}"
-                            class="bg-blue-500 text-white font-bold py-3 px-6 rounded-lg mr-4">ログイン</a>
-                        <a href="{{ route('register') }}"
-                            class="bg-green-500 text-white font-bold py-3 px-6 rounded-lg">新規登録</a>
-                    </div>
+@include('layouts.partials.head')
+@section('title', $title)
+
+<body class="antialiased">
+    {{-- header --}}
+    {{-- @include('layouts.partials.header') --}}
+
+    {{-- main --}}
+    <div
+        class="relative sm:flex sm:justify-center sm:items-center  {{ $minHeightClass ?? 'min-h-three-quarters' }}
+        bg-center bg-gray-100 dark:bg-gray-900 selection:bg-red-500 selection:text-white">
+        {{-- @include('layouts.partials.auth-navigation') --}}
+        <section class="text-gray-600 body-font">
+            <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+                <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+                    <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
                 </div>
-
-                <!-- 右側のセクション -->
-                <div class="w-full lg:w-1/2 px-4">
-                    <div class="text-left mb-6">
-                        <h2 class="text-xl font-bold">チュートリアル</h2>
-                        <!-- チュートリアル画像（後で画像パスを入れてください） -->
-                        <img src="/path/to/tutorial-image.png" alt="チュートリアル画像" class="w-full rounded-lg shadow-lg">
+                <div
+                    class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
+                        <br class="hidden lg:inline-block">readymade gluten
+                    </h1>
+                    <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air
+                        plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot
+                        chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
+                    <div class="flex justify-center">
+                        <button
+                            class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+                        <button
+                            class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
                     </div>
-                    <p>ここにチュートリアルの説明文を入れます。</p>
                 </div>
             </div>
-        </div>
-    @endsection
-</x-main>
+        </section>
+    </div>
+    {{-- info-navigation --}}
+    {{-- @include('layouts.partials.info-navigation') --}}
+
+    {{-- footer --}}
+    @include('layouts.partials.footer')
+</body>
+
+</html>
