@@ -7,41 +7,41 @@
 @section('title', $title)
 
 <body class="antialiased">
-    {{-- header --}}
-    {{-- @include('layouts.partials.header') --}}
-
-    {{-- main --}}
     <div
-        class="relative sm:flex sm:justify-center sm:items-center  {{ $minHeightClass ?? 'min-h-three-quarters' }}
-        bg-center bg-gray-100 dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-        {{-- @include('layouts.partials.auth-navigation') --}}
-        <section class="text-gray-600 body-font">
-            <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-                <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-                    <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
+        class="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full lg:w-1/2 mb-12 lg:mb-0">
+                    <div href="/index" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                        <img src="../../images/bomb.png" alt="アプリのアイコン" class="w-14 sm:w-25 lg:w-40">
+                        <h1 class="ml-3 text-3xl font-bold dark:text-gray-200">借りパクガード</h1>
+                    </div>
+                    <h2 class="text-xl lg:text-2xl mt-6 mb-4 font-semibold">
+                        返却日を忘れることなし！借りパクガードで簡単管理
+                    </h2>
+                    <p class="mb-8">
+                        アプリでは、借りたものの情報と共に、相手の機嫌をアイコンで表現。普段は笑顔マークですが、期限が迫るにつれ、アイコンが変化。友人との関係を守るための強力なサポートツールです。
+                    </p>
                 </div>
-                <div
-                    class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-                    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
-                        <br class="hidden lg:inline-block">readymade gluten
-                    </h1>
-                    <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air
-                        plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot
-                        chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
-                    <div class="flex justify-center">
-                        <button
-                            class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-                        <button
-                            class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
+                <div class="w-full lg:w-1/2 flex justify-center">
+                    <div class="grid grid-cols-4 gap-4">
+                        <img src="../../images/smile.png" alt="笑顔" class="w-16">
+                        <img src="../../images/bomb2.png" alt="爆弾" class="w-16">
+                        <img src="../../images/ignition.png" alt="点火" class="w-16">
+                        <img src="../../images/explosion.png" alt="爆発" class="w-20">
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="flex justify-center mt-8">
+                <button class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded">
+                    ログイン
+                </button>
+                <button class="ml-4 bg-gray-100 hover:bg-gray-200 text-indigo-500 font-bold py-2 px-4 rounded">
+                    登録
+                </button>
+            </div>
+        </div>
     </div>
-    {{-- info-navigation --}}
-    {{-- @include('layouts.partials.info-navigation') --}}
-
-    {{-- footer --}}
     @include('layouts.partials.footer')
 </body>
 
