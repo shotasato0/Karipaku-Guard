@@ -136,7 +136,7 @@ return [
     'starts_with' => ':attributeには、:valuesのどれかで始まる値を指定してください。',
     'string' => ':attributeは文字列を指定してください。',
     'timezone' => ':attributeには、有効なゾーンを指定してください。',
-    'unique' => ':attributeの値は既に存在しています。',
+    'unique' => 'すでに存在する:attributeです。',
     'uploaded' => ':attributeのアップロードに失敗しました。',
     'uppercase' => ':attributeは、大文字のみで指定してください。',
     'url' => ':attributeに正しい形式を指定してください。',
@@ -268,10 +268,16 @@ return [
     ],
 
     'attributes' => [
+        //自分のアプリオリジナル
         'friend_name' => '貸し主の名前',
         'item_name' => '借りた物',
         'borrowed_at' => '借りた日',
         'deadline' => '返却期限',
+
+        //Breezeで作成したログイン、登録ビューに影響
+        'name' => '氏名',
+        'email' => 'メールアドレス',
+        'password' => 'パスワード',
     ],
 
 

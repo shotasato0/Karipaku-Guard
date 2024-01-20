@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function home()
     {
-        return view('home', ['title' => '適切なタイトル']);
+        return view('home', ['title' => 'タイトル']);
     }
 
 }
