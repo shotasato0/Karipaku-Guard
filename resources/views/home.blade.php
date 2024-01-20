@@ -21,7 +21,7 @@
                         借りパクガードで簡単管理
                     </h1>
                     <p class="mb-8">
-                        アプリでは、借りたものの情報と共に、相手の機嫌をアイコンで表現。普段は笑顔マークですが、期限が迫るにつれ、アイコンが変化。友人との関係を守るための強力なサポートツールです。
+                        このアプリでは、借りたものの情報と共に相手の機嫌をアイコンで表現。普段は笑顔マークですが、期限が迫るにつれ、アイコンが変化。友人との関係を守るための強力なサポートツールです。
                     </p>
                 </div>
                 <div class="w-full lg:w-1/2 flex justify-center">
@@ -34,12 +34,14 @@
                 </div>
             </div>
             <div class="flex justify-center mt-8">
-                <button class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded">
+                <a href="{{ route('login') }}"
+                    class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded">
                     ログイン
-                </button>
-                <button class="ml-4 bg-gray-100 hover:bg-gray-200 text-indigo-500 font-bold py-2 px-4 rounded">
+                </a>
+                <a href="{{ route('register') }}"
+                    class="ml-4 bg-gray-100 hover:bg-gray-200 text-indigo-500 font-bold py-2 px-4 rounded">
                     登録
-                </button>
+                </a>
             </div>
         </div>
     </div>
