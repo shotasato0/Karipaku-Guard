@@ -35,11 +35,11 @@
             </div>
             <div class="flex justify-center mt-8">
                 <a href="{{ route('login') }}"
-                    class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded">
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded w-32 text-center">
                     ログイン
                 </a>
                 <a href="{{ route('register') }}"
-                    class="ml-4 bg-gray-100 hover:bg-gray-200 text-indigo-500 font-bold py-2 px-4 rounded">
+                    class="ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded w-32 text-center">
                     登録
                 </a>
             </div>
