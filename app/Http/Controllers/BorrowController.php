@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreBorrowRequest;
+use Illuminate\Support\Facades\Auth; // Authファサードの追加
 use Illuminate\Http\Request;
 use App\Models\Borrow;
 use App\Models\Friend;
@@ -16,15 +17,11 @@ class BorrowController extends Controller
 
 
     public function index() {
-        if (auth()->check()) {
-            $borrows = auth()->user()->borrows()->latest()->get();
-        } else {
-            $borrows = collect(); // 空のコレクションを返す
-        }
-
-        return view('index')
-            ->with(['borrows' => $borrows]);
+        $borrows = auth()->user()->borrows()->latest()->get();
+    
+        return view('index')->with(['borrows' => $borrows]);
     }
+    
 
     public function friend(Borrow $borrow) {
         return view('friends.show')
