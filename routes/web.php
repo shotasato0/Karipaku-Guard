@@ -13,7 +13,7 @@ Route::get('/', [HomeController::class, 'home'])
     ->name('home');
 
 // ログイン後にアクセスするルートに対して `auth` と `nobrowsercache` ミドルウェアを適用
-Route::middleware(['auth', 'nobrowsercache'])->group(function () {
+// Route::middleware(['auth', 'nobrowsercache'])->group(function () {
     // DeveloperMessageController
     Route::get('/developer-message', [DeveloperMessageController::class, 'show'])->name('developer.message');
 
@@ -43,6 +43,6 @@ Route::middleware(['auth', 'nobrowsercache'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
+// });
 
 require __DIR__.'/auth.php';

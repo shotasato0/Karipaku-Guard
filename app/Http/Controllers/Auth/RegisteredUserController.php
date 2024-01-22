@@ -18,14 +18,17 @@ class RegisteredUserController extends Controller
     /**
      * Display the registration view.
      */
-    public function create(): View
-{
-    if (Auth::check()) {
-        return redirect(RouteServiceProvider::HOME);
-    }
+    // RegisteredUserController.php
 
-    return view('auth.register');
-}
+    public function create(): View
+    {
+        // ユーザーが既にログインしている場合は、ダッシュボードにリダイレクト
+        if (Auth::check()) {
+            return redirect(RouteServiceProvider::HOME);
+        }
+
+        return view('auth.register');
+    }
 
 
     /**

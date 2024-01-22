@@ -15,14 +15,18 @@ class AuthenticatedSessionController extends Controller
     /**
      * Display the login view.
      */
+   // AuthenticatedSessionController.php
+
     public function create(): View
-{
-    if (Auth::check()) {
-        return redirect(RouteServiceProvider::HOME);
+    {
+        // ユーザーが既にログインしている場合は、ダッシュボードにリダイレクト
+        if (Auth::check()) {
+            return redirect(RouteServiceProvider::HOME);
+        }
+
+        return view('auth.login');
     }
 
-    return view('auth.login');
-}
 
     /**
      * Handle an incoming authentication request.

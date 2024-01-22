@@ -66,10 +66,10 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
     ];
 
-    protected $routeMiddleware = [
-        // 既存のミドルウェア
-        'nobrowsercache' => \App\Http\Middleware\NoBrowserCache::class,
-        // 他のミドルウェア
-    ];
+    // protected $routeMiddleware = [
+    //     // 既存のミドルウェア
+    //     'nobrowsercache' => \App\Http\Middleware\NoBrowserCache::class,
+    //     // 他のミドルウェア
+    // ];
     
 }
