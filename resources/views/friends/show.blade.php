@@ -48,7 +48,6 @@
 
     {{-- デスクトップ用の表示 --}}
     <div class="hidden sm:block">
-
         <body class="bg-gray-100">
             <div class="container px-4 md:px-10">
                 <h2 class="mb-4 text-2xl font-bold text-gray-800 dark:text-gray-200">貸し主の情報</h2>
