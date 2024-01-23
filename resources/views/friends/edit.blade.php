@@ -5,15 +5,7 @@
     <div class="sm:hidden">
         <div class="container px-4 md:px-10">
             <div class="py-4 inline-block min-w-full sm:px-4 lg:px-6">
-                <div class="flex flex-row justify-between">
-                    <a href="{{ route('borrows.friend', $borrow->id) }}"
-                        class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold my-2 py-2 px-4 rounded transition duration-300 ">
-                        &laquo; 戻る
-                    </a>
-                    <div class="mt-2">
-                        <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">貸し主情報の編集</h2>
-                    </div>
-                </div>
+                <h2 class="mb-2 text-xl font-bold text-gray-800 dark:text-gray-200">貸し主情報の編集</h2>
                 <div class="bg-white rounded-lg shadow-lg p-5 md:p-8">
                     <h1 class="text-3xl font-bold mb-6">
                         {{ $borrow->friend->name }}
@@ -49,9 +41,8 @@
                         <!-- 電話番号 -->
                         <div>
                             <label class="block text-lg font-semibold text-gray-900">電話番号</label>
-                            <input type="tel" name="phone" value="{{ $borrow->friend->phone }}"
-                                placeholder="電話番号" class="border rounded px-2 py-1 w-full" pattern="\d*"
-                                title="半角数字のみを入力してください" />
+                            <input type="tel" name="phone" value="{{ $borrow->friend->phone }}" placeholder="電話番号"
+                                class="border rounded px-2 py-1 w-full" pattern="\d*" title="半角数字のみを入力してください" />
                         </div>
 
                         <!-- Email -->
@@ -84,15 +75,7 @@
 
         <body class="bg-gray-100">
             <div class="container px-4 md:px-10">
-                <div class="flex flex-row justify-between">
-                    <a href="{{ route('borrows.friend', $borrow->id) }}"
-                        class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold my-2 py-2 px-4 rounded transition duration-300 ">
-                        &laquo; 戻る
-                    </a>
-                    <div class="mb-4">
-                        <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">貸し主情報の編集</h2>
-                    </div>
-                </div>
+                <h2 class="mb-2 text-xl font-bold text-gray-800 dark:text-gray-200">貸し主情報の編集</h2>
                 <div class="bg-white rounded-lg shadow-lg p-5 md:p-8">
                     <h1 class="text-3xl font-bold mb-6">
                         {{ $borrow->friend->name }}
@@ -161,14 +144,13 @@
                                                 placeholder="Email" class="border rounded px-2 py-1 lg:w-full" />
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
-                                            <input type="text" name="address"
-                                                value="{{ $borrow->friend->address }}" placeholder="住所"
-                                                class="border rounded px-2 py-1 lg:w-full" />
+                                            <input type="text" name="address" value="{{ $borrow->friend->address }}"
+                                                placeholder="住所" class="border rounded px-2 py-1 lg:w-full" />
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
                                             <input type="text" name="relationship_type"
-                                                value="{{ $borrow->friend->relationship_type }}"
-                                                placeholder="あなたとの関係" class="border rounded px-2 py-1 lg:w-full" />
+                                                value="{{ $borrow->friend->relationship_type }}" placeholder="あなたとの関係"
+                                                class="border rounded px-2 py-1 lg:w-full" />
                                         </td>
                                     </tr>
                                 </tbody>

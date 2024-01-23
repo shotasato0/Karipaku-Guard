@@ -5,12 +5,7 @@
     <div class="sm:hidden">
         <div class="container px-4 md:px-10">
             <div class="py-4 inline-block min-w-full sm:px-4 lg:px-6">
-                <div class="flex flex-row justify-between">
-                    <x-back-link />
-                    <div class="mt-2">
-                        <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">貸し主の情報</h2>
-                    </div>
-                </div>
+                <h2 class="mb-2 text-xl font-bold text-gray-800 dark:text-gray-200">貸し主の情報</h2>
                 <div class="bg-white rounded-lg shadow-lg p-5 md:p-8">
                     <h1 class="text-3xl font-bold mb-6">
                         {{ $borrow->friend->name }}
@@ -56,12 +51,7 @@
 
         <body class="bg-gray-100">
             <div class="container px-4 md:px-10">
-                <div class="flex flex-row justify-between">
-                    <x-back-link />
-                    <div class="mb-4">
-                        <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">貸し主の情報</h2>
-                    </div>
-                </div>
+                <h2 class="mb-4 text-xl font-bold text-gray-800 dark:text-gray-200">貸し主の情報</h2>
                 <div class="bg-white rounded-lg shadow-lg p-5 md:p-8">
                     <h1 class="text-3xl font-bold mb-6">
                         {{ $borrow->friend->name }}
