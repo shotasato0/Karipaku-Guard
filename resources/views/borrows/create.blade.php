@@ -67,7 +67,7 @@
     <!-- デスクトップ用の表示 -->
     <div class="hidden overflow-x-auto sm:block">
         <div class="container mx-auto p-6 lg:p-12">
-            <h2 class="mb-2 text-xl font-bold text-gray-800 dark:text-gray-200">新規作成</h2>
+            <h2 class="mb-2 text-2xl font-bold text-gray-800 dark:text-gray-200">新規作成</h2>
             <div class="rounded-lg overflow-hidden">
                 <div class="overflow-x-auto">
                     <table class="min-w-full">

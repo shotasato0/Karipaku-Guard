@@ -75,7 +75,7 @@
 
         <body class="bg-gray-100">
             <div class="container px-4 md:px-10">
-                <h2 class="mb-2 text-xl font-bold text-gray-800 dark:text-gray-200">貸し主情報の編集</h2>
+                <h2 class="mb-2 text-2xl font-bold text-gray-800 dark:text-gray-200">貸し主情報の編集</h2>
                 <div class="bg-white rounded-lg shadow-lg p-5 md:p-8">
                     <h1 class="text-3xl font-bold mb-6">
                         {{ $borrow->friend->name }}
