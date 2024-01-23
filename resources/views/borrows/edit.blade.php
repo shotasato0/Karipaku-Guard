@@ -7,13 +7,7 @@
             <div class="flex flex-col">
                 <div class="overflow-x-auto sm:mx-8 lg:mx-32">
                     <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-                        <div class="flex flex-row justify-between">
-                            <x-back-link />
-                            <div class="mt-2">
-                                <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">登録情報の編集</h2>
-                            </div>
-                        </div>
-
+                        <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">登録情報の編集</h2>
                         <div class="overflow-hidden">
                             <form method="POST" action="{{ route('borrows.update', $borrow) }}" class="space-y-4">
                                 @csrf
@@ -81,12 +75,7 @@
 
     <div class="hidden overflow-x-auto sm:block">
         <div class="container mx-auto p-6 lg:p-12">
-            <div class="flex flex-row justify-between">
-                <x-back-link />
-                <div class="mt-2">
-                    <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">登録情報の編集</h2>
-                </div>
-            </div>
+            <h2 class="mb-4 text-2xl font-bold text-gray-800 dark:text-gray-200">登録情報の編集</h2>
             <div class="rounded-lg overflow-hidden">
                 <div class="overflow-x-auto">
                     <table class="min-w-full">
