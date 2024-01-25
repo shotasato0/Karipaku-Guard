@@ -17,8 +17,8 @@
         @include('layouts.partials.auth-navigation')
         {{ $slot }}
     </div>
-    {{-- info-navigation --}}
-    @include('layouts.partials.info-navigation')
+    {{-- information --}}
+    @include('layouts.partials.information')
 
     {{-- footer --}}
     @include('layouts.partials.footer')
