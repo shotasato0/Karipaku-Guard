@@ -7,7 +7,7 @@ use App\Http\Controllers\BorrowController;
 use App\Http\Controllers\DeveloperMessageController;
 use App\Http\Controllers\HomeController;
 
-// HomeController
+    // HomeController
     Route::get('/', [HomeController::class, 'home'])->middleware('guest')->name('home');
 
     // DeveloperMessageController
