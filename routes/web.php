@@ -39,6 +39,9 @@ use App\Http\Controllers\HomeController;
     Route::delete('/borrows/{borrow}', [BorrowController::class, 'destroy'])
         ->name('borrows.destroy')->where('borrow', '[0-9]+');
 
+    // InformationController
+    Route::get('information/privacy-policy', [InformationController::class])
+        ->name('information.privacy-policy');
     // SearchController
     Route::get('/search', 'App\Http\Controllers\SearchController@index')
         ->name('search.index');
