@@ -15,7 +15,6 @@ class AuthenticatedSessionController extends Controller
     /**
      * Display the login view.
      */
-   // AuthenticatedSessionController.php
 
     public function create(): View
     {
@@ -24,7 +23,7 @@ class AuthenticatedSessionController extends Controller
             return redirect(RouteServiceProvider::HOME);
         }
 
-        return view('auth.login');
+        return view('auth.login' );
     }
 
 

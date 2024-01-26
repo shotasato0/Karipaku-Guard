@@ -4,7 +4,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    @section('title', $title)
+    @section('title', '借りパクガード')
     @include('layouts.partials.head')
 </head>
 

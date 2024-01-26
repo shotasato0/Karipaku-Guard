@@ -18,7 +18,6 @@ class RegisteredUserController extends Controller
     /**
      * Display the registration view.
      */
-    // RegisteredUserController.php
 
     public function create(): View
     {

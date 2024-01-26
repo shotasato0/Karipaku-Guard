@@ -3,9 +3,11 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-@include('layouts.partials.head')
-{{-- 子ビューの@yieldと繋がっている --}}
-@section('title', $title)
+<head>
+    {{-- 子ビューの@yieldと繋がっている --}}
+    @section('title', $title)
+    @include('layouts.partials.head')
+</head>
 
 <body class="antialiased">
     {{-- header --}}
