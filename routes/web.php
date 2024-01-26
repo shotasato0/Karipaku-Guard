@@ -6,6 +6,7 @@ use App\Http\Controllers\FriendController;
 use App\Http\Controllers\BorrowController;
 use App\Http\Controllers\DeveloperMessageController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InformationController;
 
     // HomeController
     Route::get('/', [HomeController::class, 'home'])->middleware('guest')
@@ -40,7 +41,7 @@ use App\Http\Controllers\HomeController;
         ->name('borrows.destroy')->where('borrow', '[0-9]+');
 
     // InformationController
-    Route::get('information/privacy-policy', [InformationController::class])
+    Route::get('information/privacy-policy', [InformationController::class, 'privacyPolicy'])
         ->name('information.privacy-policy');
     // SearchController
     Route::get('/search', 'App\Http\Controllers\SearchController@index')
