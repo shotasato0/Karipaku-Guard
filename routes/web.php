@@ -12,9 +12,9 @@ use App\Http\Controllers\InformationController;
     Route::get('/', [HomeController::class, 'home'])->middleware('guest')
         ->name('home');
 
-    // DeveloperMessageController
-    Route::get('/developer-message', [DeveloperMessageController::class, 'show'])
-        ->name('developer.message');
+    // // DeveloperMessageController
+    // Route::get('/developer-message', [DeveloperMessageController::class, 'show'])
+    //     ->name('developer.message');
 
     // FriendController
     Route::get('/friends/{borrow}', [FriendController::class, 'show'])
@@ -42,6 +42,9 @@ use App\Http\Controllers\InformationController;
 
     // InformationController
 
+    //開発者からのメッセージ
+    Route::get('/information/developerMessage', [InformationController::class, 'developerMessage'])
+        ->name('information.developerMessage');
     //プライバシーポリシー
     Route::get('information/privacy-policy', [InformationController::class, 'privacyPolicy'])
         ->name('information.privacy-policy');

@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 class InformationController extends Controller
 {
+    public function developerMessage()
+    {
+        return view('information.developerMessage');
+    }
+
+
     public function privacyPolicy()
     {
         return view('information.privacyPolicy');
