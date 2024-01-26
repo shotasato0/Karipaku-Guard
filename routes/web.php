@@ -41,8 +41,14 @@ use App\Http\Controllers\InformationController;
         ->name('borrows.destroy')->where('borrow', '[0-9]+');
 
     // InformationController
+
+    //プライバシーポリシー
     Route::get('information/privacy-policy', [InformationController::class, 'privacyPolicy'])
         ->name('information.privacy-policy');
+    //利用規約
+    Route::get('information/terms', [InformationController::class, 'terms'])
+        ->name('information.terms');
+
     // SearchController
     Route::get('/search', 'App\Http\Controllers\SearchController@index')
         ->name('search.index');

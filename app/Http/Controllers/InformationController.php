@@ -10,4 +10,9 @@ class InformationController extends Controller
     {
         return view('privacyPolicy');
     }
+
+    public function terms()
+    {
+        return view('infomation.terms');
+    }
 }
