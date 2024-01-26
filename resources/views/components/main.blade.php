@@ -4,7 +4,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    {{-- 子ビューの@yieldと繋がっている --}}
+    {{-- 子ビューの@sectionと繋がっている --}}
     @yield('title')
     @include('layouts.partials.head')
 </head>

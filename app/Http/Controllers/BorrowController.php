@@ -19,7 +19,8 @@ class BorrowController extends Controller
     public function index() {
         $borrows = auth()->user()->borrows()->latest()->get();
     
-        return view('index')->with(['borrows' => $borrows]);
+        return view('index')
+            ->with(['borrows' => $borrows]);
     }
     
 
