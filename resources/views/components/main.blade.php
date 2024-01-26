@@ -1,4 +1,4 @@
-@props(['title' => 'デフォルトタイトル'])
+@props(['title' => '借りパクガード'])
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">

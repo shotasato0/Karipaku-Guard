@@ -1,5 +1,8 @@
 <x-main :minHeightClass="'min-h-screen'">
-    <x-slot name="title" class="text-2xl font-bold my-4">Karipaku Guard</x-slot>
+    {{-- <x-slot name="title" class="text-2xl font-bold my-4">Karipaku Guard</x-slot> --}}
+    {{-- @section('title')
+        <title>借りパクガード</title>
+    @endsection --}}
     <div class="container mx-auto p-6 lg:p-20">
         <div class="flex flex-col space-y-4">
             <div class="flex justify-center lg:justify-end">
@@ -154,6 +157,5 @@
                 </table>
             </div>
         </div>
-    </div>
     </div>
 </x-main>
