@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    @yield('title')
+    <title>@yield('title') - 借りパクガード</title>
     @include('layouts.partials.head')
 </head>
 
