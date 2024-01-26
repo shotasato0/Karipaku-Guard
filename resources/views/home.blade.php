@@ -1,10 +1,8 @@
-@props(['title' => 'デフォルトタイトル'])
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    @section('title', '借りパクガード')
+    <title>借りパクガード</title>
     @include('layouts.partials.head')
 </head>
 
