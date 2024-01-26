@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    {{-- 子ビューの@sectionと繋がっている --}}
+    {{-- 子ビューの@sectionから値を受け取る。値はコントローラー->子ビュー->このビューへと渡ってくる --}}
     <title>@yield('title')借りパクガード</title>
     @include('layouts.partials.head')
 </head>
