@@ -1,11 +1,9 @@
-{{-- @props(['title' => '借りパクガード']) --}}
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     {{-- 子ビューの@sectionと繋がっている --}}
-    @yield('title')
+    <title>@yield('title')借りパクガード</title>
     @include('layouts.partials.head')
 </head>
 
