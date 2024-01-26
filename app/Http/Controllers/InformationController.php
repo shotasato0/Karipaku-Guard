@@ -8,11 +8,11 @@ class InformationController extends Controller
 {
     public function privacyPolicy()
     {
-        return view('privacyPolicy');
+        return view('information.privacyPolicy');
     }
 
     public function terms()
     {
-        return view('infomation.terms');
+        return view('information.terms');
     }
 }
