@@ -16,27 +16,6 @@ class FriendController extends Controller
             ->with(['friends' => $friends]);
     }
 
-    // public function show(Borrow $borrow)
-    // {
-    //     // IDに基づいて単一の友人を取得
-    //     // $friend = Friend::find($borrow); 
-    //     // $borrow インスタンスから関連する Friend インスタンスを取得
-    //     $friend = $borrow->friend;
-
-    //     if (!$friend) {
-    //         // 友人が見つからない場合の処理
-    //         abort(404);
-    //     }
-
-    //     $title = $friend->name . "の情報"; // 貸し主の名前をタイトルに使用
-
-    //     return view('friends.show', [
-    //         'borrow' => $borrow, 
-    //         'friend' => $borrow->friend,
-    //         'title' => $title  // タイトルをビューに渡す
-    //     ]);
-    // }
-
     public function edit(Borrow $borrow)
     {
         return view('friends.edit')

@@ -9,39 +9,42 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InformationController;
 
     // HomeController
+    //ログイン前に表示される画面
     Route::get('/', [HomeController::class, 'home'])->middleware('guest')
         ->name('home');
 
-    // // DeveloperMessageController
-    // Route::get('/developer-message', [DeveloperMessageController::class, 'show'])
-    //     ->name('developer.message');
-
     // FriendController
-    // Route::get('/friends/{borrow}', [FriendController::class, 'show'])
-    //     ->name('friends.show')->where('borrow', '[0-9]+');
+    //貸し主情報の編集
     Route::get('/friends/{borrow}/edit/', [FriendController::class, 'edit'])
         ->name('friends.edit');
+    //貸し主情報の更新
     Route::patch('/friends/update/{friend}', [FriendController::class, 'update'])
         ->name('friends.update')->where('friend', '[0-9]+');
 
     // BorrowController
+    //メイン画面
     Route::get('/index', [BorrowController::class, 'index'])
         ->name('borrows.index');
+    //貸し主情報
     Route::get('/borrows/{borrow}', [BorrowController::class, 'friend'])
         ->name('borrows.friend')->where('borrow', '[0-9]+');
-    Route::post('/borrows/store', [BorrowController::class, 'store'])
-        ->name('borrows.store');
+    //新規作成
     Route::get('/borrows/create', [BorrowController::class, 'create'])
         ->name('borrows.create');
+    //保存
+    Route::post('/borrows/store', [BorrowController::class, 'store'])
+        ->name('borrows.store');
+    //登録情報の編集
     Route::get('/borrows/{borrow}/edit/', [BorrowController::class, 'edit'])
         ->name('borrows.edit');
+    //登録情報の更新
     Route::patch('/borrows/update/{borrow}', [BorrowController::class, 'update'])
         ->name('borrows.update')->where('borrow', '[0-9]+');
+    //登録情報の削除
     Route::delete('/borrows/{borrow}', [BorrowController::class, 'destroy'])
         ->name('borrows.destroy')->where('borrow', '[0-9]+');
 
     // InformationController
-
     //開発者からのメッセージ
     Route::get('/information/developerMessage', [InformationController::class, 'developerMessage'])
         ->name('information.developerMessage');
@@ -52,7 +55,8 @@ use App\Http\Controllers\InformationController;
     Route::get('information/terms', [InformationController::class, 'terms'])
         ->name('information.terms');
 
-    // SearchController
+    //SearchController
+    //検索機能
     Route::get('/search', 'App\Http\Controllers\SearchController@index')
         ->name('search.index');
 
