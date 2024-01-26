@@ -4,6 +4,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 @include('layouts.partials.head')
+{{-- 子ビューの@yieldと繋がっている --}}
 @section('title', $title)
 
 <body class="antialiased">

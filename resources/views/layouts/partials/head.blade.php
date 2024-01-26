@@ -1,8 +1,9 @@
-<head>
+{{-- headタグの中身。再利用可能な部分テンプレート（パーシャル） --}}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    {{-- このパーシャルを使用する親ビューからのタイトルを受け取るためのプレースホルダー --}}
     <title>@yield('title')</title>
 
     <!-- Fonts -->
@@ -827,4 +828,3 @@
         }
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>

@@ -3,8 +3,11 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-@include('layouts.partials.head')
-@section('title', $title)
+<head>
+    @section('title', $title)
+    @include('layouts.partials.head')
+</head>
+
 
 <body class="antialiased">
     <div
