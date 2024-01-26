@@ -1,5 +1,5 @@
 <x-main>
-    {{-- <x-slot name="title">Karipaku Guard - Edit Borrow</x-slot> --}}
+    <x-slot name="title">Karipaku Guard - Edit Borrow</x-slot>
 
     <!-- モバイルビュー用の表示 -->
     <div class="sm:hidden">

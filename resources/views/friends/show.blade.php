@@ -1,6 +1,4 @@
 <x-main>
-    <x-slot name="title">{{ $borrow }} - Karipaku Guard</x-slot>
-
     <!-- モバイルビュー用の表示 -->
     <div class="sm:hidden">
         <div class="container px-4 md:px-10">
