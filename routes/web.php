@@ -17,8 +17,8 @@ use App\Http\Controllers\InformationController;
     //     ->name('developer.message');
 
     // FriendController
-    Route::get('/friends/{borrow}', [FriendController::class, 'show'])
-        ->name('friends.show')->where('borrow', '[0-9]+');
+    // Route::get('/friends/{borrow}', [FriendController::class, 'show'])
+    //     ->name('friends.show')->where('borrow', '[0-9]+');
     Route::get('/friends/{borrow}/edit/', [FriendController::class, 'edit'])
         ->name('friends.edit');
     Route::patch('/friends/update/{friend}', [FriendController::class, 'update'])

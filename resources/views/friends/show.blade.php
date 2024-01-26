@@ -1,5 +1,5 @@
 <x-main>
-    {{-- @section('title', $title ?? 'デフォルトタイトル') --}}
+    @section('title', $title ?? '貸し主の情報 - ')
     <!-- モバイルビュー用の表示 -->
     <div class="sm:hidden">
         <div class="container px-4 md:px-10">

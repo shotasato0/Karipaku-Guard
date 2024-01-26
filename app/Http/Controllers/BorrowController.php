@@ -25,8 +25,18 @@ class BorrowController extends Controller
     
 
     public function friend(Borrow $borrow) {
-        return view('friends.show')
-            ->with(['borrow' => $borrow]);
+
+        if(!$borrow->friend) {
+             // 友人が見つからない場合の処理
+            abort(404);
+        }
+
+        $title = $borrow->friend->name . 'の情報 - ';
+        
+        return view('friends.show', [
+            'borrow' => $borrow,
+            'title' => $title // タイトルをビューに渡す
+        ]);
     }
 
     public function create() {
