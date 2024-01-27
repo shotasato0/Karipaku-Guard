@@ -18,8 +18,16 @@ class FriendController extends Controller // FriendControllerクラスを定義�
 
     public function edit(Borrow $borrow) // editメソッド。指定されたBorrowモデルを編集するためのメソッド。
     {
-        return view('friends.edit') // 'friends.edit'ビューを返す。
-            ->with(['borrow' => $borrow]); // ビューに$borrow変数を渡す。
+        if(!$borrow->friend) {
+            abort(404);
+        }
+
+        $title = $borrow->friend->name . 'の情報の編集 - '; // ビューに表示するタイトルを設定。
+
+        return view('friends.edit', [
+            'borrow' => $borrow,
+            'title' => $title
+        ]); // 'friends.edit'ビューを返す。
     }
 
     public function update(Request $request, Friend $friend) // updateメソッド。指定されたFriendモデルを更新するためのメソッド。
@@ -44,7 +52,7 @@ class FriendController extends Controller // FriendControllerクラスを定義�
 
         if ($friend->borrows->isNotEmpty()) { // もしFriendが借用情報を持っていれば
             $borrow = $friend->borrows->first(); // 最初の借用情報を取得。
-            return redirect()->route('friends.show', ['borrow' => $borrow->id]); // friends.showルートにリダイレクトし、借用情報のIDを渡す。
+            return redirect()->route('borrows.friend', ['borrow' => $borrow->id]); // friends.showルートにリダイレクトし、借用情報のIDを渡す。
         } else {
             return redirect()->route('borrows.index'); // 借用情報がなければborrows.indexにリダイレクト。
         }

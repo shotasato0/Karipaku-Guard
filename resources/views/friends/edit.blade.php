@@ -1,6 +1,6 @@
 <x-main>
-    <x-slot name="title" class="text-2xl font-bold my-4">{{ $borrow }} - Karipaku Guard</x-slot>
-
+    {{-- <x-slot name="title" class="text-2xl font-bold my-4">{{ $borrow }} - Karipaku Guard</x-slot> --}}
+    @section('title', $title ?? '貸し主情報の編集 - ')
     {{-- モバイルビュー --}}
     <div class="sm:hidden">
         <div class="container px-4 md:px-10">
