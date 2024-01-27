@@ -1,5 +1,6 @@
 <x-main>
-    <x-slot name="title">Karipaku Guard - Create Borrow</x-slot>
+    {{-- <x-slot name="title">Karipaku Guard - Create Borrow</x-slot> --}}
+    @section('title', '新規作成 - ')
 
     <!-- モバイルビュー用の表示 -->
     <div class="sm:hidden">
