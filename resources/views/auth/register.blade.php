@@ -1,5 +1,5 @@
 <x-guest-layout>
-    @section('title', '新規登録')
+    @section('title', '登録')
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
