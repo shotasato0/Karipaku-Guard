@@ -1,6 +1,5 @@
 <x-main>
-    <x-slot name="title">Karipaku Guard - Edit Borrow</x-slot>
-
+    @section('title', '登録情報の編集 - ')
     <!-- モバイルビュー用の表示 -->
     <div class="sm:hidden">
         <div class="container mx-auto p-8">
