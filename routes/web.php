@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FriendController;
 use App\Http\Controllers\BorrowController;
-use App\Http\Controllers\DeveloperMessageController;
+use App\Http\Controllers\DeveloperMessageController;//いらないかも？
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InformationController;
 
@@ -12,6 +12,11 @@ use App\Http\Controllers\InformationController;
     //ログイン前に表示される画面
     Route::get('/', [HomeController::class, 'home'])->middleware('guest')
         ->name('home');
+
+    //ManualController
+    //アプリの使い方
+    Route::get('/manual', [ManualController::class, 'index'])
+        ->name('manual.index');
 
     // FriendController
     //貸し主情報の編集
