@@ -49,7 +49,8 @@
         </div>
         <div class="mb-8">
             <h2 class="text-2xl font-bold mb-4 border-b">8. お問い合わせ</h2>
-            <p>本プライバシーポリシーに関するご質問や懸念がある場合は、[お問合せのリンク]までご連絡ください。</p>
+            <p>本プライバシーポリシーに関するご質問や懸念がある場合は、<a href="https://twitter.com/shoprogramming" rel="noopener noreferrer"
+                    class="ml-1" target="_blank">（@shoprogramming）</a>までご連絡ください。</p>
         </div>
     </div>
 </x-main>
