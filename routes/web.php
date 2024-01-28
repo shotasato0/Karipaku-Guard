@@ -7,6 +7,8 @@ use App\Http\Controllers\BorrowController;
 use App\Http\Controllers\DeveloperMessageController;//いらないかも？
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InformationController;
+use App\Http\Controllers\ManualController;
+
 
     // HomeController
     //ログイン前に表示される画面

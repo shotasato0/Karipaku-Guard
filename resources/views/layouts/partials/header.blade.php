@@ -7,7 +7,7 @@
         </a>
         <nav
             class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center">
-            <a href="" class="mr-5 hover:text-gray-900 font-bold">使い方ガイド</a>
+            <a href="{{ route('manual.index') }}" class="mr-5 hover:text-gray-900 font-bold">使い方ガイド</a>
         </nav>
     </div>
 </header>
