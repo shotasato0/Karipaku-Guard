@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <a href="{{ route('friends.edit', $borrow) }}"
-                        class="py-2 bg-blue-500 hover:bg-blue-700 text-white mt-10 font-bold rounded inline-block align-middle text-center"
+                        class="py-2 bg-blue-600 hover:bg-blue-500 duration-75 text-white mt-10 font-bold rounded inline-block align-middle text-center"
                         style="line-height: normal; height: 38px; width: 80px;">
                         編集
                     </a>
@@ -91,7 +91,7 @@
                         </table>
                     </div>
                     <a href="{{ route('friends.edit', $borrow) }}"
-                        class="py-2 bg-blue-500 hover:bg-blue-700 text-white mt-10 font-bold rounded inline-block align-middle text-center"
+                        class="py-2 bg-blue-600 hover:bg-blue-500 duration-75 text-white mt-10 font-bold rounded inline-block align-middle text-center"
                         style="line-height: normal; height: 38px; width: 80px;">
                         編集
                     </a>

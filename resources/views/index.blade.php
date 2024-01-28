@@ -128,7 +128,7 @@
                                 {{-- 編集と削除 --}}
                                 <td class="edit-button py-2 text-sm text-gray-900 font-light whitespace-wrap">
                                     <a href="{{ route('borrows.edit', $borrow) }}"
-                                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 rounded flex items-center justify-center h-10 w-20">
+                                        class="bg-blue-600 hover:bg-blue-500 duration-75 text-white font-bold py-2 rounded flex items-center justify-center h-10 w-20">
                                         編集
                                     </a>
                                 </td>
