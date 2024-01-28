@@ -41,7 +41,7 @@
                 </a>
                 <a href="{{ route('register') }}"
                     class="ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded w-32 text-center">
-                    登録
+                    新規登録
                 </a>
             </div>
         </div>
