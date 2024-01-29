@@ -10,43 +10,75 @@
                 <p>借りパクガードは、他者から借りたアイテムを管理するためのアプリです。貸し主、借りた物、借りた日、返却期限を記録し、管理することができます。</p>
             </section>
 
-            {{-- 機能説明セクション --}}
-            <section class="mb-10">
-                <h2 class="text-xl font-semibold mb-3">主要機能とその使い方</h2>
-                <ol class="list-decimal ml-5">
-                    <li>リスト表示 - 貸し主、借りた物、借りた日、返却期限の一覧を見ることができます。</li>
-                    <li>貸し主の情報 - 貸し主名をクリックすることで、貸し主の詳細な情報を登録、編集することができます。</li>
-                    <li>信頼度表示 - 返却期限に応じて信頼度がビジュアル化されます。</li>
-                    <li>編集・削除 - 借り物に関する情報を編集、または削除することができます。</li>
-                    <li>新規追加 - 新しい借り物をリストに追加することができます。</li>
-                </ol>
+            <!-- リスト表示セクション -->
+            <section class="mb-10 flex flex-wrap">
+                <!-- 機能説明 -->
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-xl font-semibold mb-3">リスト表示</h2>
+                    <p>貸し主、借りた物、借りた日、返却期限の一覧を見ることができます。</p>
+                </div>
+                <!-- 対応する画像 -->
+                <div class="w-full lg:w-1/2 flex justify-center items-center">
+                    <a href="../../../../images/screen-list.png" target="_blank">
+                        <img src="../../../../images/screen-list.png" width="300" alt="リスト表示画像">
+                    </a>
+                </div>
             </section>
 
-            {{-- スクリーンショットセクション --}}
-            <section class="mb-10">
-                <h2 class="text-xl font-semibold mb-3">スクリーンショット</h2>
-                <a href="../../../../images/screen-list.png" target="_blank">
-                    <img src="../../../../images/screen-list.png" width="300" alt="リスト表示画像">
-                </a>
-                <a href="../../../../images/screen-addition.png" target="_blank">
-                    <img src="../../../../images/screen-addition.png" width="300" alt="新規追加画像">
-                </a>
-                <a href="../../../../images/screen-information.png" target="_blank">
-                    <img src="../../../../images/screen-information.png" width="300" alt="貸し主の情報画像">
-                </a>
+            <!-- 貸し主の情報セクション -->
+            <section class="mb-10 flex flex-wrap">
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-xl font-semibold mb-3">貸し主の情報</h2>
+                    <p>貸し主名をクリックすることで、貸し主の詳細な情報を登録、編集することができます。</p>
+                </div>
+                <div class="w-full lg:w-1/2 flex justify-center items-center">
+                    <a href="../../../../images/screen-information.png" target="_blank">
+                        <img src="../../../../images/screen-information.png" width="300" alt="貸し主の情報画像">
+                    </a>
+                </div>
+            </section>
+
+            <!-- 信頼度表示セクション -->
+            <section class="mb-10 flex flex-wrap">
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-xl font-semibold mb-3">信頼度表示</h2>
+                    <p>返却期限に応じて信頼度がビジュアル化されます。</p>
+                </div>
+                <div class="w-full lg:w-1/2 flex justify-center items-center">
+                    <a href="ここに信頼度表示画像のURL" target="_blank">
+                        <img src="ここに信頼度表示画像のURL" width="300" alt="信頼度表示画像">
+                    </a>
+                </div>
+            </section>
+
+            <!-- 編集・削除セクション -->
+            <section class="mb-10 flex flex-wrap">
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-xl font-semibold mb-3">編集・削除</h2>
+                    <p>借り物に関する情報を編集、または削除することができます。</p>
+                </div>
+                <div class="w-full lg:w-1/2 flex justify-center items-center">
+                    <a href="ここに編集・削除画像のURL" target="_blank">
+                        <img src="ここに編集・削除画像のURL" width="300" alt="編集・削除画像">
+                    </a>
+                </div>
+            </section>
+
+            <!-- 新規追加セクション -->
+            <section class="mb-10 flex flex-wrap">
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-xl font-semibold mb-3">新規追加</h2>
+                    <p>新しい借り物をリストに追加することができます。</p>
+                </div>
+                <div class="w-full lg:w-1/2 flex justify-center items-center">
+                    <a href="../../../../images/screen-addition.png" target="_blank">
+                        <img src="../../../../images/screen-addition.png" width="300" alt="新規追加画像">
+                    </a>
+                </div>
             </section>
 
             {{-- FAQセクション --}}
-            <section class="mb-10">
-                <h2 class="text-xl font-semibold mb-3">よくある質問</h2>
-                <dl class="ml-5">
-                    <dt class="font-semibold mb-2">Q: アプリの登録は必要ですか？</dt>
-                    <dd class="mb-5">A: いいえ、ユーザー登録は必要ありませんが、アプリへのログイン情報がないと、
-                        アプリを閉じてしまった際に情報が保存されません。情報を保存しておきたいのであればログインして使用されることをお勧めします。</dd>
-                    <!-- 他の質問と回答を追加 -->
-                </dl>
-            </section>
+            <!-- ...他のセクション... -->
         </div>
     </body>
-
 </x-main>
