@@ -25,7 +25,15 @@
             {{-- スクリーンショットセクション --}}
             <section class="mb-10">
                 <h2 class="text-xl font-semibold mb-3">スクリーンショット</h2>
-                {{-- ここにスクリーンショットを挿入 --}}
+                <a href="../../../../images/screen-list.png" target="_blank">
+                    <img src="../../../../images/screen-list.png" width="300" alt="リスト表示画像">
+                </a>
+                <a href="../../../../images/screen-addition.png" target="_blank">
+                    <img src="../../../../images/screen-addition.png" width="300" alt="新規追加画像">
+                </a>
+                <a href="../../../../images/screen-information.png" target="_blank">
+                    <img src="../../../../images/screen-information.png" width="300" alt="貸し主の情報画像">
+                </a>
             </section>
 
             {{-- FAQセクション --}}
