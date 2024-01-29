@@ -124,12 +124,10 @@
                                 <tr class="bg-white border-b">
                                     {{-- friend_idが取得必須だが、ビューに表示させたくないのでhiddenにする --}}
                                     <input type="hidden" name="friend_id" value="{{ $borrow->friend_id }}">
-                                    <td class="text-lg px-6 py-4 whitespace-nowrap">
-                                        <a href="{{ route('borrows.friend', $borrow->id) }}"
-                                            class="relative hover:text-blue-600 tooltip">
-                                            {{ $borrow->friend->name }}
-                                            <span class="tooltiptext">貸し主情報を見る</span>
-                                        </a>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <input type="text" name="friend_name" id="friend_name"
+                                            value="{{ $borrow->friend->name }}"
+                                            class="border rounded px-2 py-1 w-full">
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <input type="text" name="item_name" id="item_name"
