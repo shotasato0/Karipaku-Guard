@@ -1,13 +1,13 @@
 <x-main>
     {{-- <x-slot name="title">Karipaku Guard - Create Borrow</x-slot> --}}
-    @section('title', '新規作成 - ')
+    @section('title', '新規追加 - ')
 
     <!-- モバイルビュー用の表示 -->
     <div class="sm:hidden">
         <div class="container mx-auto p-8">
             <div class="flex flex-col">
                 <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-                    <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">新規作成</h2>
+                    <h2 class="text-xl font-bold text-gray-800 dark:text-gray-200">新規追加</h2>
                     <div class="overflow-hidden">
                         <form method="POST" action="{{ route('borrows.store') }}" class="space-y-4">
                             @csrf
@@ -68,7 +68,7 @@
     <!-- デスクトップ用の表示 -->
     <div class="hidden overflow-x-auto sm:block">
         <div class="container mx-auto p-6 lg:p-12">
-            <h2 class="mb-2 text-2xl font-bold text-gray-800 dark:text-gray-200">新規作成</h2>
+            <h2 class="mb-2 text-2xl font-bold text-gray-800 dark:text-gray-200">新規追加</h2>
             <div class="rounded-lg overflow-hidden">
                 <div class="overflow-x-auto">
                     <table class="min-w-full">

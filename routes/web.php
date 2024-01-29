@@ -35,7 +35,7 @@ use App\Http\Controllers\ManualController;
     //貸し主情報
     Route::get('/borrows/{borrow}', [BorrowController::class, 'friend'])
         ->name('borrows.friend')->where('borrow', '[0-9]+');
-    //新規作成
+    //新規追加
     Route::get('/borrows/create', [BorrowController::class, 'create'])
         ->name('borrows.create');
     //保存
