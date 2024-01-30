@@ -1,5 +1,5 @@
 <x-main :minHeightClass="'min-h-screen'">
-    <x-slot name="title" class="text-2xl font-bold my-4">Karipaku Guard - 利用規約</x-slot>
+    @section('title', '利用規約 - ')
     <div class="container mx-auto p-6 lg:p-20 text-black-800 dark:text-white">
         <h1 class="text-3xl font-bold mb-4">利用規約</h1>
         <p class="mb-8">本利用規約（以下、「本規約」といいます）は、このウェブサイト上で提供するサービス「借りパクガード」（以下、「本サービス」といいます）の利用条件を定めるものです。

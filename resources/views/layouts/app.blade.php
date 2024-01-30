@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}"> <!-- HTMLの開始タグで、言語属性にアプリケーションのロケール（言語設定）を設定 -->
 
 <head>
-    <title>ダッシュボード</title> <!-- ページのタイトルを設定 -->
+    <title>ダッシュボード - 借りパクガード</title> <!-- ページのタイトルを設定 -->
     @include('layouts.partials.head') <!-- head部分の共通コンポーネントをインクルード -->
 </head>
 
