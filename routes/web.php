@@ -8,12 +8,20 @@ use App\Http\Controllers\DeveloperMessageController;//いらないかも？
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InformationController;
 use App\Http\Controllers\ManualController;
+use App\Http\Controllers\GoogleLoginController;
 
 
     // HomeController
     //ログイン前に表示される画面
     Route::get('/', [HomeController::class, 'home'])->middleware('guest')
         ->name('home');
+
+    // GoogleLoginController
+    //Googleログインに使う
+    Route::get('/auth/google', [GoogleLoginController::class, 'redirectToGoogle'])
+        ->name('login.google');
+    Route::get('/auth/google/callback', [GoogleLoginController::class, 'handleGoogleCallback'])
+        ->name('login.google.callback');
 
     //ManualController
     //アプリの使い方
