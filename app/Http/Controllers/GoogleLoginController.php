@@ -33,5 +33,32 @@ class GoogleLoginController extends Controller
             throw $e;
         }
     }
+
+    public function handleGoogleSignupCallback()
+{
+    try {
+        $socialiteUser = Socialite::driver('google')->user();
+        $email = $socialiteUser->email;
+
+        // 既存ユーザーのチェック
+        $user = User::where('email', $email)->first();
+
+        // ユーザーが存在しない場合のみ新規作成
+        if (!$user) {
+            $user = User::create([
+                'name' => $socialiteUser->name,
+                'email' => $email,
+                // 他の必要な情報を追加
+            ]);
+        }
+
+        Auth::login($user);
+
+        return redirect()->intended('dashboard');
+    } catch (Exception $e) {
+        Log::error($e);
+        throw $e;
+    }
+}
 }
 
