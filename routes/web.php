@@ -17,11 +17,19 @@ use App\Http\Controllers\GoogleLoginController;
         ->name('home');
 
     // GoogleLoginController
-    //Googleログインに使う
+    //Googleログインに使用
     Route::get('/auth/google', [GoogleLoginController::class, 'redirectToGoogle'])
         ->name('login.google');
     Route::get('/auth/google/callback', [GoogleLoginController::class, 'handleGoogleCallback'])
         ->name('login.google.callback');
+
+    //Googleアカウントを使用した新規登録時に使用
+    Route::get('/auth/google/signup', [GoogleLoginController::class, 'redirectToGoogle'])
+        ->name('signup.google');
+
+    Route::get('/auth/google/signup/callback', [GoogleLoginController::class, 'handleGoogleSignupCallback'])
+        ->name('signup.google.callback');
+
 
     //ManualController
     //アプリの使い方
