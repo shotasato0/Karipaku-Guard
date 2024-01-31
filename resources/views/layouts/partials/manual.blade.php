@@ -33,28 +33,6 @@
 
         <!-- 各セクションを横並びに配置 -->
         <div class="flex flex-wrap justify-between">
-            <!-- リスト表示セクション -->
-            <section class="mb-10 w-full lg:w-1/2 flex flex-col items-center">
-                <div class="flex justify-center items-center mb-3">
-                    <img src="../../../../images/screen-list.png" width="400" alt="リスト表示画像">
-                </div>
-                <div style="width: 400px; padding: 0 20px;">
-                    <h2 class="text-center text-xl font-semibold mb-3">リスト表示</h2>
-                    <p>貸し主、借りた物、借りた日、返却期限の一覧を見ることができます。</p>
-                </div>
-            </section>
-
-            <!-- 編集・削除セクション -->
-            <section class="mb-10 w-full lg:w-1/2 flex flex-col items-center">
-                <div class="flex justify-center items-center mb-3">
-                    <img src="../../../../images/screen-edit.png" width="395" alt="貸し主の情報画像">
-                </div>
-                <div style="width: 395px; padding: 0 20px;">
-                    <h2 class="text-center text-xl font-semibold mb-3">編集・削除</h2>
-                    <p>借り物に関する情報を編集、または削除することができます。</p>
-                </div>
-            </section>
-
             <!-- 新規追加セクション -->
             <section class="mb-10 w-full lg:w-1/2 flex flex-col items-center">
                 <div class="flex justify-center items-center mb-3">
@@ -66,6 +44,17 @@
                 </div>
             </section>
 
+            <!-- リスト表示セクション -->
+            <section class="mb-10 w-full lg:w-1/2 flex flex-col items-center">
+                <div class="flex justify-center items-center mb-3">
+                    <img src="../../../../images/screen-list.png" width="400" alt="リスト表示画像">
+                </div>
+                <div style="width: 400px; padding: 0 20px;">
+                    <h2 class="text-center text-xl font-semibold mb-3">リスト表示</h2>
+                    <p>貸し主、借りた物、借りた日、返却期限の一覧を見ることができます。</p>
+                </div>
+            </section>
+
             <!-- 貸し主の情報セクション -->
             <section class="mb-10 w-full lg:w-1/2 flex flex-col items-center">
                 <div class="flex justify-center items-center mb-3">
@@ -74,6 +63,17 @@
                 <div style="width: 395px; padding: 0 20px;">
                     <h2 class="text-center text-xl font-semibold mb-3">貸し主の情報</h2>
                     <p>貸し主名をクリックすることで、貸し主の詳細な情報を登録、編集することができます。</p>
+                </div>
+            </section>
+
+            <!-- 編集・削除セクション -->
+            <section class="mb-10 w-full lg:w-1/2 flex flex-col items-center">
+                <div class="flex justify-center items-center mb-3">
+                    <img src="../../../../images/screen-edit.png" width="395" alt="貸し主の情報画像">
+                </div>
+                <div style="width: 395px; padding: 0 20px;">
+                    <h2 class="text-center text-xl font-semibold mb-3">編集・削除</h2>
+                    <p>借り物に関する情報を編集、または削除することができます。</p>
                 </div>
             </section>
         </div>
