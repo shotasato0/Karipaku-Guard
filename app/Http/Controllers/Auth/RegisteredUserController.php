@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
-use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -15,29 +14,17 @@ use Illuminate\View\View;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SampleMail;
 
-
 class RegisteredUserController extends Controller
 {
-    /**
-     * Display the registration view.
-     */
-
     public function create(): View
     {
-        // ユーザーが既にログインしている場合は、ダッシュボードにリダイレクト
         if (Auth::check()) {
-            return redirect(RouteServiceProvider::HOME);
+            return redirect()->route('verification.notice'); // ここをルート名でリダイレクト
         }
 
         return view('auth.register');
     }
 
-
-    /**
-     * Handle an incoming registration request.
-     *
-     * @throws \Illuminate\Validation\ValidationException
-     */
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
@@ -52,13 +39,13 @@ class RegisteredUserController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        // 新規ユーザー作成後、メール送信
         Mail::to($request->email)->send(new SampleMail($request->name, $request->email));
 
         event(new Registered($user));
 
         Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
+        // リダイレクト先をルート名を使用して指定
+        return redirect()->route('verification.notice');
     }
 }
