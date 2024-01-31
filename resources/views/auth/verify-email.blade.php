@@ -29,11 +29,4 @@
             </button>
         </form>
     </div>
-
-    <!-- トップページへのリンクを追加 -->
-    <div class="mt-4">
-        <a href="{{ route('borrows.index') }}" class="underline text-sm text-gray-600 hover:text-gray-900">
-            {{ __('トップページに進む') }}
-        </a>
-    </div>
 </x-guest-layout>
