@@ -30,33 +30,27 @@ class FriendController extends Controller // FriendControllerクラスを定義�
         ]); // 'friends.edit'ビューを返す。
     }
 
-    public function update(Request $request, Friend $friend) // updateメソッド。指定されたFriendモデルを更新するためのメソッド。
-    {
-        $validateData = $request->validate([ // 入力データのバリデーション。
-            'age' => 'required|string|max:255', // 年齢は必須で、文字列、最大255文字。
-            'gender' => 'required|string|max:255', // 性別も必須で、文字列、最大255文字。
-            'phone' => 'required|string|max:255', // 電話番号も必須で、文字列、最大255文字。
-            'email' => 'required|string|max:255', // メールアドレスも必須で、文字列、最大255文字。
-            'address' => 'required|string|max:255', // 住所も必須で、文字列、最大255文字。
-            'relationship_type' => 'required|string|max:255', // 関係の種類も必須で、文字列、最大255文字。
-        ]);
+    public function update(Request $request, Friend $friend)
+{
+    // リクエストデータの受け取り、未入力の場合はnullを設定
+    $friend->age = $request->has('age') ? $request->age : null;
+    $friend->gender = $request->has('gender') ? $request->gender : null;
+    $friend->phone = $request->has('phone') ? $request->phone : null;
+    $friend->email = $request->has('email') ? $request->email : null;
+    $friend->address = $request->has('address') ? $request->address : null;
+    $friend->relationship_type = $request->has('relationship_type') ? $request->relationship_type : null;
 
-        // 受け取ったリクエストのデータでFriendモデルのプロパティを更新。
-        $friend->age = $request->age;
-        $friend->gender = $request->gender;
-        $friend->phone = $request->phone;
-        $friend->email = $request->email;
-        $friend->address = $request->address;
-        $friend->relationship_type = $request->relationship_type;
-        $friend->save(); // データベースに保存。
+    $friend->save(); // 更新内容をデータベースに保存
 
-        if ($friend->borrows->isNotEmpty()) { // もしFriendが借用情報を持っていれば
-            $borrow = $friend->borrows->first(); // 最初の借用情報を取得。
-            return redirect()->route('borrows.friend', ['borrow' => $borrow->id]); // friends.showルートにリダイレクトし、借用情報のIDを渡す。
-        } else {
-            return redirect()->route('borrows.index'); // 借用情報がなければborrows.indexにリダイレクト。
-        }
-        
+    // リダイレクト処理
+    if ($friend->borrows->isNotEmpty()) {
+        $borrow = $friend->borrows->first();
+        return redirect()->route('borrows.friend', ['borrow' => $borrow->id]);
+    } else {
+        return redirect()->route('borrows.index');
     }
+}
+
+
 
 }
