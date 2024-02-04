@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\SampleMail;
 
 class RegisteredUserController extends Controller
 {
@@ -38,8 +37,6 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-
-        Mail::to($request->email)->send(new SampleMail($request->name, $request->email));
 
         event(new Registered($user));
 
