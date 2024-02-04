@@ -1,7 +1,10 @@
 <footer class="text-gray-600 body-font">
     <div class="bg-gray-100">
         <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row items-center">
-            <p class="text-gray-500 text-sm text-center mb-3 sm:mb-0">© 2023 Karipaku Guard —</p>
+            <div class="flex">
+                <p class="text-gray-500 text-sm text-center mb-3 sm:mb-0 mr-1">© 2024 Karipaku Guard</p>
+                <p class="hidden sm:block text-gray-500 text-sm text-center mb-3 sm:mb-0">—</p>
+            </div>
             <div class="flex flex-row">
                 <a href="https://twitter.com/shoprogramming" rel="noopener noreferrer" class="text-gray-600 ml-3"
                     target="_blank">
