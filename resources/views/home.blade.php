@@ -36,7 +36,7 @@
             </div>
             <div class="flex justify-center mt-8">
                 <a href="{{ route('login') }}"
-                    class="bg-blue-600 hover:bg-blue-500 duration-75 text-white font-bold py-3 px-6 rounded w-32 text-center">
+                    class=" bg-gray-300 hover:bg-gray-200 duration-75 text-gray-700 font-bold py-3 px-6 rounded w-32 text-center">
                     ログイン
                 </a>
                 <a href="{{ route('register') }}"
@@ -44,6 +44,7 @@
                     新規登録
                 </a>
             </div>
+
         </div>
     </div>
     @include('layouts.partials.footer')
