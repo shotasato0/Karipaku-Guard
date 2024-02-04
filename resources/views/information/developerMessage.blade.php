@@ -24,7 +24,7 @@
         </p>
         <div class="flex justify-center mt-10">
             <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
-                data-url="https://karipakuguard.com" data-text="借りパクガードで借り物を簡単管理。相手からの信頼度を下げないように気をつけよう！"
+                data-url="https://karipakuguard.jp" data-text="借りパクガードで借り物を簡単管理。相手からの信頼度を下げないように気をつけよう！"
                 data-show-count="false">ポスト</a>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
