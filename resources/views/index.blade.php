@@ -10,7 +10,7 @@
             <!-- モバイルビュー用のカード表示 -->
             <div class="sm:hidden">
                 @forelse ($borrows as $borrow)
-                    <div class="bg-white p-4 rounded-lg shadow-md mb-4">
+                    <div class="bg-white p-2 sm:p-4 rounded-lg shadow-md mb-4">
                         <div><strong>貸し主:</strong> <a href="{{ route('borrows.friend', $borrow->id) }}"
                                 class="relative hover:text-blue-600 tooltip">
                                 {{ $borrow->friend->name }}
@@ -26,7 +26,7 @@
                                 <img src="../../images/smile.png" alt="笑顔" class="w-16 ml-4 js-smile">
                                 <img src="../../images/bomb2.png" alt="爆弾" class="w-16 ml-4 hidden js-bomb">
                                 <img src="../../images/ignition.png" alt="点火"
-                                    class="w-20 ml-1 hidden js-ignition">
+                                    class="w-20 ml-2 hidden js-ignition">
                                 <img src="../../images/explosion.png" alt="爆発" class="w-24 hidden js-explosion">
                             </div>
                             <!-- 編集・削除ボタンのコンテナ -->
