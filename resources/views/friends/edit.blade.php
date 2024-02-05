@@ -6,7 +6,7 @@
         <div class="container px-4 md:px-10">
             <div class="py-4 inline-block min-w-full sm:px-4 lg:px-6">
                 <h2 class="mb-2 text-xl font-bold text-gray-800 dark:text-gray-200">貸し主情報の編集</h2>
-                <div class="bg-white rounded-lg shadow-lg p-5 md:p-8">
+                <div class="bg-white rounded-lg shadow-lg p-8 md:p-8">
                     <h1 class="text-3xl font-bold mb-6">
                         {{ $borrow->friend->name }}
                     </h1>
@@ -112,7 +112,7 @@
                                     <tr>
                                         <td class="px-6 py-4 whitespace-nowrap">
                                             <!-- 年齢のプルダウンメニュー -->
-                                            <select name="age" class="border rounded pr-6 py-1 w-full   ">
+                                            <select name="age" class="border rounded pr-6 py-1 w-18">
                                                 @for ($i = 18; $i <= 100; $i++)
                                                     <option value="{{ $i }}"
                                                         {{ $borrow->friend->age == $i ? 'selected' : '' }}>
@@ -122,7 +122,7 @@
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap">
                                             <!-- 性別のプルダウンメニュー -->
-                                            <select name="gender" class="border rounded pr-6 py-1 w-full">
+                                            <select name="gender" class="border rounded pr-6 py-1 w-18">
                                                 <option value="男性"
                                                     {{ $borrow->friend->gender == '男性' ? 'selected' : '' }}>男性
                                                 </option>

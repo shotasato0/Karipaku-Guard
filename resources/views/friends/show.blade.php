@@ -5,7 +5,7 @@
         <div class="container px-4 md:px-10">
             <div class="py-4 inline-block min-w-full sm:px-4 lg:px-6">
                 <h2 class="mb-2 text-xl font-bold text-gray-800 dark:text-gray-200">貸し主の情報</h2>
-                <div class="bg-white rounded-lg shadow-lg p-5 md:p-8">
+                <div class="bg-white rounded-lg shadow-lg p-8 md:p-8">
                     <h1 class="text-3xl font-bold mb-6">
                         {{ $borrow->friend->name }}
                     </h1>

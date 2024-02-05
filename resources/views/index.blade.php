@@ -12,7 +12,7 @@
                 @forelse ($borrows as $borrow)
                     <div class="bg-white p-2 sm:p-4 rounded-lg shadow-md mb-4">
                         <div>
-                            <div><strong>貸し主:</strong> <a href="{{ route('borrows.friend', $borrow->id) }}"
+                            <div><strong>貸し主　:</strong> <a href="{{ route('borrows.friend', $borrow->id) }}"
                                     class="relative text-blue-500 hover:text-blue-600 tooltip">
                                     {{ $borrow->friend->name }}
                                     <span class="tooltiptext">貸し主情報を見る</span>
