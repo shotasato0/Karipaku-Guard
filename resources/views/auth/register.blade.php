@@ -50,11 +50,5 @@
             </x-primary-button>
         </div>
     </form>
-    <!-- register.blade.php -->
-    <div class="flex items-center justify-end mt-4">
-        <a href="{{ route('signup.google') }}" class="ml-3 inline-flex items-center">
-            <img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png">
-        </a>
-    </div>
 
 </x-guest-layout>
