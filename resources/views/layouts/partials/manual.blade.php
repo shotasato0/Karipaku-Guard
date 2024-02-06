@@ -5,7 +5,7 @@
 
         {{-- ヘッダーセクション --}}
         <div class="flex justify-center mb-20">
-            <section class="text-center mb-10 w-full lg:w-1/2">
+            <section class="text-center w-full lg:w-1/2">
                 <h2 class="text-xl font-semibold mb-3">アプリ概要</h2>
                 <p>借りパクガードは、他者から借りたアイテムを管理するためのアプリです。貸し主、借りた物、借りた日、返却期限を記録し、管理することができます。</p>
             </section>
@@ -14,18 +14,30 @@
         <!-- 信頼度表示セクション -->
         <div class="flex justify-center mb-10">
             <section class="mb-10 w-full lg:w-1/2">
-                <div class="flex justify-center items-center mb-3">
-                    <div class="grid grid-cols-4 gap-4 mb-4">
-                        <img src="../../images/smile.png" alt="笑顔" class="w-16">
-                        <img src="../../images/bomb2.png" alt="爆弾" class="w-16">
-                        <img src="../../images/ignition.png" alt="点火" class="w-16">
-                        <img src="../../images/explosion.png" alt="爆発" class="w-20">
-                    </div>
-                </div>
                 <div>
                     <h2 class="text-center text-xl font-semibold mb-3">信頼度表示</h2>
                     <p>返却期限に応じて信頼度アイコンが変化します。初めは笑顔のアイコンですが、返却期限の１週間前になると爆弾アイコンに変化。
                         さらに３日前になると爆弾に火が付き・・・期限を過ぎると大爆発！こうなると相手からの信頼もガタ落ち！？爆弾が爆発する前に借りたものを返そう！</p>
+                </div>
+                <div class="flex justify-center items-center mt-8">
+                    <div class="grid grid-cols-4 gap-12 mb-4">
+                        <div class="flex flex-col items-center">
+                            <img src="../../images/smile.png" alt="笑顔" class="w-16">
+                            <p>初期状態</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="../../images/bomb2.png" alt="爆弾" class="w-16">
+                            <p>１週間前</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="../../images/ignition.png" alt="点火" class="w-16">
+                            <p>３日前</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="../../images/explosion.png" alt="爆発" class="w-16 mr-4">
+                            <p>期限切れ！</p>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
