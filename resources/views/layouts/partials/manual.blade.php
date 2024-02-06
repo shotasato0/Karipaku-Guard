@@ -1,7 +1,7 @@
 <x-main :minHeightClass="'min-h-screen'">
     @section('title', '使い方ガイド - ')
     <div class="container mx-auto p-10 lg:p-20 text-black-800 dark:text-white">
-        <h1 class="text-center text-2xl font-bold mb-10">借りパクガードの使い方</h1>
+        <h1 class="text-center text-3xl font-bold mb-20">借りパクガードの使い方</h1>
 
         {{-- ヘッダーセクション --}}
         <div class="flex justify-center mb-20">
@@ -20,7 +20,7 @@
                         さらに３日前になると爆弾に火が付き・・・期限を過ぎると大爆発！こうなると相手からの信頼もガタ落ち！？爆弾が爆発する前に借りたものを返そう！</p>
                 </div>
                 <div class="flex justify-center items-center mt-8">
-                    <div class="grid grid-cols-4 gap-12 mb-4">
+                    <div class="grid grid-cols-4 gap-2 sm:gap-14 mb-4">
                         <div class="flex flex-col items-center">
                             <img src="../../images/smile.png" alt="笑顔" class="w-16">
                             <p>初期状態</p>
@@ -34,15 +34,15 @@
                             <p>３日前</p>
                         </div>
                         <div class="flex flex-col items-center">
-                            <img src="../../images/explosion.png" alt="爆発" class="w-16 mr-4">
-                            <p>期限切れ！</p>
+                            <img src="../../images/explosion.png" alt="爆発" class="w-16 mr-2 sm:mr-0">
+                            <p>期限切れ</p>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
 
-
+        <h2 class="text-center text-xl font-semibold mb-10">その他の機能</h2>
         <!-- 各セクションを横並びに配置 -->
         <div class="flex flex-wrap justify-between">
             <!-- 新規追加セクション -->
