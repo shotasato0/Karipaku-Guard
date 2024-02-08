@@ -1,5 +1,12 @@
 <x-main :minHeightClass="'min-h-screen'">
     <div class="container mx-auto p-6 lg:p-20">
+        @if (session('login_success'))
+            <div id="loginSuccessAlert"
+                class="fixed top-5 right-5 bg-green-600 text-white py-3 px-6 rounded-lg shadow opacity-90 z-50">
+                {{ session('login_success') }}
+            </div>
+        @endif
+
         <div class="flex flex-col space-y-4">
             <div class="flex justify-center lg:justify-end">
                 <div class="flex flex-row sm:justify-end space-y-2 sm:space-y-0 sm:space-x-2 w-full">
