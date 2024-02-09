@@ -1,4 +1,5 @@
 <?php
+// ユーザーがメールアドレスの確認（認証）を要求した際に、新しいメール確認通知を送信するコントローラー
 
 namespace App\Http\Controllers\Auth;
 

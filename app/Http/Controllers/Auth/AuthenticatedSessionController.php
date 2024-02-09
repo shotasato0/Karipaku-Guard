@@ -36,6 +36,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
+        // ログイン成功メッセージをセッションに追加
         session()->flash('login_success', 'ログインしました');
 
         return redirect()->intended(RouteServiceProvider::HOME);

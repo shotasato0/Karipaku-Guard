@@ -40,6 +40,7 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
+         // ユーザーをログインさせる
         Auth::login($user);
 
         // リダイレクト先をルート名を使用して指定
