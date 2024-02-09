@@ -10,8 +10,14 @@
 <body class="antialiased">
     @if (session('logout_success'))
         <div id="logoutSuccessAlert"
-            class="fixed top-5 right-5 bg-pink-600 text-white py-3 px-6 rounded-lg shadow-md opacity-0 z-50">
+            class="fixed top-5 right-5 bg-purple-600 text-white py-3 px-6 rounded-lg shadow-md opacity-0 z-50">
             {{ session('logout_success') }}
+        </div>
+    @endif
+    @if (session('delete_account'))
+        <div id="js-deleteAccountAlert"
+            class="fixed top-5 right-5 bg-red-600 text-white py-3 px-6 rounded-lg shadow-md opacity-0 z-50">
+            {{ session('delete_account') }}
         </div>
     @endif
     <div

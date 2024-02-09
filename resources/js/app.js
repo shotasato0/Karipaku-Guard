@@ -4,6 +4,7 @@ import './bomb.js';
 import './historyHandler';
 import './loginSuccessAlert'
 import './logoutSuccessAlert'
+import './deleteAccountAlert'
 
 
 // ページが完全にロードされた後に実行

@@ -49,11 +49,16 @@ class ProfileController extends Controller
         $user = $request->user();
 
         Auth::logout();
-
+        
         $user->delete();
-
+        
+        // 現在のセッションを無効にし、すべてのセッションデータを削除する
         $request->session()->invalidate();
+        // セッション固定攻撃を防ぐために、新しいセッショントークンを生成
         $request->session()->regenerateToken();
+        
+        // アカウント削除時にメッセージをセッションに追加
+        session()->flash('delete_account', 'アカウントを削除しました');
 
         return Redirect::to('/');
     }

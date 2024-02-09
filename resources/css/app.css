@@ -27,13 +27,12 @@
     margin-left: 0; /* マージン左をリセット */
 
     /* 影を追加 */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
     /* 透過アニメーション */
     opacity: 0;
     transition: opacity 0.3s;
 }
-
 
 /* ホバー時にツールチップを表示 */
 .tooltip:hover .tooltiptext {
@@ -72,12 +71,14 @@
     }
 }
 
-.login-success-alert-visible, .logout-success-alert-visible {
+.login-success-alert-visible,
+.logout-success-alert-visible,
+.delete-account-alert-visible {
     animation: slideDown 0.5s forwards;
 }
 
-.login-success-alert-hide, .logout-success-alert-hide {
+.login-success-alert-hide,
+.logout-success-alert-hide,
+.delete-account-alert-hide {
     animation: slideUp 0.5s forwards;
 }
-
-
