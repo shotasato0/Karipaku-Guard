@@ -23,8 +23,9 @@
             <br>話が逸れましたが、初めての本格的な個人開発として、シンプルで直感的なUIに重点を置いて作成しました。皆様からのフィードバックを歓迎し、それをもとにアプリをさらに改善していく予定です。ご意見やご感想は、私のX（旧Twitter）経由でお待ちしています！
         </p>
         <div class="flex justify-center mt-10">
+            {{-- シェア機能 --}}
             <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
-                data-url="https://karipakuguard.jp" data-text="借りパクガードで借り物を簡単管理。相手からの信頼度を下げないように気をつけよう！"
+                data-url="https://karipaku-guard.jp" data-text="借りパクガードで借り物を簡単管理。相手からの信頼度を下げないように気をつけよう！"
                 data-show-count="false">ポスト</a>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
