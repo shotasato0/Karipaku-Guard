@@ -8,6 +8,12 @@
 
 
 <body class="antialiased">
+    @if (session('logout_success'))
+        <div id="logoutSuccessAlert"
+            class="fixed top-5 right-5 bg-pink-600 text-white py-3 px-6 rounded-lg shadow-md opacity-0 z-50">
+            {{ session('logout_success') }}
+        </div>
+    @endif
     <div
         class="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
         <div class="container mx-auto px-6 py-12">

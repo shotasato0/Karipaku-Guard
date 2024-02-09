@@ -3,6 +3,8 @@ import './search';
 import './bomb.js';
 import './historyHandler';
 import './loginSuccessAlert'
+import './logoutSuccessAlert'
+
 
 // ページが完全にロードされた後に実行
 document.addEventListener("DOMContentLoaded", () => {

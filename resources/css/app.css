@@ -72,11 +72,11 @@
     }
 }
 
-.login-success-alert-visible {
+.login-success-alert-visible, .logout-success-alert-visible {
     animation: slideDown 0.5s forwards;
 }
 
-.login-success-alert-hide {
+.login-success-alert-hide, .logout-success-alert-hide {
     animation: slideUp 0.5s forwards;
 }
 
