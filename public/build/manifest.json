@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-d9ce15f9.css",
+    "file": "assets/app-9ab3c3b5.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -8,7 +8,7 @@
     "dynamicImports": [
       "resources/js/confirmdelete.js"
     ],
-    "file": "assets/app-83d094f5.js",
+    "file": "assets/app-d3decec8.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
