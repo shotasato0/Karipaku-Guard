@@ -1,5 +1,4 @@
 <x-guest-layout>
-    {{-- 親ビューの@yieldに当てはめるタイトル --}}
     @section('title', 'ログイン')
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
