@@ -1,0 +1,84 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* ツールチップコンテナ */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* ツールチップテキスト */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: auto; /* 幅を自動調整 */
+    background-color: white; /* 背景色を白に */
+    color: black; /* テキスト色を黒に */
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px; /* パディングを調整 */
+    border: 1px solid #ddd; /* 薄いグレーの枠線 */
+
+    /* 位置とスタイル */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 110%; /* 貸し主名の右側に表示 */
+    margin-left: 0; /* マージン左をリセット */
+
+    /* 影を追加 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    /* 透過アニメーション */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* ホバー時にツールチップを表示 */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width: 640px) {
+    .tooltip .tooltiptext {
+        bottom: 0; /* 下部ではなく右側に表示 */
+        left: 100%; /* リンクの右側に表示 */
+        margin-left: 10px; /* 少しマージンを取る */
+        white-space: nowrap;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+.login-success-alert-visible,
+.logout-success-alert-visible,
+.delete-account-alert-visible {
+    animation: slideDown 0.5s forwards;
+}
+
+.login-success-alert-hide,
+.logout-success-alert-hide,
+.delete-account-alert-hide {
+    animation: slideUp 0.5s forwards;
+}

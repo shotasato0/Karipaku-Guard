@@ -1,0 +1,15 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const deleteAccountAlert = document.getElementById("js-deleteAccountAlert");
+    if (deleteAccountAlert) {
+        // 表示アニメーションを適用
+        deleteAccountAlert.classList.add("delete-account-alert-visible");
+
+        setTimeout(function () {
+            // 消滅アニメーションを適用
+            deleteAccountAlert.classList.replace(
+                "delete-account-alert-visible",
+                "delete-account-alert-hide"
+            );
+        }, 3000); // 3秒後にアニメーション切替
+    }
+});
