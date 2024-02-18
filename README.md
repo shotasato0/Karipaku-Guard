@@ -19,7 +19,13 @@
 
 ## 機能一覧
 
-<table align="center" style="width: 100%;">
+<style>
+  .centered-table th {
+    text-align: center;
+  }
+</style>
+
+<table class="centered-table" style="width: 100%;">
 
 <thead>
 <tr>
@@ -91,11 +97,56 @@
 
 </table>
 
-
 ## 使用技術
 
 以下の技術を使用しています。
-
--   技術 1
--   技術 2
--   技術 3
+<table style="width: 100%;">
+<thead>
+<tr>
+  <th style="width: 20%;">カテゴリー</th>
+  <th style="width: 80%;">テクノロジースタック</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>フロントエンド</td>
+  <td>tailwindcss, JavaScript</td>
+</tr>
+<tr>
+  <td>バックエンド</td>
+  <td>Laravel, PHP, Node.js</td>
+</tr>
+<tr>
+  <td>データベース</td>
+  <td>MySQL</td>
+</tr>
+<tr>
+  <td>コンテナサービス</td>
+  <td>Docker</td>
+</tr>
+<tr>
+  <td>依存関係管理ツール</td>
+  <td>Composer</td>
+</tr>
+<tr>
+  <td>パッケージマネージャー</td>
+  <td>npm, Homebrew</td>
+</tr>
+<tr>
+  <td>ビルドツール/ハンドラー</td>
+  <td>Vite</td>
+</tr>
+<tr>
+  <td>インフラストラクチャー</td>
+  <td>XSERVER</td>
+</tr>
+<tr>
+  <td>デザイン</td>
+  <td>Figma, ChatGPT（イラスト生成）</td>
+</tr>
+<tr>
+  <td>その他</td>
+  <td>GitHub, Git, Sourcetree</td>
+</tr>
+</tbody>
+</table>
