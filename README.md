@@ -150,3 +150,6 @@
 </tr>
 </tbody>
 </table>
+
+## ER図
+![画像 2 ](/Users/satoushouta/Documents/Karipaku-Guard/er-diagram.png)
