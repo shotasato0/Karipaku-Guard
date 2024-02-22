@@ -1,4 +1,4 @@
-![画像１](/Users/satoushouta/Documents/Karipaku-Guard/public/images/topimage.png)
+<img src="/Users/satoushouta/Documents/Karipaku-Guard/public/images/topimage.png">
 
 # サービスの URL
 
