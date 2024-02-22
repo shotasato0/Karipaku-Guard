@@ -8,7 +8,7 @@
   }
 </style>
 
-<img src="/Users/satoushouta/Documents/Karipaku-Guard/public/images/topimage.png">
+<img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/update-readme/public/images/topimage.png">
 <div class="padding-bottom"></div>
 
 
@@ -32,6 +32,8 @@
 
 
 ## アプリケーションのイメージ
+![animation_image](https://github.com/shotasato0/Karipaku-Guard/assets/83856475/45591031-e237-466f-ad79-f77b068e7550)
+
 <div class="padding-bottom"></div>
 
 
@@ -47,8 +49,8 @@
 </thead>
 <tbody>
 <tr>
-  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/update-readme/public/images/app.view/view_top.png" width="full"></td>
-  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/update-readme/public/images/app.view/view_register.png" width="full"></td>
+  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/update-readme/public/images/app.view/view_top.png"></td>
+  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/update-readme/public/images/app.view/view_register.png"></td>
 </tr>
 <tr>
   <td align="left">シンプルで直感的なUIを心掛けました。</td>
@@ -68,8 +70,8 @@
 </thead>
 <tbody>
 <tr>
-  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/update-readme/public/images/app.view/view_login.png" width="full"></td>
-  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/update-readme/public/images/app.view/view_list.png" width="full"></td>
+  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/update-readme/public/images/app.view/view_login.png"></td>
+  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/update-readme/public/images/app.view/view_list.png"></td>
 </tr>
 <tr>
   <td align="left">メールアドレスとパスワードでの認証機能を実装しました。</td>
@@ -89,8 +91,8 @@
 </thead>
 <tbody>
 <tr>
-  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/update-readme/public/images/app.view/view_new_addition.png" width="full"></td>
-  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/update-readme/public/images/app.view/view_edit_registrant.png" width="full"></td>
+  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/update-readme/public/images/app.view/view_new_addition.png"></td>
+  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/update-readme/public/images/app.view/view_edit_registrant.png"></td>
 </tr>
 <tr>
   <td align="left">新たな貸し主と、その借りた物、借りた日と返却期限を登録することができます。</td>
@@ -110,8 +112,8 @@
 </thead>
 <tbody>
 <tr>
-  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/update-readme/public/images/app.view/view_lender_details.png" width="full"></td>
-  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/update-readme/public/images/app.view/view_search.png" width="full"></td>
+  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/update-readme/public/images/app.view/view_lender_details.png"></td>
+  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/update-readme/public/images/app.view/view_search.png"></td>
 </tr>
 <tr>
   <td align="left">貸し主の詳細な情報を見ることができます。初めは未登録になっていますが、編集ボタンから情報の編集や登録を行うことができます。</td>
@@ -182,4 +184,4 @@
 
 ## ER 図
 
-<img src="/Users/satoushouta/Documents/Karipaku-Guard/er-diagram.png">
+<img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/update-readme/er-diagram.png" width="50%">
