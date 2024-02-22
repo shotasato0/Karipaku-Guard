@@ -1,25 +1,11 @@
-<style>
-  .centered-table th {
-    text-align: center;
-  }
-
-  .padding-bottom {
-    padding-bottom: 60px;
-  }
-</style>
-
-<img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/master/public/images/topimage.png">
-<div class="padding-bottom"></div>
-
+![Karipaku Guard Top Image](https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/master/public/images/topimage.png)
 
 # サービスの URL
 
 無料で使うことができます。  
 [https://karipaku-guard.jp/](https://karipaku-guard.jp/)
-<div class="padding-bottom"></div>
 
-
-## なぜ開発したか
+## 開発への想い
 
 こちらのアプリは、友人や家族、職場の方々から借りたアイテムを管理し、返済期限を把握するためのツールとなっております。  
 思いついたきっかけは、他県に住んでいる兄妹に NintendoSwitch とソフトを貸したところ、そのまま返ってこなかったという出来事からでした。
@@ -27,161 +13,51 @@
 私がこのアプリを作成するにあたってどうしても取り入れたかった要素は、"信頼度を視覚的な指標で表現する"ことでした。  
 これにより、誰から借りた物を優先的に注意すべきかが一目で分かるようになっています。
 
-初めての本格的な個人開発として、シンプルで直感的な UI に重点を置いて作成しました。
-<div class="padding-bottom"></div>
-
-
 ## アプリケーションのイメージ
-![animation_image](https://github.com/shotasato0/Karipaku-Guard/assets/83856475/45591031-e237-466f-ad79-f77b068e7550)
 
-<div class="padding-bottom"></div>
-
+![アプリケーションのイメージ](https://github.com/shotasato0/Karipaku-Guard/assets/83856475/45591031-e237-466f-ad79-f77b068e7550)
 
 ## 機能一覧
 
-<div class="padding-bottom">
-<table class="centered-table" style="width: 100%;">
-<thead>
-<tr>
-  <th align="center">トップ画面</th>
-  <th align="center">新規登録</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/master/public/images/app.view/view_top.png"></td>
-  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/master/public/images/app.view/view_register.png"></td>
-</tr>
-<tr>
-  <td align="left">シンプルで直感的なUIを心掛けました。</td>
-  <td align="left">新規登録画面とメールでのパスワード認証による2段階認証を実装しました。</td>
-</tr>
-</tbody>
-</table>
-</div>
+### トップ画面 & 新規登録
 
-<div class="padding-bottom">
-<table class="centered-table" style="width: 100%;">
-<thead>
-<tr>
-  <th align="center">ログイン画面</th>
-  <th align="center">貸し主一覧表示画面</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/master/public/images/app.view/view_login.png"></td>
-  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/master/public/images/app.view/view_list.png"></td>
-</tr>
-<tr>
-  <td align="left">メールアドレスとパスワードでの認証機能を実装しました。</td>
-  <td align="left">登録している貸し主名、借りた物、借りた日付、返却期限、返却期限が近づいていることを知らせる信頼度アイコンが表示されます。</td>
-</tr>
-</tbody>
-</table>
-</div>
+| ![トップ画面](https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/master/public/images/app.view/view_top.png) | ![新規登録](https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/master/public/images/app.view/view_register.png) |
+| :---: | :---: |
+| シンプルで直感的なUIを心掛けました。 | 新規登録画面とメールでのパスワード認証による2段階認証を実装しました。 |
 
-<div class="padding-bottom">
-<table class="centered-table" style="width: 100%;">
-<thead>
-<tr>
-  <th align="center">新規追加画面</th>
-  <th align="center">編集画面</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/master/public/images/app.view/view_new_addition.png"></td>
-  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/master/public/images/app.view/view_edit_registrant.png"></td>
-</tr>
-<tr>
-  <td align="left">新たな貸し主と、その借りた物、借りた日と返却期限を登録することができます。</td>
-  <td align="left">貸し主名、借りた物、借りた日付、返却期限を編集できます。</td>
-</tr>
-</tbody>
-</table>
-</div>
+### ログイン画面 & 貸し主一覧表示画面
 
-<div class="padding-bottom">
-<table class="centered-table" style="width: 100%;">
-<thead>
-<tr>
-  <th align="center">貸し主情報の詳細画面</th>
-  <th align="center">検索画面</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/master/public/images/app.view/view_lender_details.png"></td>
-  <td align="center"><img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/master/public/images/app.view/view_search.png"></td>
-</tr>
-<tr>
-  <td align="left">貸し主の詳細な情報を見ることができます。初めは未登録になっていますが、編集ボタンから情報の編集や登録を行うことができます。</td>
-  <td align="left">登録された貸し主名や借りた物に関連するキーワードを入力することで、該当する情報を簡単に検索し表示することが可能です。（日付では検索することができませんので、あらかじめご了承ください）</td>
-</tr>
-</tbody>
-</table>
-</div>
+| ![ログイン画面](https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/master/public/images/app.view/view_login.png) | ![貸し主一覧表示画面](https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/master/public/images/app.view/view_list.png) |
+| :---: | :---: |
+| メールアドレスとパスワードでの認証機能を実装しました。 | 登録している貸し主名、借りた物、借りた日付、返却期限、返却期限が近づいていることを知らせる信頼度アイコンが表示されます。 |
 
+### 新規追加画面 & 編集画面
+
+| ![新規追加画面](https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/master/public/images/app.view/view_new_addition.png) | ![編集画面](https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/master/public/images/app.view/view_edit_registrant.png) |
+| :---: | :---: |
+| 新たな貸し主と、その借りた物、借りた日と返却期限を登録することができます。 | 貸し主名、借りた物、借りた日付、返却期限を編集できます。 |
+
+### 貸し主情報の詳細画面 & 検索画面
+
+| ![貸し主情報の詳細画面](https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/master/public/images/app.view/view_lender_details.png) | ![検索画面](https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/master/public/images/app.view/view_search.png) |
+| :---: | :---: |
+| 貸し主の詳細な情報を見ることができます。初めは未登録になっていますが、編集ボタンから情報の編集や登録を行うことができます。 | 登録された貸し主名や借りた物に関連するキーワードを入力することで、該当する情報を簡単に検索し表示することが可能です。（日付では検索することができませんので、あらかじめご了承ください） |
 
 ## 使用技術
 
 以下の技術を使用しています。
 
-<div class="padding-bottom">
-<table style="width: 100%;">
-<thead>
-<tr>
-  <th style="width: 20%;">カテゴリー</th>
-  <th style="width: 80%;">テクノロジースタック</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>フロントエンド</td>
-  <td>tailwindcss, JavaScript</td>
-</tr>
-<tr>
-  <td>バックエンド</td>
-  <td>Laravel, PHP, Node.js</td>
-</tr>
-<tr>
-  <td>データベース</td>
-  <td>MySQL</td>
-</tr>
-<tr>
-  <td>コンテナサービス</td>
-  <td>Docker</td>
-</tr>
-<tr>
-  <td>依存関係管理ツール</td>
-  <td>Composer</td>
-</tr>
-<tr>
-  <td>パッケージマネージャー</td>
-  <td>npm, Homebrew</td>
-</tr>
-<tr>
-  <td>ビルドツール/ハンドラー</td>
-  <td>Vite</td>
-</tr>
-<tr>
-  <td>インフラストラクチャー</td>
-  <td>XSERVER</td>
-</tr>
-<tr>
-  <td>デザイン</td>
-  <td>Figma, ChatGPT（イラスト生成）</td>
-</tr>
-<tr>
-  <td>その他</td>
-  <td>GitHub, Git, Sourcetree</td>
-</tr>
-</tbody>
-</table>
-</div>
-
+- **フロントエンド**: tailwindcss, JavaScript
+- **バックエンド**: Laravel, PHP, Node.js
+- **データベース**: MySQL
+- **コンテナサービス**: Docker
+- **依存関係管理ツール**: Composer
+- **パッケージマネージャー**: npm, Homebrew
+- **ビルドツール/ハンドラー**: Vite
+- **インフラストラクチャー**: XSERVER
+- **デザイン**: Figma, ChatGPT（イラスト生成）
+- **その他**: GitHub, Git, Sourcetree
 
 ## ER 図
 
-<img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/master/er-diagram.png" width="50%">
+![ER図](https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/master/er-diagram.png)
