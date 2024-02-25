@@ -60,4 +60,5 @@
 
 ## ER 図
 
-![ER図](https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/master/er-diagram.png)
+<img src="https://raw.githubusercontent.com/shotasato0/Karipaku-Guard/master/er-diagram.png" width="50%" height="auto">
+
