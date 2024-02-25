@@ -46,7 +46,7 @@ class SearchController extends Controller
 
         //ページネーション
         //5レコードずつ表示する
-        $posts = $borrows->paginate(5);
+        $posts = $borrows->paginate(5);//borrowsモデルからデータを取得し、1ページあたり5件のデータを表示するよう指示
         return view('search.results', ['posts' => $posts]);
     }
 }

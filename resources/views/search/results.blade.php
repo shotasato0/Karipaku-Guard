@@ -1,7 +1,13 @@
 <x-main>
     <x-slot name="title" class="text-2xl font-bold my-4">Karipaku Guard</x-slot>
     <div class="container mx-auto p-6 lg:p-20">
-        <div class="flex flex-col">
+        <div class="flex flex-col sm:flex-row items-center">
+            <!-- 検索結果と件数を表示 -->
+            <div
+                class="text-2xl font-bold bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white whitespace-nowrap mb-2">
+                <span class="{{ request()->session()->get('theme') }}">検索結果:
+                    {{ $posts->total() }}件</span>
+            </div>
             <div class="mb-4 flex flex-row space-y-2 sm:space-y-0 sm:space-x-2 w-full sm:justify-end">
                 <x-search-form />
                 <x-create-button />
