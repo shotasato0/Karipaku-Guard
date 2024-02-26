@@ -28,16 +28,17 @@ class NewPasswordController extends Controller
      * @throws \Illuminate\Validation\ValidationException
      */
     public function store(Request $request): RedirectResponse
+    
     {
+        // リクエストデータのバリデーションを行う。トークン、メールアドレス、パスワード（確認を含む）が必要。
         $request->validate([
             'token' => ['required'],
             'email' => ['required', 'email'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        // Here we will attempt to reset the user's password. If it is successful we
-        // will update the password on an actual user model and persist it to the
-        // database. Otherwise we will parse the error and return the response.
+        // ユーザーのパスワードのリセットを行う。成功した場合はユーザーモデル上でパスワードを更新し、データベースに永続。
+        // そうでない場合は、エラーを解析し、レスポンスを返す。
         $status = Password::reset(
             $request->only('email', 'password', 'password_confirmation', 'token'),
             function ($user) use ($request) {
@@ -49,10 +50,8 @@ class NewPasswordController extends Controller
                 event(new PasswordReset($user));
             }
         );
-
-        // If the password was successfully reset, we will redirect the user back to
-        // the application's home authenticated view. If there is an error we can
-        // redirect them back to where they came from with their error message.
+        //パスワードが正常にリセットされた場合は、ユーザーをアプリケーションの認証済みホームビューにリダイレクトする
+        //エラーがある場合は、エラーメッセージとともに元の場所にリダイレクトする
         return $status == Password::PASSWORD_RESET
                     ? redirect()->route('login')->with('status', __($status))
                     : back()->withInput($request->only('email'))
