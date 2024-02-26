@@ -9,7 +9,12 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InformationController;
 use App\Http\Controllers\ManualController;
 use App\Http\Controllers\GoogleLoginController;
+use App\Http\Controllers\LoginController;
 
+
+    // LoginController（ゲストログイン用）
+    Route::POST('/guest-login', [LoginController::class, 'guest'])
+        ->name('gusetLogin');
 
     // HomeController
     //ログイン前に表示される画面
