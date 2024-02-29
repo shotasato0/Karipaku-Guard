@@ -57,11 +57,6 @@
                 </a>
             </div>
         </div>
-
-        <form method="POST" action="{{ route('gusetLogin') }}">
-            @csrf
-            <button>ゲストログインする</button>
-        </form>
     </div>
     @include('layouts.partials.footer')
 </body>

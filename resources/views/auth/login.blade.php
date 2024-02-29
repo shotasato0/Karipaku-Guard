@@ -51,4 +51,8 @@
             </div>
         </div>
     </form>
+    <form method="POST" action="{{ route('gusetLogin') }}">
+        @csrf
+        <button>ゲストログインする</button>
+    </form>
 </x-guest-layout>
