@@ -11,6 +11,7 @@ use App\Providers\RouteServiceProvider;
 class LoginController extends Controller
 {
     public function guest() {
+        // Userテーブルからゲストユーザーのデータを取得。条件にはメアド。
         $user = User::where('email', 'guest@example.com')->first();
 
         if ($user === null) {
