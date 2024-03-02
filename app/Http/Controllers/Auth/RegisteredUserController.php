@@ -17,10 +17,6 @@ class RegisteredUserController extends Controller
 {
     public function create(): View
     {
-        // if (Auth::check()) {
-        //     return redirect()->route('verification.notice');
-        // }
-
         return view('auth.register');
     }
 
