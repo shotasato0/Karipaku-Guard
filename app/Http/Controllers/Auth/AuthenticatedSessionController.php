@@ -19,9 +19,9 @@ class AuthenticatedSessionController extends Controller
     public function create(): View
     {
         // ユーザーが既にログインしている場合は、ダッシュボードにリダイレクト
-        if (Auth::check()) {
-            return redirect(RouteServiceProvider::HOME);
-        }
+        // if (Auth::check()) {
+        //     return redirect(RouteServiceProvider::HOME);
+        // }
 
         return view('auth.login');
     }

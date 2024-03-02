@@ -15,16 +15,22 @@ class RedirectIfAuthenticated // RedirectIfAuthenticatedミドルウェアのク
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next, string ...$guards): Response // ミドルウェアの主要な処理を行うメソッド。
-    {
-        $guards = empty($guards) ? [null] : $guards; // 引数で受け取った$guardsが空の場合、デフォルトのガード（null）を使用するように設定。
+    public function handle(Request $request, Closure $next, string ...$guards): Response
+{
+    $guards = empty($guards) ? [null] : $guards;
 
-        foreach ($guards as $guard) { // 引数で指定された認証ガード（またはデフォルトのガード）を順にチェックするループ。
-            if (Auth::guard($guard)->check()) { // 指定されたガードでユーザーが既に認証されているかを確認。
-                return redirect(RouteServiceProvider::HOME); // 認証されている場合、RouteServiceProviderに定義されたHOME定数（通常はダッシュボードやホームページのURL）にリダイレクト。
+    foreach ($guards as $guard) {
+        if (Auth::guard($guard)->check()) {
+            // ユーザーがゲストである場合はリダイレクトしない
+            if (Auth::user()->is_guest) {
+                return $next($request);
             }
+            // それ以外の認証済みユーザーの場合は、ホームまたはダッシュボードにリダイレクト
+            return redirect(RouteServiceProvider::HOME);
         }
-
-        return $next($request); // ユーザーが認証されていない場合、次のミドルウェア（または最終的なリクエストハンドラ）にリクエストを渡す。
     }
+
+    return $next($request);
+}
+
 }

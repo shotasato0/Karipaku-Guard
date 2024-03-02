@@ -18,6 +18,7 @@ class GuestUserSeeder extends Seeder
             'name' => 'ゲストユーザー',
             'email' => 'guest@example.com',
             'password' => Hash::make('XDrzn4BwRHwu'), //適切なパスワードを設定
+            'is_guest' => true, // ゲストユーザーとして設定
         ]);
     }
 }

@@ -12,12 +12,10 @@ class LoginController extends Controller
 {
     public function guest() {
         // Userテーブルからゲストユーザーのデータを取得。条件にはメアド。
-        $user = User::where('email', 'guest@example.com')->first();
-
-        if ($user === null) {
-            //ユーザーが見つからなかった場合の処理
-            return redirect()->route('login')->withErrors('ユーザーが見つかりません。');
-        }
+        $user = User::firstOrCreate(
+            ['email' => 'guest@example.com'], // 検索条件
+            ['is_guest' => true], // 作成する場合のデフォルト値
+        );
 
         Auth::login($user);
 
