@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers; // 名前空間を定義。このコントローラはApp\Http\Controllers名前空間に属します。
+namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreBorrowRequest; // StoreBorrowRequestクラスをインポート。これはカスタムリクエストバリデーションクラスです。
 use Illuminate\Support\Facades\Auth; // Authファサードをインポート。認証処理に使用されます。
@@ -62,10 +62,26 @@ class BorrowController extends Controller // BorrowControllerクラスを定義�
         $borrow->borrowed_at = $request->borrowed_at; // 借りた日付を設定。
         $borrow->deadline = $request->deadline; // 返却期限を設定。
         $borrow->save(); // データベースに保存。
+
+        // 1. セッションから既存の借り物リストを取得（または新しいリストを開始）
+        $borrows = session()->get('borrows', []);
+
+        // 2. 新しい借り物データをリストに追加
+        $borrows[] = [
+            'user_id' => auth()->id(),
+            'friend_id' => $friend->id,
+            'item_name' => $request->item_name,
+            'borrowed_at' => $request->borrowed_at,
+            'deadline' => $request->deadline,
+        ];
+
+        // 3. 更新されたリストをセッションに保存
+        session(['borrows' => $borrows]);
+
     
         return redirect() // 保存後、borrows.indexルートにリダイレクト。
             ->route('borrows.index');
-    }
+    }   
     
 
     public function edit(Borrow $borrow) // editメソッド。指定されたBorrowモデルを編集するためのフォームを表示するメソッド。

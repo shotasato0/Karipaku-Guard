@@ -24,10 +24,10 @@
             @endif
         @else
             <!-- 未認証ユーザー向けのリンク -->
-            <a href="{{ route('login') }}" class="...">ログイン</a>
+            {{-- <a href="{{ route('login') }}" class="...">ログイン</a>
             @if (Route::has('register'))
                 <a href="{{ route('register') }}" class="...">新規登録</a>
-            @endif
+            @endif --}}
         @endauth
     </div>
 @endif
