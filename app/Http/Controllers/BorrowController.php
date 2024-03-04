@@ -18,12 +18,16 @@ class BorrowController extends Controller // BorrowControllerクラスを定義�
 
     public function index() // indexメソッド。借り物の一覧を表示するためのメソッド。
     {
-        $borrows = auth()->user()->borrows()->latest()->get(); // 認証されたユーザーに関連する借り物を最新順で取得。
-    
+        if(auth()->check()) {
+            $borrows = auth()->user()->borrows()->latest()->get(); // 認証されたユーザーに関連する借り物を最新順で取得。
+        } else {
+            $borrows = session()->get('borrows', []); //認証されてなければ（ゲストユーザーであれば）セッションからデータを取得（セッションがなければ空配列を使用）
+        }
+
         return view('index') // 'index'ビューを返し、データを渡す。
             ->with(['borrows' => $borrows]); // ビューに$borrows変数を渡す。
     }
-    
+
 
     public function friend(Borrow $borrow) // friendメソッド。特定の借り物に関連する友人の情報を表示するメソッド。
     {
@@ -34,7 +38,7 @@ class BorrowController extends Controller // BorrowControllerクラスを定義�
         }
 
         $title = $borrow->friend->name . 'の情報 - '; // ビューに表示するタイトルを設定。
-        
+
         return view('friends.show', [ // 'friends.show'ビューを返す。
             'borrow' => $borrow, // ビューに$borrow変数を渡す。
             'title' => $title // タイトルもビューに渡す。
