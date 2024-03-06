@@ -14,7 +14,7 @@ use App\Http\Controllers\LoginController;
 
     // LoginController（ゲストログイン用）
     Route::POST('/guest-login', [LoginController::class, 'guest'])
-        ->name('gusetLogin');
+        ->name('guestLogin');
 
     // HomeController
     //ログイン前に表示される画面

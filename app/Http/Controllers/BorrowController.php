@@ -52,41 +52,47 @@ class BorrowController extends Controller // BorrowControllerクラスを定義�
 
     public function store(StoreBorrowRequest $request) // storeメソッド。新しい借り物を保存するメソッド。
     {
-        // バリデーションが成功した場合の処理。StoreBorrowRequestに定義されたバリデーションルールに基づいている。
-
-        $friend = new Friend(); // 新しいFriendモデルのインスタンスを作成。
-        $friend->name = $request->friend_name; // リクエストから友人の名前を取得して設定。
-        $friend->save(); // データベースに保存。
+        if(Auth::check()) {
+            // バリデーションが成功した場合の処理。StoreBorrowRequestに定義されたバリデーションルールに基づいている。
     
-        // 新しいBorrowモデルのインスタンスを作成。
-        $borrow = new Borrow();
-        $borrow->user_id = auth()->id(); // 現在のユーザーIDを設定。
-        $borrow->friend_id = $friend->id; // 新しく作成したFriendのIDを設定。
-        $borrow->item_name = $request->item_name; // リクエストから借り物の名前を取得して設定。
-        $borrow->borrowed_at = $request->borrowed_at; // 借りた日付を設定。
-        $borrow->deadline = $request->deadline; // 返却期限を設定。
-        $borrow->save(); // データベースに保存。
-
-        // 1. セッションから既存の借り物リストを取得（または新しいリストを開始）
-        $borrows = session()->get('borrows', []);
-
-        // 2. 新しい借り物データをリストに追加
-        $borrows[] = [
-            'user_id' => auth()->id(),
-            'friend_id' => $friend->id,
-            'item_name' => $request->item_name,
-            'borrowed_at' => $request->borrowed_at,
-            'deadline' => $request->deadline,
-        ];
-
-        // 3. 更新されたリストをセッションに保存
-        session(['borrows' => $borrows]);
-
+            $friend = new Friend(); // 新しいFriendモデルのインスタンスを作成。
+            $friend->name = $request->friend_name; // リクエストから友人の名前を取得して設定。
+            $friend->save(); // データベースに保存。
+        
+            // 新しいBorrowモデルのインスタンスを作成。
+            $borrow = new Borrow();
+            $borrow->user_id = auth()->id(); // 現在のユーザーIDを設定。
+            $borrow->friend_id = $friend->id; // 新しく作成したFriendのIDを設定。
+            $borrow->item_name = $request->item_name; // リクエストから借り物の名前を取得して設定。
+            $borrow->borrowed_at = $request->borrowed_at; // 借りた日付を設定。
+            $borrow->deadline = $request->deadline; // 返却期限を設定。
+            $borrow->save(); // データベースに保存。
+        } else {
+            // 1. セッションから既存の借り物リストを取得（または新しいリストを開始）
+            $borrows = session()->get('borrows', []);
     
+            if (count($borrows) >= 3) {
+                array_shift($borrows);
+            } 
+
+            // 2. 新しい借り物データをリストに追加
+            $borrows[] = [
+                // 'user_id' => auth()->id(), 上記で条件分岐したため、また一時的なidを使う設計に変更するため必要なくなった
+                // 'friend_id' => $friend->id,
+                'friend_name' => $request->friend_name,
+                'item_name' => $request->item_name,
+                'borrowed_at' => $request->borrowed_at,
+                'deadline' => $request->deadline,
+            ];
+
+            // 3. 更新されたリストをセッションに保存
+            session()->put('borrows', $borrows);
+        }
+
         return redirect() // 保存後、borrows.indexルートにリダイレクト。
             ->route('borrows.index');
-    }   
-    
+    }  
+
 
     public function edit(Borrow $borrow) // editメソッド。指定されたBorrowモデルを編集するためのフォームを表示するメソッド。
     {

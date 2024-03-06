@@ -1,24 +1,26 @@
 <?php
 
-// namespace App\Http\Controllers;
+namespace App\Http\Controllers;
 
-// use Illuminate\Http\Request;
-// use App\Models\User;
-// use Illuminate\Support\Facades\Auth;
-// use App\Providers\RouteServiceProvider;
+use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
+use App\Providers\RouteServiceProvider;
 
 
-// class LoginController extends Controller
-// {
-//     public function guest() {
-//         // Userテーブルからゲストユーザーのデータを取得。条件にはメアド。
-//         $user = User::firstOrCreate(
-//             ['email' => 'guest@example.com'], // 検索条件
-//             ['is_guest' => true], // 作成する場合のデフォルト値
-//         );
+class LoginController extends Controller
+{
+    // ゲストユーザー用の一時セッションを作成するメソッド
+    public function guest(Request $request): RedirectResponse
+    {
+        // セッションにゲストユーザー用の一時的なデータを設定
+        session(['is_guest' => true]);
 
-//         Auth::login($user);
+        // 必要なら他のゲストユーザー用のデータをセッションに追加
+        // 例: session(['guest_cart' => []]); など
 
-//         return redirect()->intended(RouteServiceProvider::HOME);
-//     }
-// }
+        // ゲストユーザーをアプリケーションの特定のセクションにリダイレクト
+        return redirect()->intended(RouteServiceProvider::HOME);
+    }
+
+}
