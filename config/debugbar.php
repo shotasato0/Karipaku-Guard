@@ -168,9 +168,9 @@ return [
         'symfony_request' => true,  // Only one can be enabled..
         'mail'            => true,  // Catch mail messages
         'laravel'         => false, // Laravel version and environment
-        'events'          => false, // All events fired
+        'events'          => true, // All events fired
         'default_request' => false, // Regular or special Symfony request logger
-        'logs'            => false, // Add the latest log messages
+        'logs'            => true, // Add the latest log messages
         'files'           => false, // Show the included files
         'config'          => false, // Display config settings
         'cache'           => false, // Display cache events
@@ -210,7 +210,7 @@ return [
         ],
         'views' => [
             'timeline' => false,  // Add the views to the timeline (Experimental)
-            'data' => false,    //Note: Can slow down the application, because the data can be quite large..
+            'data' => true,    //Note: Can slow down the application, because the data can be quite large..
             'exclude_paths' => [], // Add the paths which you don't want to appear in the views
         ],
         'route' => [
