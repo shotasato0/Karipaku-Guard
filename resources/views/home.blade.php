@@ -56,6 +56,10 @@
                     新規登録
                 </a>
             </div>
+            <form method="POST" action="{{ route('guestLogin') }}">
+                @csrf
+                <button>ゲストログインする</button>
+            </form>
         </div>
     </div>
     @include('layouts.partials.footer')

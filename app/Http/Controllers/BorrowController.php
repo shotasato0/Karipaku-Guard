@@ -10,10 +10,10 @@ use App\Models\Friend; // App\Models名前空間からFriendモデルをイン�
 
 class BorrowController extends Controller // BorrowControllerクラスを定義。基本のControllerクラスを継承。
 {
-    public function __construct()
-    {
-        $this->middleware('auth'); // コンストラクタで、'auth'ミドルウェアを適用。これにより、認証されたユーザーのみがアクセス可能になる。
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth'); // コンストラクタで、'auth'ミドルウェアを適用。これにより、認証されたユーザーのみがアクセス可能になる。
+    // }
 
 
     public function index() // indexメソッド。借り物の一覧を表示するためのメソッド。
